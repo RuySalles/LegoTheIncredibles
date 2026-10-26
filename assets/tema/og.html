@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+  Imagem de compartilhamento (og-image-N.jpg, 1200×630): a capa da pasta do dossiê, nas cores do uniforme.
+  Gerar: python tools/gerar_og.py. Os números vêm de data/*.json, para não ficar desatualizada.
+-->
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Libre+Franklin:wght@400;600&family=Staatliches&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tema.css">
+<style>
+  html,body{width:1200px;height:630px;overflow:hidden;margin:0;padding:0;background:var(--mesa)}
+  body{background-image:radial-gradient(ellipse at 30% 0%,#ffffff12,transparent 60%)}
+  .og-capa{position:absolute;left:56px;top:70px;width:1088px;height:500px;background:var(--pasta);border:2px solid var(--pasta-borda);border-radius:6px 22px 6px 6px;padding:40px 46px;box-shadow:0 20px 50px #000a}
+  .og-capa::before{content:"";position:absolute;top:-28px;left:40px;width:300px;height:30px;background:var(--pasta);border:2px solid var(--pasta-borda);border-bottom:0;border-radius:14px 14px 0 0}
+  .og-capa::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22px;border-radius:0 0 6px 6px;background:repeating-linear-gradient(90deg,var(--tinta) 0 80px,var(--laranja) 80px 120px,var(--preto) 120px 140px)}
+  .og-etq{display:inline-block;background:var(--ficha);border:2px solid var(--pasta-borda);padding:8px 18px;font:700 22px "Courier Prime",monospace;letter-spacing:.04em}
+  .og-carimbo{position:absolute;right:56px;top:230px;transform:rotate(-8deg);border:5px solid var(--tinta);color:var(--tinta-txt);font:400 40px/1 Staatliches,sans-serif;letter-spacing:.12em;padding:10px 18px;border-radius:8px}
+  .og-capa .dz-lacre{top:30px;right:40px;width:124px;height:124px;border-width:10px}
+  h1{font:400 112px/0.95 Staatliches,sans-serif;letter-spacing:.02em;margin:34px 0 20px;color:var(--texto)}
+  h1 em{font-style:normal;color:var(--tinta-txt)}
+  .og-campos{display:flex;border:2px solid var(--pasta-borda);background:var(--ficha);width:max-content}
+  .og-campos div{padding:12px 26px;border-right:2px solid var(--pasta-borda)}
+  .og-campos div:last-child{border-right:0}
+  .og-campos small{display:block;font:600 16px "Libre Franklin",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mudo)}
+  .og-campos b{font:700 34px "Courier Prime",monospace;color:var(--texto)}
+  .og-campos div:first-child b{color:var(--tinta-txt)}
+</style>
+</head>
+<body>
+<div class="og-capa">
+  <span class="og-etq">PROCESSO Nº 818320 · LEGO THE INCREDIBLES</span>
+  <span class="og-carimbo">Confidencial</span>
+  <span class="dz-lacre" aria-hidden="true">i</span>
+  <h1>Assunto: <em>100%</em><br>da família Pêra</h1>
+  <div class="og-campos" id="campos"></div>
+</div>
+<script type="module">
+  import { HAS_ROTA } from '../guia.config.js';
+  const conq = await fetch('../../data/conquistas.json').then(r => r.json());
+  const ids = Object.keys(conq.achievements);
+  const missable = ids.filter(id => conq.achievements[id].missable).length;
+  const campos = [['Conquistas', ids.length], ['Perdíveis', missable || 'Nenhuma']];
+  if (HAS_ROTA) {
+    const rota = await fetch('../../data/rota.json').then(r => r.json()).catch(() => null);
+    if (rota) campos.push(['Tarefas na rota', rota.stages.reduce((a, s) => a + s.tasks.length, 0)]);
+  }
+  campos.push(['Tempo', conq.overview.hours]);
+  document.getElementById('campos').innerHTML = campos.map(([k, v]) => `<div><small>${k}</small><b>${v}</b></div>`).join('');
+</script>
+</body>
+</html>

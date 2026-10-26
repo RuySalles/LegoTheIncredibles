@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceito 2 — Créditos de 1962</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Jost:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prancha.css">
+<style>
+/* ===== Conceito 2: Créditos de 1962 ===== */
+.t-escuro{ /* "Noite em Municiberg" */
+  --fundo:#1b1411;--placa:#2a1f1a;--placa2:#35271f;--creme:#f3e6cf;--texto:#f3e6cf;--suave:#dccdb3;--mudo:#b5a487;
+  --vermelho:#ee4a2f;--laranja:#f4973d;--azul:#4fb3aa;--preto:#120d0b;--sombra:#0009;
+}
+.t-claro{ /* "Cartaz de Metroville" */
+  --fundo:#f1e4cb;--placa:#fbf3e2;--placa2:#ead9b9;--creme:#fbf3e2;--texto:#21170f;--suave:#3d2f22;--mudo:#5e4c39;
+  --vermelho:#c0301a;--laranja:#a8520a;--azul:#1d6c66;--preto:#21170f;--sombra:#5a3a1a33;
+}
+.c2{background:var(--fundo);color:var(--texto);font:16px/1.55 Jost,system-ui,sans-serif;overflow:hidden}
+.c2 *{box-sizing:border-box}
+.c2-disp{font-family:"Big Shoulders Display",sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.01em}
+/* Topo: faixas diagonais + o emblema "i" que se preenche */
+.c2-topo{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px;align-items:center;padding:34px 30px 40px;
+  background:linear-gradient(115deg,transparent 0 58%,var(--vermelho) 58% 70%,var(--laranja) 70% 76%,transparent 76%),var(--placa)}
+.c2-topo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:repeating-linear-gradient(90deg,var(--vermelho) 0 40px,var(--laranja) 40px 60px,var(--preto) 60px 70px)}
+.c2-topo small{font:700 .8rem Jost;letter-spacing:.32em;text-transform:uppercase;color:var(--laranja)}
+.c2-topo h1{font-size:clamp(2.6rem,9cqi,5.4rem);line-height:.86;margin:10px 0 14px}
+.c2-topo h1 span{display:block;color:var(--vermelho)}
+.c2-topo p{margin:0;max-width:520px;color:var(--suave)}
+.c2-numeros{display:flex;gap:0;margin-top:18px;flex-wrap:wrap}
+.c2-numeros div{padding:6px 16px 6px 0;margin-right:16px;border-right:3px solid var(--vermelho)}
+.c2-numeros div:last-child{border:0}
+.c2-numeros b{display:block;font:900 1.9rem/1 "Big Shoulders Display"}
+.c2-numeros small{letter-spacing:.1em;color:var(--mudo);font-size:.72rem}
+.c2-emblema{--p:var(--g-progresso,0);position:relative;width:200px;aspect-ratio:1;border-radius:50%;justify-self:center;
+  background:conic-gradient(var(--laranja) calc(var(--p)*360deg),var(--placa2) 0);box-shadow:0 10px 30px var(--sombra);transition:background .5s}
+.c2-emblema::before{content:"";position:absolute;inset:14px;border-radius:50%;background:var(--preto)}
+.c2-emblema i{position:absolute;inset:30px;border-radius:50%;background:var(--laranja);display:grid;place-items:center;font:900 6.4rem/1 "Big Shoulders Display";font-style:normal;color:var(--preto)}
+.c2-emblema b{position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);background:var(--vermelho);color:#fff;padding:2px 12px;font:900 1.2rem "Big Shoulders Display";white-space:nowrap}
+.c2-filtros{display:flex;gap:0;margin:26px 30px 0;border:3px solid var(--texto);width:max-content;max-width:calc(100% - 60px)}
+.c2-filtros button{font:700 .9rem Jost;letter-spacing:.08em;text-transform:uppercase;background:none;color:var(--texto);border:0;border-right:3px solid var(--texto);padding:10px 16px;min-height:44px;cursor:pointer}
+.c2-filtros button:last-child{border:0}
+.c2-filtros button[aria-pressed=true]{background:var(--texto);color:var(--fundo)}
+/* Capítulo = cartela de título */
+.c2-cartela{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;margin:30px 30px 18px}
+.c2-cartela .n{width:74px;aspect-ratio:1;border-radius:50%;background:var(--vermelho);color:#fff;display:grid;place-items:center;font:900 2.4rem "Big Shoulders Display"}
+.c2-cartela h2{font-size:2.3rem;line-height:.95;margin:0}
+.c2-cartela p{margin:2px 0 0;color:var(--suave)}
+.c2-cartela .cont{font:900 1.5rem "Big Shoulders Display";border-bottom:6px solid var(--laranja)}
+/* Conquista = painel geométrico */
+.c2-mosaico{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;padding:0 30px 34px}
+.c2-card{position:relative;overflow:hidden;background:var(--placa);padding:18px 18px 16px;clip-path:polygon(0 0,calc(100% - 34px) 0,100% 34px,100% 100%,0 100%);box-shadow:inset 6px 0 0 var(--rar)}
+.c2-card[data-rar=epic]{--rar:var(--vermelho)}.c2-card[data-rar=rare]{--rar:var(--laranja)}.c2-card[data-rar=uncommon]{--rar:var(--azul)}.c2-card[data-rar=common]{--rar:var(--mudo)}
+.c2-card header{display:flex;gap:12px;align-items:center;margin-bottom:10px;padding-right:36px}
+.c2-card img{width:58px;height:58px;border-radius:50%;border:3px solid var(--rar);object-fit:cover}
+.c2-card h3{font:900 1.45rem/1 "Big Shoulders Display";text-transform:uppercase;margin:0}
+.c2-card .rar{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mudo)}
+.c2-card .desc{margin:0 0 8px;font-style:italic;color:var(--suave)}
+.c2-card .dica{margin:0}
+.c2-card footer{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+.c2-card .chip{font:700 .78rem Jost;letter-spacing:.06em;background:var(--placa2);padding:3px 10px}
+.c2-acao{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;background:var(--texto);color:var(--fundo);font:700 .85rem Jost;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.c2-acao input{width:18px;height:18px;accent-color:var(--vermelho)}
+/* Assinatura: "vestir o uniforme" — faixa vermelha cruza o painel e o emblema aparece */
+.c2-card::after{content:"";position:absolute;top:-40%;right:-30%;width:70px;height:180%;background:linear-gradient(90deg,var(--vermelho) 0 70%,var(--laranja) 70%);transform:rotate(35deg) translateX(260px);transition:transform .45s cubic-bezier(.5,0,.2,1);z-index:0}
+.c2-card>*{position:relative;z-index:1}
+.c2-card[data-feita]::after{transform:rotate(35deg) translateX(0)}
+.c2-selo{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;background:var(--laranja);border:4px solid var(--preto);display:grid;place-items:center;font:900 1.4rem "Big Shoulders Display";color:var(--preto);transform:scale(0) rotate(-90deg);transition:transform .3s .3s cubic-bezier(.3,1.6,.6,1);z-index:2}
+.c2-card[data-feita] .c2-selo{transform:scale(1) rotate(0)}
+.c2-card[data-feita] .c2-acao{background:var(--vermelho);color:#fff}
+@container (max-width:560px){
+  .c2-topo{grid-template-columns:1fr;padding:24px 16px 34px;background:linear-gradient(115deg,transparent 0 40%,var(--vermelho) 40% 58%,var(--laranja) 58% 66%,transparent 66%) top/100% 200px no-repeat,var(--placa)}
+  .c2-emblema{width:150px;grid-row:1}.c2-emblema i{inset:24px;font-size:4.6rem}
+  .c2-filtros{margin:22px 16px 0}.c2-filtros button{padding:10px 10px;font-size:.8rem}
+  .c2-cartela{margin:26px 16px 14px;gap:12px}.c2-cartela .n{width:54px;font-size:1.8rem}.c2-cartela h2{font-size:1.8rem}.c2-cartela .cont{grid-column:2}
+  .c2-mosaico{padding:0 16px 24px;grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.c2-card::after,.c2-selo,.c2-emblema{transition:none}}
+</style>
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Conceito 2 · Créditos de 1962</h1>
+   <p><strong>O guia é a abertura de um filme de espionagem dos anos 60, no estilo dos créditos de <em>Os Incríveis</em>.</strong> Faixas diagonais em vermelho e laranja, formas recortadas, cartelas de título; o emblema "i" da família se preenche com o progresso.</p></div>
+  <div class="pr-nav"><a href="conceito-4.html">Conceito 4 (1 + cores do 2) →</a><a href="conceito-1.html">← Conceito 1</a><a href="conceito-3.html">Conceito 3 →</a></div>
+ </div>
+ <div class="pr-grid">
+  <div class="pr-box">
+   <h2>O papel de cada peça</h2>
+   <table>
+    <tr><td>Página</td><td>Uma sequência de créditos: blocos chapados, diagonais e muito respiro</td></tr>
+    <tr><td>Topo</td><td>Cartaz de abertura com o emblema "i" gigante, números do 100% como créditos</td></tr>
+    <tr><td>Capítulo</td><td>Cartela de título com número dentro de um círculo vermelho</td></tr>
+    <tr><td>Conquista</td><td>Painel recortado, borda lateral na cor da raridade, ícone em medalhão</td></tr>
+    <tr><td>Marcar</td><td>"Em ação!" → "Salvo!": o painel veste o uniforme</td></tr>
+    <tr><td>Progresso</td><td>O anel laranja em volta do emblema "i" (0–100%)</td></tr>
+    <tr><td>Filtros</td><td>"Todas / Em perigo / Salvas"; perdível = "Corra!"; dificuldade = raios</td></tr>
+    <tr><td>Fontes</td><td>"Créditos finais", rolando como no fim do filme</td></tr>
+   </table>
+  </div>
+  <div class="pr-box">
+   <h2>Paleta e fontes</h2>
+   <b>Escuro · "Noite em Municiberg"</b>
+   <div class="pr-sw"><span style="background:#1b1411;color:#f3e6cf">fundo #1b1411</span><span style="background:#2a1f1a;color:#f3e6cf">placa #2a1f1a</span><span style="background:#ee4a2f">vermelho #ee4a2f</span><span style="background:#f4973d">laranja #f4973d</span><span style="background:#4fb3aa">azul #4fb3aa</span></div>
+   <b>Claro · "Cartaz de Metroville"</b>
+   <div class="pr-sw"><span style="background:#f1e4cb">fundo #f1e4cb</span><span style="background:#fbf3e2">placa #fbf3e2</span><span style="background:#c0301a;color:#fff">vermelho #c0301a</span><span style="background:#a8520a;color:#fff">laranja #a8520a</span><span style="background:#1d6c66;color:#fff">azul #1d6c66</span></div>
+   <p style="margin:0"><span style="font:900 1.6rem 'Big Shoulders Display';text-transform:uppercase">Big Shoulders</span> títulos condensados de cartaz · <span style="font:500 1rem Jost">Jost</span> texto geométrico, herdeiro da Futura dos anos 60.</p>
+   <h2 style="margin-top:14px">Momento de assinatura</h2>
+   <p class="pr-note" style="margin:0">Ao marcar, uma faixa vermelha e laranja cruza o painel na diagonal (o uniforme) e o selo "i" gira para dentro do canto; o anel do emblema do topo avança. <b>Teste: clique em "Em ação!" nos painéis.</b></p>
+  </div>
+ </div>
+ <div class="pr-label">Recorte real · tema escuro</div>
+ <div class="pr-frame"><div class="c2 t-escuro" data-quadro></div></div>
+ <div class="pr-label">Recorte real · tema claro</div>
+ <div class="pr-frame"><div class="c2 t-claro" data-quadro></div></div>
+ <div class="pr-label">Celular · 375 px</div>
+ <div class="pr-phones">
+  <div class="pr-phone"><div class="c2 t-escuro" data-quadro></div></div>
+  <div class="pr-phone"><div class="c2 t-claro" data-quadro></div></div>
+ </div>
+</div>
+<script src="dados.js"></script>
+<script src="prancha.js"></script>
+<script>
+(async () => {
+const render = vm => `
+<section class="c2-topo">
+ <div><small>Disney · Pixar · LEGO apresentam</small>
+  <h1 class="c2-disp">Os Incríveis<span>100%</span></h1>
+  <p>As ${vm.total} conquistas da Steam, cada uma com a dica que resolve e a ordem que economiza horas.</p>
+  <div class="c2-numeros"><div><b>${vm.total}</b><small>CONQUISTAS</small></div><div><b>${vm.overview.difficulty}/10</b><small>DIFICULDADE</small></div><div><b>${vm.overview.hours}</b><small>DE JOGO</small></div><div><b>0</b><small>PERDÍVEIS</small></div></div>
+ </div>
+ <div class="c2-emblema" aria-label="Progresso"><i>i</i><b data-pct></b></div>
+</section>
+<div class="c2-filtros"><button aria-pressed="true">Todas</button><button aria-pressed="false">Em perigo</button><button aria-pressed="false">Salvas</button></div>
+<header class="c2-cartela"><span class="n">${vm.capitulo.n}</span><div><h2 class="c2-disp">${vm.capitulo.titulo}</h2><p>${vm.capitulo.subtitulo}</p></div><span class="cont">1/${vm.capitulo.total}</span></header>
+<div class="c2-mosaico">
+ ${vm.cards.map(c => `<article class="c2-card" data-card data-rar="${c.raridade.chave}"${c.feita ? ' data-feita' : ''}>
+   <span class="c2-selo" aria-hidden="true">i</span>
+   <header><img src="${c.icone}" alt=""><div><h3>${c.nome}</h3><span class="rar">${c.raridade.rotulo} · ${c.raridade.pct}</span></div></header>
+   <p class="desc">${c.desc}</p><p class="dica">${c.dica}</p>
+   <footer>${c.dificuldade ? `<span class="chip">${'⚡'.repeat(c.dificuldade)}</span>` : ''}${c.tempo ? `<span class="chip">${c.tempo}</span>` : ''}
+    <label class="c2-acao"><input type="checkbox" aria-label="Marcar ${c.nome}"> <span data-rot>${c.feita ? 'Salvo!' : 'Em ação!'}</span></label></footer>
+  </article>`).join('')}
+</div>`;
+await montar({ render, capitulo: 'incredibles-2', ids: ['COMPLETE_CHAPTER07', 'CHAPTER09_ALL8INCREDIBLE', 'CHAPTER07_THROWENEMIESINGEARS'], feitas: ['COMPLETE_CHAPTER07'] });
+document.querySelectorAll('[data-card] input').forEach(inp => inp.addEventListener('change', () => {
+  inp.closest('[data-card]').querySelector('[data-rot]').textContent = inp.checked ? 'Salvo!' : 'Em ação!';
+}));
+})();
+</script>
+</body>
+</html>

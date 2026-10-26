@@ -1,0 +1,215 @@
+{
+  "_leia-me": "Fontes do guia. Dicas (conquistas.json) e tarefas (rota.json) citam fontes pelo \"id\". \"short\" é o nome curto que aparece no fim de cada dica; \"about\" diz o que aquela fonte confirmou. Divergências entre fontes vão em \"confirm\", dizendo quem afirma o quê.",
+  "sources": [
+    {
+      "id": "steam-stats",
+      "title": "Steam — Estatísticas de conquistas de LEGO The Incredibles",
+      "short": "Steam",
+      "url": "https://steamcommunity.com/stats/818320/achievements/?l=brazilian",
+      "about": "nomes, descrições oficiais, ícones e porcentagens globais."
+    },
+    {
+      "id": "gp-conquistas",
+      "title": "Gamepressure — LEGO The Incredibles: Achievements",
+      "short": "Gamepressure",
+      "url": "https://www.gamepressure.com/lego-the-incredibles/achievements/zfb29b",
+      "about": "requisitos de cada conquista, Edna Mode no sul de <em>Outer Municiberg</em>, a prisão no centro da cidade e o momento do <em>wheelie</em>."
+    },
+    {
+      "id": "gp-100",
+      "title": "Gamepressure — How to complete the game in 100%?",
+      "short": "Gamepressure (100%)",
+      "url": "https://www.gamepressure.com/lego-the-incredibles/how-to-complete-the-game-in-100/z1b285",
+      "about": "a lista do 100%: 12 fases, 120 Minikits, 12 Red Bricks, 22 Family Builds, 25 corridas, 20 desafios, 93 bolsas, 113 personagens, 40 veículos e 210 Gold Bricks."
+    },
+    {
+      "id": "gp-redbricks",
+      "title": "Gamepressure — Red bricks (Super builds)",
+      "short": "Gamepressure (Red Bricks)",
+      "url": "https://www.gamepressure.com/lego-the-incredibles/red-bricks-super-builds/zeb29a",
+      "about": "os 12 Red Bricks com distrito, personagem Pixar e o puzzle de cada um; como ativar no menu."
+    },
+    {
+      "id": "gp-moedas",
+      "title": "Gamepressure — How to get lots of coins in no time?",
+      "short": "Gamepressure (peças)",
+      "url": "https://www.gamepressure.com/lego-the-incredibles/how-to-get-lots-of-coins-in-no-time/z3b287",
+      "about": "que os multiplicadores se somam e que o x10 vem de <em>Industrial District</em>."
+    },
+    {
+      "id": "gp-crimewaves",
+      "title": "Gamepressure — Crimewaves",
+      "short": "Gamepressure (Crimewaves)",
+      "url": "https://www.gamepressure.com/lego-the-incredibles/crimewaves/z5b298",
+      "about": "10 Crimewaves, uma por distrito, em ordem fixa; cada uma revela os segredos do distrito e dá um personagem."
+    },
+    {
+      "id": "happythumbs",
+      "title": "HappyThumbs Gaming — Lego Incredibles Trophy/Achievement Guide",
+      "short": "HappyThumbs",
+      "url": "https://happythumbsgaming.com/2018/06/lego-incredibles-trophy-achievement-guide/",
+      "about": "armadilhas de <em>Nomanisan Island</em>, canhões de gosma, caixas de mudança, os 8 poderes do Zezé, preço de Bob Parr e Gilberto, cidadão veterano e onde ficam os quatro multiplicadores."
+    },
+    {
+      "id": "steam-dampit",
+      "title": "Steam — Lego The Incredibles Trophy/Achievement Guide (DamPit_)",
+      "short": "Guia Steam (DamPit_)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3521192886",
+      "about": "15–20 h, nenhuma perdível, truque dos guaxinins, combo com a Violeta, rota dos 9 minutos, Reflux como veterano e lista do 100%."
+    },
+    {
+      "id": "steam-turbo",
+      "title": "Steam — LEGO The Incredibles 100% Video Guide (Turbo Achiever)",
+      "short": "Guia Steam (Turbo Achiever)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2845483767",
+      "about": "roteiro em 4 passos, a ordem das 10 Crimewaves e Tradewind (desafio <em>Big Catch</em>, nas Docks) como voador cedo."
+    },
+    {
+      "id": "pst",
+      "title": "PlayStationTrophies — LEGO The Incredibles Trophy Guide & Road Map",
+      "short": "PlayStationTrophies",
+      "url": "https://www.playstationtrophies.org/game/lego-the-incredibles/guide/",
+      "about": "nota 2/10, 12–15 h, roteiro história → Crimewaves → Free Play; armadilhas fáceis de perder em <em>Nomanisan Island</em>."
+    },
+    {
+      "id": "metagame",
+      "title": "MetaGame.guide — LEGO The Incredibles Trophy Guide",
+      "short": "MetaGame",
+      "url": "https://metagame.guide/lego-the-incredibles-ps4/trophy-guide",
+      "about": "nota 2/10, cerca de 17 h, uma jogada e nenhuma perdível."
+    },
+    {
+      "id": "ta-solucoes",
+      "title": "TrueAchievements / XboxAchievements — soluções da comunidade",
+      "short": "TrueAchievements",
+      "url": "https://www.trueachievements.com/game/LEGO-The-Incredibles/achievements",
+      "about": "labirinto com Invencibilidade, rota e cronômetro de <em>Making Parr</em>, lista de armadilhas e de caixas, poderes do Zezé por forma."
+    },
+    {
+      "id": "prodigy",
+      "title": "Prodigy Gamers — Locations Of All Red Bricks",
+      "short": "Prodigy Gamers",
+      "url": "https://prodigygamers.com/2018/06/16/lego-incredibles-locations-of-all-red-bricks-to-unlock-characters/",
+      "about": "local e custo em Incredibricks de cada Family Build Pixar (Dory custa 1, os outros 5)."
+    },
+    {
+      "id": "outcyders",
+      "title": "Outcyders — Pixar character unlocks & Red Brick guide",
+      "short": "Outcyders",
+      "url": "https://outcyders.net/guide/lego-the-incredibles-cheats-pixar-character-unlocks-red-brick-guide",
+      "about": "tabela personagem Pixar → Red Brick → distrito."
+    },
+    {
+      "id": "gamingbolt",
+      "title": "GamingBolt — LEGO The Incredibles Complete Guide",
+      "short": "GamingBolt",
+      "url": "https://gamingbolt.com/lego-the-incredibles-complete-guide-all-red-brick-locations-completing-challenges-heroes-cheat-codes-and-more",
+      "about": "desafios da cidade (100 Incredibricks, 10 equipamentos do Hipnotizador, 10 cartazes) e códigos."
+    },
+    {
+      "id": "steam-minikit",
+      "title": "Steam — discussão: Minikit do fliperama em Elastigirl On The Case",
+      "short": "Discussão Steam (Minikit)",
+      "url": "https://steamcommunity.com/app/818320/discussions/0/2572002906849558385",
+      "about": "o Minikit que parece bugado sai destruindo os olhos nas prateleiras do corredor."
+    },
+    {
+      "id": "steam-familybuild",
+      "title": "Steam — discussão: Family Build bônus de Financial District",
+      "short": "Discussão Steam (Family Builds)",
+      "url": "https://steamcommunity.com/app/818320/discussions/0/3307213006842752505",
+      "about": "o pad Pixar bônus só aparece depois de todos os outros pads Pixar."
+    },
+    {
+      "id": "steam-jackjack",
+      "title": "Steam — discussão: Ataque do Zezé!",
+      "short": "Discussão Steam (Zezé)",
+      "url": "https://steamcommunity.com/app/818320/discussions/0/1729827777334130516",
+      "about": "o poder que costuma faltar: iluminar um lugar escuro com o Zezé em chamas, em <em>Revelations</em>."
+    },
+    {
+      "id": "jogando",
+      "title": "Testado jogando",
+      "short": "testado jogando",
+      "about": "o que foi conferido no próprio jogo durante a escrita do guia."
+    }
+  ],
+  "confirm": [
+    {
+      "text": "Multiplicadores x6 e x8: a página de peças da Gamepressure põe o x8 em <em>Waterfront</em> e o x6 em <em>Downtown</em>; a página de Red Bricks da própria Gamepressure, Prodigy, Outcyders e HappyThumbs dizem x8 = Linguini em <em>Downtown</em> e x6 = Miguel em <em>Waterfront</em>. O guia segue a maioria.",
+      "sources": [
+        "gp-moedas",
+        "gp-redbricks",
+        "prodigy",
+        "outcyders",
+        "happythumbs"
+      ]
+    },
+    {
+      "text": "Quando os Family Builds Pixar aparecem no mapa: a página de Red Bricks da Gamepressure diz que só depois de <strong>todas</strong> as Crimewaves; a página de Crimewaves e o guia Turbo Achiever dizem que cada Crimewave revela os do próprio distrito.",
+      "sources": [
+        "gp-redbricks",
+        "gp-crimewaves",
+        "steam-turbo"
+      ]
+    },
+    {
+      "text": "Botão do <em>wheelie</em> em <em>Hover Train Hijinx</em>: Gamepressure diz segurar o pulo; DamPit_ diz segurar X (controle Xbox); HappyThumbs diz Quadrado (PlayStation, que equivale ao X do Xbox).",
+      "sources": [
+        "gp-conquistas",
+        "steam-dampit",
+        "happythumbs"
+      ]
+    },
+    {
+      "text": "Guaxinins de <em>Revelations</em>: HappyThumbs manda apertar o botão mostrado até encher o círculo; DamPit_ e comentários do TrueAchievements dizem para apertar os três botões juntos desde o início, sem repetir a mesma combinação duas vezes seguidas.",
+      "sources": [
+        "happythumbs",
+        "steam-dampit",
+        "ta-solucoes"
+      ]
+    },
+    {
+      "text": "Poderes do Zezé: HappyThumbs lista 8; a discussão da Steam cita 6; o TrueAchievements separa por forma (normal, fogo, monstro). Todos concordam que iluminar um lugar escuro é o que costuma faltar.",
+      "sources": [
+        "happythumbs",
+        "steam-jackjack",
+        "ta-solucoes"
+      ]
+    },
+    {
+      "text": "Cidadão veterano para <em>Captura dos Cidadãos Veteranos</em>: DamPit_ usou Reflux; HappyThumbs sugere a velhinha (<em>Old Lady</em>) das bolsas vermelhas. Provavelmente os dois contam.",
+      "sources": [
+        "steam-dampit",
+        "happythumbs"
+      ]
+    },
+    {
+      "text": "Caixas de mudança em <em>House Parr-ty</em>: um guia fala em 9; outro diz que não dá para fazer na segunda metade da fase; HappyThumbs diz que quase todas ficam na primeira área e a escondida está na sala do globo espelhado.",
+      "sources": [
+        "happythumbs",
+        "ta-solucoes"
+      ]
+    },
+    {
+      "text": "Como as fases do primeiro filme (7 a 12) são liberadas: as fontes só dizem que vêm depois de <em>Screenslaver Showdown</em>. Confirmar jogando se é automático ou se há um ponto no mapa.",
+      "sources": [
+        "gp-conquistas",
+        "steam-dampit"
+      ]
+    },
+    {
+      "text": "<em>Os Super-heróis voltaram!</em>: a Steam pede 50 crimes; a Gamepressure escreve 5. Vale a Steam.",
+      "sources": [
+        "steam-stats",
+        "gp-conquistas"
+      ]
+    },
+    {
+      "text": "<em>Incrível demais!</em> (todas as Family Builds): um jogador relatou 100% sem a conquista destravar, sem solução no tópico. Se acontecer, refaça o pad bônus de <em>Financial District</em> e reinicie o jogo.",
+      "sources": [
+        "steam-familybuild"
+      ]
+    }
+  ]
+}

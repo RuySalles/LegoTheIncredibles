@@ -1,0 +1,770 @@
+{
+  "_leia-me": "Conteúdo da rota. Veja o README.md antes de editar. Regra de ouro: nunca mude ou reutilize o \"id\" de uma tarefa (t1, t2…), porque é ele que guarda o progresso de quem já usa o site. Tarefas novas recebem o próximo número livre.",
+  "mainTitle": "Missão",
+  "tagTypes": [
+    {
+      "type": "prereq",
+      "label": "Destrava",
+      "color": "danger",
+      "explain": "abre o que vem depois; não pule"
+    },
+    {
+      "type": "redbrick",
+      "label": "Red Brick",
+      "color": "special",
+      "flow": "<strong>Red Brick</strong>: faça o Family Build Pixar, resolva o puzzle e <strong>ligue</strong> o bloco no menu (última aba).",
+      "explain": "bônus permanente; ligue no menu"
+    },
+    {
+      "type": "fase",
+      "label": "Fase",
+      "color": "info",
+      "flow": "<strong>Fase</strong>: no Free Play, com os blocos ligados, cada volta rende Minikits, <em>True Super</em> e o desafio da fase.",
+      "explain": "fase da história, de preferência no Free Play"
+    },
+    {
+      "type": "cidade",
+      "label": "Cidade",
+      "color": "ok",
+      "flow": "<strong>Cidade</strong>: o resto mora no mundo aberto: duplas, corridas, crimes e a prisão.",
+      "explain": "mundo aberto"
+    },
+    {
+      "type": "custo",
+      "label": "Custo",
+      "color": "warm",
+      "explain": "peças ou Incredibricks gastos"
+    }
+  ],
+  "legendNote": "Distritos e fases em inglês, como aparecem na tela. Os Red Bricks são de graça: o preço é o Family Build (Incredibricks).",
+  "materials": [],
+  "milestones": {
+    "title": "Red Bricks",
+    "hint": "Os 12 blocos vermelhos. Os quatro multiplicadores somam x960.",
+    "items": [
+      {
+        "label": "x2",
+        "name": "Multiplicador x2",
+        "detail": "Merida · <em>City Park</em>",
+        "unlock": "t5"
+      },
+      {
+        "label": "x6",
+        "name": "Multiplicador x6",
+        "detail": "Miguel · <em>Waterfront</em>",
+        "unlock": "t6"
+      },
+      {
+        "label": "x8",
+        "name": "Multiplicador x8",
+        "detail": "Linguini · <em>Downtown</em>",
+        "unlock": "t7"
+      },
+      {
+        "label": "x10",
+        "name": "Multiplicador x10",
+        "detail": "WALL-E · <em>Industrial District</em>",
+        "unlock": "t8"
+      },
+      {
+        "label": "INV",
+        "name": "Invencibilidade",
+        "detail": "Relâmpago McQueen · corrida da Piston Cup",
+        "unlock": "t9"
+      },
+      {
+        "label": "ÍMÃ",
+        "name": "Ímã de Peças",
+        "detail": "Woody · <em>Tourist District</em>",
+        "unlock": "t10"
+      },
+      {
+        "label": "DET",
+        "name": "Detector de Itens",
+        "detail": "Flik · <em>Urbem Heights</em>",
+        "unlock": "t11"
+      },
+      {
+        "label": "SWG",
+        "name": "Swing Mode",
+        "detail": "Dory · <em>Waterfront</em> (1 Incredibrick)",
+        "unlock": "t29"
+      },
+      {
+        "label": "RÁP",
+        "name": "Interação Rápida",
+        "detail": "Bing Bong · <em>Residential District</em>",
+        "unlock": "t29"
+      },
+      {
+        "label": "DES",
+        "name": "Destruir ao Tocar",
+        "detail": "Russell · <em>Financial District</em>",
+        "unlock": "t29"
+      },
+      {
+        "label": "CLÁ",
+        "name": "Modo Clássico",
+        "detail": "Spot · <em>Outer Municiberg</em>",
+        "unlock": "t29"
+      },
+      {
+        "label": "EDN",
+        "name": "Edna Mode… Mode",
+        "detail": "Sulley · <em>Docks</em>",
+        "unlock": "t29"
+      }
+    ]
+  },
+  "stages": [
+    {
+      "title": "A família em ação",
+      "subtitle": "As 12 fases e a bônus no Modo História",
+      "tag": "Base",
+      "note": "O Modo História é obrigatório: libera os personagens que o Free Play exige e abre a cidade. Não perca tempo com desafios difíceis agora; sem os Red Bricks eles custam o dobro.",
+      "tasks": [
+        {
+          "id": "t1",
+          "title": "Jogue as fases 1 a 6 (<em>Os Incríveis 2</em>)",
+          "desc": "<em>Under-mined</em>, <em>Hover Train Hijinx</em>, <em>Revelations</em>, <em>Elastigirl On The Case</em>, <em>House Parr-ty</em> e <em>Screenslaver Showdown</em>. De brinde: engrenagens (fase 1) e empinada (fase 2) são fáceis de fazer já na primeira passada.",
+          "tags": [
+            {
+              "text": "Fase",
+              "type": "fase"
+            },
+            {
+              "text": "Destrava",
+              "type": "prereq"
+            }
+          ],
+          "sources": [
+            "gp-conquistas",
+            "steam-dampit"
+          ]
+        },
+        {
+          "id": "t2",
+          "title": "Jogue as fases 7 a 12 (<em>Os Incríveis</em>)",
+          "desc": "<em>The Golden Years</em> (libera o Bochecha), <em>Vigilant Vigilantes</em>, <em>Nomanisan Island</em>, <em>Return to Nomanisan Island</em>, <em>Above Parr</em> e <em>The Final Showdown</em>. As armadilhas de <em>Nomanisan Island</em> dá para pegar de uma vez.",
+          "tags": [
+            {
+              "text": "Fase",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "gp-conquistas",
+            "steam-dampit"
+          ]
+        },
+        {
+          "id": "t3",
+          "title": "Destrua a cidade na fase bônus do Omnidroid",
+          "desc": "Mantenha a destruição contínua para o multiplicador da fase não cair: até 1 milhão de peças para os primeiros personagens.",
+          "tags": [
+            {
+              "text": "Fase",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "gp-conquistas"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Limpe os distritos",
+      "subtitle": "As 10 Crimewaves, em ordem",
+      "tag": "Prioridade",
+      "note": "Cada Crimewave revela no mapa os Family Builds, corridas e Gold Bricks do distrito; sem elas, nem os multiplicadores existem. A ordem é fixa, então é só seguir o marcador.",
+      "tasks": [
+        {
+          "id": "t4",
+          "title": "Conclua as 10 Crimewaves",
+          "desc": "Ordem: <em>Waterfront</em>, <em>City Park</em>, <em>Financial District</em>, <em>Tourist District</em>, <em>Downtown</em>, <em>Outer Municiberg</em>, <em>Docks</em>, <em>Urbem Heights</em>, <em>Residential District</em>, <em>Industrial District</em>. Resolva os crimes de rua (pontos vermelhos) que estiverem no caminho: contam para os 50.",
+          "tags": [
+            {
+              "text": "Cidade",
+              "type": "cidade"
+            },
+            {
+              "text": "Destrava",
+              "type": "prereq"
+            },
+            {
+              "text": "~3 h"
+            }
+          ],
+          "sources": [
+            "steam-turbo",
+            "gp-crimewaves"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Multiplicadores",
+      "subtitle": "Os Red Bricks que aceleram todo o resto",
+      "tag": "Prioridade",
+      "note": "Daqui em diante cada peça vale até 960. Faça na ordem do mais barato ao x10 e ligue cada bloco no menu assim que sair. Junte os Incredibricks voando pelos telhados (são 100 na cidade).",
+      "tasks": [
+        {
+          "id": "t5",
+          "title": "x2: Family Build da Merida, no meio de <em>City Park</em>",
+          "desc": "Monte a cabana de madeira em frente ao labirinto, abra a porta com um personagem que atira, quebre os potes e acenda o fogo sob o caldeirão.",
+          "tags": [
+            {
+              "text": "Red Brick",
+              "type": "redbrick"
+            },
+            {
+              "text": "City Park"
+            },
+            {
+              "text": "5 Incredibricks",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "gp-redbricks",
+            "prodigy"
+          ]
+        },
+        {
+          "id": "t6",
+          "title": "x6: Family Build do Miguel, no leste de <em>Waterfront</em>",
+          "desc": "Monte a mansão do Ernesto, ache as peças lá dentro e monte o violão.",
+          "tags": [
+            {
+              "text": "Red Brick",
+              "type": "redbrick"
+            },
+            {
+              "text": "Waterfront"
+            },
+            {
+              "text": "5 Incredibricks",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "prodigy",
+            "outcyders"
+          ]
+        },
+        {
+          "id": "t7",
+          "title": "x8: Family Build do Linguini, no sul de <em>Downtown</em>",
+          "desc": "Na cozinha do Gusteau, entre no cano com o rato (ou o robô da Edna) e empurre os tijolos vermelhos da prateleira.",
+          "tags": [
+            {
+              "text": "Red Brick",
+              "type": "redbrick"
+            },
+            {
+              "text": "Downtown"
+            },
+            {
+              "text": "5 Incredibricks",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "prodigy",
+            "gp-redbricks"
+          ]
+        },
+        {
+          "id": "t8",
+          "title": "x10: Family Build do WALL-E, no noroeste de <em>Industrial District</em>",
+          "desc": "Com o laser do WALL-E, destrua os dois blocos atrás do caminhão amarelo; lá dentro, quebre a estante da direita e monte a alavanca.",
+          "tags": [
+            {
+              "text": "Red Brick",
+              "type": "redbrick"
+            },
+            {
+              "text": "Industrial"
+            },
+            {
+              "text": "5 Incredibricks",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "prodigy",
+            "gp-redbricks"
+          ]
+        },
+        {
+          "id": "t9",
+          "title": "Invencibilidade: vença a corrida do Relâmpago McQueen",
+          "desc": "Family Build no nordeste da orla; depois, vença a corrida na arquibancada da Piston Cup. Deixa os desafios de dano triviais.",
+          "tags": [
+            {
+              "text": "Red Brick",
+              "type": "redbrick"
+            },
+            {
+              "text": "5 Incredibricks",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "prodigy",
+            "gp-redbricks"
+          ]
+        },
+        {
+          "id": "t10",
+          "title": "Ímã de Peças: Family Build do Woody, em <em>Tourist District</em>",
+          "desc": "Na Pizza Planet, puxe o volante do foguete com a Mulher-Elástica e encaixe na máquina quebrada.",
+          "tags": [
+            {
+              "text": "Red Brick",
+              "type": "redbrick"
+            },
+            {
+              "text": "Tourist"
+            },
+            {
+              "text": "5 Incredibricks",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "prodigy",
+            "gp-redbricks"
+          ]
+        },
+        {
+          "id": "t11",
+          "title": "Detector de Itens: Family Build do Flik, em <em>Urbem Heights</em>",
+          "desc": "Cave os dois montes ao lado do caminhão de biscoitos, monte o mecanismo da porta e gire a manivela lá dentro. Mostra Minikits no mapa das fases.",
+          "tags": [
+            {
+              "text": "Red Brick",
+              "type": "redbrick"
+            },
+            {
+              "text": "Urbem Heights"
+            },
+            {
+              "text": "5 Incredibricks",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "prodigy",
+            "gp-redbricks"
+          ]
+        },
+        {
+          "id": "t12",
+          "title": "Libere a Tradewind no desafio <em>Big Catch</em>, nas <em>Docks</em>",
+          "desc": "Ela voa e mergulha: com ela, Incredibricks em telhados e Minikits altos ficam fáceis.",
+          "tags": [
+            {
+              "text": "Cidade",
+              "type": "cidade"
+            },
+            {
+              "text": "Docks"
+            }
+          ],
+          "sources": [
+            "steam-turbo"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Free Play com tudo ligado",
+      "subtitle": "As 12 fases de novo: Minikits, True Super e desafios",
+      "tag": "Exploração",
+      "note": "Com x960 e Invencibilidade, cada volta numa fase resolve três coisas de uma vez. Faça o desafio da fase na mesma visita em que pega os Minikits.",
+      "tasks": [
+        {
+          "id": "t13",
+          "title": "Pegue os 10 Minikits e encha o <em>True Super</em> em cada fase",
+          "desc": "Use o Detector de Itens e um voador. Em <em>Elastigirl On The Case</em>, destrua os olhos das prateleiras do corredor inicial: é isso que libera o Minikit, não o fliperama.",
+          "tags": [
+            {
+              "text": "Fase",
+              "type": "fase"
+            },
+            {
+              "text": "12 fases"
+            },
+            {
+              "text": "~4 h"
+            }
+          ],
+          "sources": [
+            "steam-dampit",
+            "steam-minikit"
+          ]
+        },
+        {
+          "id": "t14",
+          "title": "<em>Under-mined</em>: 5 inimigos nas engrenagens e combo de 75",
+          "desc": "Engrenagens na sala logo depois das grandes congeladas. Para o combo, Violeta: estoure a bolha e passe por cima dos inimigos sem levar dano.",
+          "tags": [
+            {
+              "text": "Fase 1",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "steam-dampit",
+            "happythumbs"
+          ]
+        },
+        {
+          "id": "t15",
+          "title": "<em>Hover Train Hijinx</em>: empinada de 10 segundos",
+          "desc": "Na corrida de moto, depois dos vidros; não bata em nada destrutível.",
+          "tags": [
+            {
+              "text": "Fase 2",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "steam-dampit",
+            "gp-conquistas"
+          ]
+        },
+        {
+          "id": "t16",
+          "title": "<em>Revelations</em>: 8 duelos \"Incrível\" e a área escura do Zezé",
+          "desc": "Guaxinins no início (três botões juntos). Depois, no trecho <em>Breaking News</em>, derrube a parede ao lado do segundo helicóptero e entre com o Zezé em chamas.",
+          "tags": [
+            {
+              "text": "Fase 3",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "steam-dampit",
+            "steam-jackjack"
+          ]
+        },
+        {
+          "id": "t17",
+          "title": "<em>Elastigirl On The Case</em>: alcance o Hipnotizador em 3:15",
+          "desc": "Voador + Mulher-Elástica; cronômetro só na perseguição. Treine a rota uma vez.",
+          "tags": [
+            {
+              "text": "Fase 4",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "ta-solucoes"
+          ]
+        },
+        {
+          "id": "t18",
+          "title": "<em>House Parr-ty</em>: quebre todas as caixas de mudança",
+          "desc": "Quase todas na primeira área; a escondida fica alta na sala do globo espelhado.",
+          "tags": [
+            {
+              "text": "Fase 5",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "happythumbs"
+          ]
+        },
+        {
+          "id": "t19",
+          "title": "<em>Screenslaver Showdown</em>: apague o fogo da cozinha sem o Family Build",
+          "desc": "Entre com o Gelado e apague foguinho por foguinho.",
+          "tags": [
+            {
+              "text": "Fase 6",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "steam-dampit"
+          ]
+        },
+        {
+          "id": "t20",
+          "title": "<em>The Golden Years</em>: labirinto do Bomb Voyage com Invencibilidade",
+          "desc": "Ligue o bloco para os dois personagens e atravesse.",
+          "tags": [
+            {
+              "text": "Fase 7",
+              "type": "fase"
+            },
+            {
+              "text": "Invencibilidade"
+            }
+          ],
+          "sources": [
+            "ta-solucoes"
+          ]
+        },
+        {
+          "id": "t21",
+          "title": "<em>Vigilant Vigilantes</em>: termine em menos de 9 minutos",
+          "desc": "Invencibilidade + voador; atravesse o fogo em vez de apagar.",
+          "tags": [
+            {
+              "text": "Fase 8",
+              "type": "fase"
+            },
+            {
+              "text": "Invencibilidade"
+            }
+          ],
+          "sources": [
+            "steam-dampit"
+          ]
+        },
+        {
+          "id": "t22",
+          "title": "<em>Nomanisan Island</em>: dispare todas as armadilhas",
+          "desc": "Todas em volta da cachoeira, na primeira área; nada de golpe no chão.",
+          "tags": [
+            {
+              "text": "Fase 9",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "happythumbs",
+            "pst"
+          ]
+        },
+        {
+          "id": "t23",
+          "title": "<em>Return to Nomanisan Island</em>: sem levar gosma",
+          "desc": "Caixas grandes à esquerda, caixa de papelão para se esconder, torre no intervalo dos tiros.",
+          "tags": [
+            {
+              "text": "Fase 10",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "happythumbs"
+          ]
+        },
+        {
+          "id": "t24",
+          "title": "<em>Above Parr</em>: queda livre sem destroços",
+          "desc": "Siga os anéis de peças.",
+          "tags": [
+            {
+              "text": "Fase 11",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "happythumbs"
+          ]
+        },
+        {
+          "id": "t25",
+          "title": "<em>The Final Showdown</em> com Lucio Barros (treino)",
+          "desc": "Escolha <em>Lucius Best (Workout)</em> como um dos dois e vá até o fim.",
+          "tags": [
+            {
+              "text": "Fase 12",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "steam-dampit"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Pela cidade",
+      "subtitle": "Elenco, corridas e o resto do mapa",
+      "tag": "Exploração",
+      "note": "Com as peças rendendo 960x, compre o elenco inteiro e feche a cidade distrito por distrito, sem voltar.",
+      "tasks": [
+        {
+          "id": "t26",
+          "title": "Crie um herói com capa na casa da Edna",
+          "desc": "Sul de <em>Outer Municiberg</em>. Uma criação com capa dá as duas conquistas.",
+          "tags": [
+            {
+              "text": "Cidade",
+              "type": "cidade"
+            },
+            {
+              "text": "Outer Municiberg"
+            }
+          ],
+          "sources": [
+            "gp-conquistas"
+          ]
+        },
+        {
+          "id": "t27",
+          "title": "Faça as duplas: Gelado + policial, Roberto + Gilberto, Bochecha + Síndrome",
+          "desc": "Congele o policial; bata no Gilberto com o Roberto; derrote um inimigo com o Gilberto (sem poderes). Roberto e Gilberto custam 100.000 e 50.000 peças.",
+          "tags": [
+            {
+              "text": "Cidade",
+              "type": "cidade"
+            },
+            {
+              "text": "150.000 peças",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "steam-dampit",
+            "happythumbs"
+          ]
+        },
+        {
+          "id": "t28",
+          "title": "Corridas: prata com o Flecha e uma subaquática com a Dory",
+          "desc": "Dory sai do Family Build Pixar do sul de <em>Waterfront</em> (1 Incredibrick). Com o Flecha, chegue em segundo de propósito.",
+          "tags": [
+            {
+              "text": "Cidade",
+              "type": "cidade"
+            },
+            {
+              "text": "1 Incredibrick",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "steam-dampit",
+            "prodigy"
+          ]
+        },
+        {
+          "id": "t29",
+          "title": "Feche as 22 Family Builds e os 6 Red Bricks restantes",
+          "desc": "Dory, Bing Bong, Russell, Spot, Sulley e os pads comuns. O pad Pixar bônus de <em>Financial District</em> aparece por último.",
+          "tags": [
+            {
+              "text": "Red Brick",
+              "type": "redbrick"
+            },
+            {
+              "text": "Cidade",
+              "type": "cidade"
+            }
+          ],
+          "sources": [
+            "gp-redbricks",
+            "steam-familybuild"
+          ]
+        },
+        {
+          "id": "t30",
+          "title": "Gold Bricks, desafios, corridas, veículos e bolsas",
+          "desc": "210 Gold Bricks, 20 desafios, 25 corridas, 40 veículos, 93 bolsas, 113 personagens. A última aba do menu mostra o que falta por distrito.",
+          "tags": [
+            {
+              "text": "Cidade",
+              "type": "cidade"
+            },
+            {
+              "text": "~3 h"
+            }
+          ],
+          "sources": [
+            "gp-100",
+            "gamingbolt"
+          ]
+        },
+        {
+          "id": "t31",
+          "title": "Complete os 50 crimes de rua",
+          "desc": "Voe de ponto vermelho em ponto vermelho no minimapa até o contador fechar.",
+          "tags": [
+            {
+              "text": "Cidade",
+              "type": "cidade"
+            }
+          ],
+          "sources": [
+            "steam-dampit"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Chave da Cidade",
+      "subtitle": "Prisão e conferência final",
+      "tag": "Final",
+      "note": "A prisão só abre depois das 10 Crimewaves e serve para as duas conquistas de chefe. O resto aqui é conferir.",
+      "tasks": [
+        {
+          "id": "t32",
+          "title": "Solte um chefe na prisão e derrote-o com um idoso",
+          "desc": "Centro da cidade. Abrir a cela já dá uma conquista; vença a Crimewave com Reflux ou a velhinha para a outra.",
+          "tags": [
+            {
+              "text": "Cidade",
+              "type": "cidade"
+            }
+          ],
+          "sources": [
+            "gp-conquistas",
+            "steam-dampit",
+            "happythumbs"
+          ]
+        },
+        {
+          "id": "t33",
+          "title": "Confira os 8 poderes do Zezé",
+          "desc": "Se a conquista não saiu, quase sempre falta iluminar a área escura de <em>Revelations</em>.",
+          "tags": [
+            {
+              "text": "Fase 3",
+              "type": "fase"
+            }
+          ],
+          "sources": [
+            "happythumbs",
+            "steam-jackjack"
+          ]
+        },
+        {
+          "id": "t34",
+          "title": "Confira o bilhão de peças",
+          "desc": "Se faltar, repita uma fase curta com todos os multiplicadores.",
+          "tags": [
+            {
+              "text": "Custo",
+              "type": "custo"
+            }
+          ],
+          "sources": [
+            "steam-dampit"
+          ]
+        },
+        {
+          "id": "t35",
+          "title": "Feche o 100% e receba a Chave da Cidade",
+          "desc": "A última aba do menu lista cada categoria; resolva o que ainda não estiver cheio.",
+          "tags": [
+            {
+              "text": "Final"
+            }
+          ],
+          "sources": [
+            "gp-100"
+          ]
+        }
+      ]
+    }
+  ]
+}

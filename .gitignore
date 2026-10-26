@@ -1,0 +1,5 @@
+# Cópias de segurança locais (zip + LEIA-ME); não vão para o git nem para o site
+backups/
+# Imagem de compartilhamento em PNG gerada antes de converter para JPG
+og.png
+__pycache__/

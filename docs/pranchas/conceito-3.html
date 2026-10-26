@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceito 3 — O Ateliê da Edna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,500&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prancha.css">
+<style>
+/* ===== Conceito 3: O Ateliê da Edna ===== */
+.t-escuro{ /* "Laboratório depois da prova" */
+  --fundo:#0f1215;--papel:#1a1f25;--grade:#26303a;--texto:#eceae4;--suave:#c6c9cc;--mudo:#99a0a8;
+  --vermelho:#ef5440;--ouro:#e3b55a;--fita:#e8d27a;--fita-tinta:#2a2410;--alfinete:#ef5440;--sombra:#000a;
+}
+.t-claro{ /* "Mesa de croquis" */
+  --fundo:#e4e7ea;--papel:#fcfcf9;--grade:#dde6ee;--texto:#1b2026;--suave:#363d45;--mudo:#59616b;
+  --vermelho:#b42b1b;--ouro:#8a6110;--fita:#f0db7e;--fita-tinta:#2a2410;--alfinete:#b42b1b;--sombra:#1b202633;
+}
+.c3{background:var(--fundo);color:var(--texto);font:16px/1.55 Karla,system-ui,sans-serif;padding:26px}
+.c3 *{box-sizing:border-box}
+.serif{font-family:"Bodoni Moda",serif}
+/* Topo: o painel de inspiração (mood board) */
+.c3-topo{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:26px;align-items:end}
+.c3-topo small{font:700 .75rem Karla;letter-spacing:.38em;text-transform:uppercase;color:var(--mudo)}
+.c3-topo h1{font:800 clamp(2.4rem,7.5cqi,4.6rem)/.95 "Bodoni Moda",serif;margin:8px 0 12px;letter-spacing:-.01em}
+.c3-topo h1 i{font-weight:500;color:var(--vermelho)}
+.c3-topo p{margin:0;color:var(--suave);max-width:540px}
+.c3-topo blockquote{margin:14px 0 0;font:italic 500 1.05rem "Bodoni Moda",serif;color:var(--mudo)}
+.c3-amostras{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.c3-amostras div{aspect-ratio:3/4;border-radius:2px;position:relative;box-shadow:0 4px 10px var(--sombra);
+  background:var(--c);-webkit-mask:linear-gradient(#000,#000) top/100% calc(100% - 6px) no-repeat,radial-gradient(4px at 4px 100%,#0000 98%,#000) bottom left/8px 6px repeat-x;
+  mask:linear-gradient(#000,#000) top/100% calc(100% - 6px) no-repeat,radial-gradient(4px at 4px 100%,#0000 98%,#000) bottom left/8px 6px repeat-x}
+.c3-amostras div::before{content:"";position:absolute;top:6px;left:50%;width:9px;height:9px;margin-left:-4px;border-radius:50%;background:var(--alfinete);box-shadow:0 1px 2px #0006}
+.c3-amostras span{position:absolute;bottom:12px;left:6px;right:6px;font:700 .62rem Karla;letter-spacing:.08em;text-transform:uppercase;color:#fff;text-shadow:0 1px 2px #000a}
+/* Fita métrica = progresso */
+.c3-fita{position:relative;margin:28px 0 6px;height:46px;background:var(--fita);border-radius:3px;box-shadow:0 4px 10px var(--sombra);overflow:hidden;
+  background-image:repeating-linear-gradient(90deg,var(--fita-tinta) 0 1px,transparent 1px calc(100%/51)),repeating-linear-gradient(90deg,var(--fita-tinta) 0 2px,transparent 2px calc(100%/51*5));
+  background-size:100% 10px,100% 18px;background-repeat:no-repeat;background-position:0 0,0 0}
+.c3-fita b{position:absolute;bottom:4px;font:700 .7rem Karla;color:var(--fita-tinta);transform:translateX(-50%)}
+.c3-marca{position:absolute;top:-4px;bottom:-4px;left:calc(var(--g-progresso,0)*100%);width:3px;background:var(--vermelho);transition:left .5s cubic-bezier(.4,0,.2,1)}
+.c3-marca::after{content:"";position:absolute;top:0;left:-6px;border:7px solid transparent;border-top-color:var(--vermelho)}
+.c3-fita-leg{display:flex;justify-content:space-between;color:var(--mudo);font-size:.86rem}
+.c3-fita-leg b{color:var(--texto)}
+.c3-filtros{display:flex;gap:18px;margin:22px 0 0;flex-wrap:wrap}
+.c3-filtros button{font:600 1rem Karla;background:none;border:0;border-bottom:2px solid transparent;color:var(--suave);padding:8px 2px;min-height:44px;cursor:pointer}
+.c3-filtros button[aria-pressed=true]{color:var(--texto);border-bottom-color:var(--vermelho)}
+/* Capítulo = página da coleção */
+.c3-colecao{margin-top:24px;border-top:1px solid var(--grade);padding-top:18px}
+.c3-colecao>header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.c3-colecao h2{font:800 2rem/1 "Bodoni Moda",serif;margin:0}
+.c3-colecao h2 i{font-weight:500;font-size:1.1rem;color:var(--mudo);margin-right:8px}
+.c3-colecao header p{margin:4px 0 0;color:var(--suave)}
+.c3-colecao header b{font:italic 500 1.2rem "Bodoni Moda",serif}
+.c3-croquis{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+/* Conquista = croqui em papel quadriculado */
+.c3-croqui{position:relative;background:var(--papel);padding:18px 18px 16px;box-shadow:0 6px 18px var(--sombra);
+  background-image:linear-gradient(var(--grade) 1px,transparent 1px),linear-gradient(90deg,var(--grade) 1px,transparent 1px);background-size:18px 18px}
+.c3-croqui header{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:center}
+.c3-croqui img{width:64px;height:64px;border-radius:50%;filter:grayscale(1);border:2px solid var(--texto)}
+.c3-croqui[data-feita] img{filter:none}
+.c3-croqui h3{font:800 1.3rem/1.05 "Bodoni Moda",serif;margin:0}
+.c3-croqui .rar{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mudo)}
+.c3-croqui .desc{margin:12px 0 6px;font:italic 500 1rem "Bodoni Moda",serif;color:var(--suave)}
+.c3-croqui .dica{margin:0;background:var(--papel);padding:2px 0}
+.c3-croqui footer{display:flex;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}
+.c3-croqui .chip{font:600 .8rem Karla;border:1px solid var(--grade);background:var(--papel);padding:2px 8px}
+.c3-amostra{position:absolute;top:-8px;right:16px;width:30px;height:42px;background:var(--rar);box-shadow:0 3px 6px var(--sombra)}
+.c3-croqui[data-rar=epic]{--rar:var(--vermelho)}.c3-croqui[data-rar=rare]{--rar:var(--ouro)}.c3-croqui[data-rar=uncommon]{--rar:#5a8fbf}.c3-croqui[data-rar=common]{--rar:var(--mudo)}
+.c3-ok{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border:1px solid var(--texto);background:var(--papel);font:700 .85rem Karla;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.c3-ok input{width:18px;height:18px;accent-color:var(--vermelho)}
+/* Assinatura: a rubrica da Edna é desenhada à mão sobre o croqui aprovado */
+.c3-rubrica{position:absolute;right:10px;bottom:48px;width:150px;height:70px;pointer-events:none;overflow:visible}
+.c3-rubrica path{fill:none;stroke:var(--vermelho);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset .8s cubic-bezier(.6,0,.3,1)}
+.c3-rubrica text{font:italic 500 .8rem "Bodoni Moda",serif;fill:var(--vermelho);opacity:0;transition:opacity .3s .7s}
+.c3-croqui[data-feita] .c3-rubrica path{stroke-dashoffset:0}
+.c3-croqui[data-feita] .c3-rubrica text{opacity:1}
+@container (max-width:560px){
+  .c3{padding:16px}
+  .c3-topo{grid-template-columns:1fr;gap:18px}
+  .c3-croquis{grid-template-columns:1fr}
+  .c3-fita{height:40px}
+}
+@media (prefers-reduced-motion:reduce){.c3-rubrica path,.c3-rubrica text,.c3-marca{transition:none}}
+</style>
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Conceito 3 · O Ateliê da Edna</h1>
+   <p><strong>O guia é o caderno de croquis da Edna Moda para a coleção "100%".</strong> Cada conquista é um croqui em papel quadriculado com uma amostra de tecido; cada capítulo, uma página da coleção; o progresso é medido na fita métrica.</p></div>
+  <div class="pr-nav"><a href="conceito-4.html">Conceito 4 (1 + cores do 2) →</a><a href="conceito-1.html">← Conceito 1</a><a href="conceito-2.html">← Conceito 2</a></div>
+ </div>
+ <div class="pr-grid">
+  <div class="pr-box">
+   <h2>O papel de cada peça</h2>
+   <table>
+    <tr><td>Página</td><td>O ateliê: papel quadriculado, alfinetes, tecidos, tipografia de revista de moda</td></tr>
+    <tr><td>Topo</td><td>O painel de inspiração: título em Bodoni, uma amostra de tecido por capítulo, frase da Edna</td></tr>
+    <tr><td>Capítulo</td><td>Uma página da coleção ("Look 01 · Os Incríveis 2")</td></tr>
+    <tr><td>Conquista</td><td>Um croqui com retrato (ícone) em grafite até ser aprovado e amostra de tecido na cor da raridade</td></tr>
+    <tr><td>Marcar</td><td>"Aprovar" → a rubrica da Edna é desenhada à mão sobre o croqui</td></tr>
+    <tr><td>Progresso</td><td>A fita métrica com 51 marcas; o marcador vermelho anda</td></tr>
+    <tr><td>Filtros</td><td>"Coleção / Na prancheta / Aprovados"; perdível = "Prova única"</td></tr>
+    <tr><td>Fontes</td><td>"Fornecedores", como etiquetas de tecido</td></tr>
+   </table>
+  </div>
+  <div class="pr-box">
+   <h2>Paleta e fontes</h2>
+   <b>Escuro · "Laboratório depois da prova"</b>
+   <div class="pr-sw"><span style="background:#0f1215;color:#eceae4">fundo #0f1215</span><span style="background:#1a1f25;color:#eceae4">papel #1a1f25</span><span style="background:#ef5440">vermelho #ef5440</span><span style="background:#e3b55a">ouro #e3b55a</span><span style="background:#e8d27a">fita #e8d27a</span></div>
+   <b>Claro · "Mesa de croquis"</b>
+   <div class="pr-sw"><span style="background:#e4e7ea">fundo #e4e7ea</span><span style="background:#fcfcf9">papel #fcfcf9</span><span style="background:#b42b1b;color:#fff">vermelho #b42b1b</span><span style="background:#8a6110;color:#fff">ouro #8a6110</span><span style="background:#f0db7e">fita #f0db7e</span></div>
+   <p style="margin:0"><span style="font:800 1.5rem 'Bodoni Moda'">Bodoni Moda</span> títulos de revista de moda · <span style="font:600 1rem Karla">Karla</span> texto limpo de ficha técnica.</p>
+   <h2 style="margin-top:14px">Momento de assinatura</h2>
+   <p class="pr-note" style="margin:0">Ao aprovar, a rubrica vermelha da Edna se desenha sobre o croqui, o retrato sai do grafite e o marcador da fita métrica anda. <b>Teste: clique em "Aprovar" nos croquis.</b></p>
+  </div>
+ </div>
+ <div class="pr-label">Recorte real · tema escuro</div>
+ <div class="pr-frame"><div class="c3 t-escuro" data-quadro></div></div>
+ <div class="pr-label">Recorte real · tema claro</div>
+ <div class="pr-frame"><div class="c3 t-claro" data-quadro></div></div>
+ <div class="pr-label">Celular · 375 px</div>
+ <div class="pr-phones">
+  <div class="pr-phone"><div class="c3 t-escuro" data-quadro></div></div>
+  <div class="pr-phone"><div class="c3 t-claro" data-quadro></div></div>
+ </div>
+</div>
+<script src="dados.js"></script>
+<script src="prancha.js"></script>
+<script>
+(async () => {
+const TECIDOS = [['#c8321e', 'Filme 2'], ['#1f2a3a', 'Filme 1'], ['#d6862a', 'Cidade'], ['#4f7f9e', 'Elenco'], ['#a8892f', 'Coleção']];
+const RUBRICA = '<svg class="c3-rubrica" viewBox="0 0 150 70" aria-hidden="true"><path d="M8 48 C 20 10, 34 10, 30 40 C 27 58, 14 56, 22 40 C 32 22, 52 30, 48 46 C 46 54, 56 52, 62 38 C 66 30, 70 46, 76 44 C 84 40, 84 28, 92 34 C 98 40, 104 46, 142 22"/><text x="60" y="66">aprovado, querida</text></svg>';
+const render = vm => `
+<section class="c3-topo">
+ <div><small>Edna Moda · Coleção 100%</small>
+  <h1>Os Incríveis, <i>sem capas</i></h1>
+  <p>As ${vm.total} conquistas de <em>LEGO The Incredibles</em> desenhadas uma a uma: o que fazer, onde, e a ordem que poupa horas.</p>
+  <blockquote>“Eu nunca olho para trás, querida. Distrai do agora.”</blockquote>
+ </div>
+ <div class="c3-amostras">${TECIDOS.map(([c, n]) => `<div style="--c:${c}"><span>${n}</span></div>`).join('')}</div>
+</section>
+<div class="c3-fita" aria-hidden="true"><span class="c3-marca"></span>${[10, 20, 30, 40, 50].map(n => `<b style="left:${n / 51 * 100}%">${n}</b>`).join('')}</div>
+<div class="c3-fita-leg"><span>Medida da coleção: <b data-feitas></b> aprovados</span><b data-pct></b></div>
+<div class="c3-filtros"><button aria-pressed="true">Coleção</button><button aria-pressed="false">Na prancheta</button><button aria-pressed="false">Aprovados</button></div>
+<section class="c3-colecao">
+ <header><div><h2><i>Look 0${vm.capitulo.n}</i>${vm.capitulo.titulo}</h2><p>${vm.capitulo.subtitulo}</p></div><b>1 de ${vm.capitulo.total}</b></header>
+ <div class="c3-croquis">
+ ${vm.cards.map(c => `<article class="c3-croqui" data-card data-rar="${c.raridade.chave}"${c.feita ? ' data-feita' : ''}>
+   <span class="c3-amostra" aria-hidden="true"></span>
+   <header><img src="${c.icone}" alt=""><div><h3>${c.nome}</h3><span class="rar">${c.raridade.rotulo} · ${c.raridade.pct}</span></div></header>
+   <p class="desc">${c.desc}</p><p class="dica">${c.dica}</p>
+   ${RUBRICA}
+   <footer>${c.dificuldade ? `<span class="chip">Dificuldade ${c.dificuldade}/5</span>` : ''}${c.tempo ? `<span class="chip">${c.tempo}</span>` : ''}
+    <label class="c3-ok"><input type="checkbox" aria-label="Aprovar ${c.nome}"> Aprovar</label></footer>
+  </article>`).join('')}
+ </div>
+</section>`;
+await montar({ render, capitulo: 'incredibles-2', ids: ['COMPLETE_CHAPTER07', 'CHAPTER09_ALL8INCREDIBLE', 'CHAPTER07_THROWENEMIESINGEARS'], feitas: ['COMPLETE_CHAPTER07'] });
+})();
+</script>
+</body>
+</html>

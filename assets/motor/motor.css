@@ -1,0 +1,41 @@
+/* MOTOR — o mínimo FUNCIONAL que todo guia precisa, igual em todos. Não edite por jogo.
+   Nada de cor, fonte, forma ou layout aqui: isso é do tema (assets/tema/tema.css).
+   O tema pode sobrescrever a aparência de qualquer coisa abaixo, mas não o comportamento. */
+
+[hidden]{display:none!important}
+
+/* Grupos recolhidos (capítulos e etapas): o corpo some; o cabeçalho continua clicável */
+[data-recolhido] [data-g="corpo"]{display:none}
+
+/* Spoilers: borrados até o visitante pedir (botão [data-g="spoilers"] liga data-spoilers no <html>) */
+[data-g-spoiler]{filter:blur(6px);user-select:none;transition:filter .2s}
+:root[data-spoilers] [data-g-spoiler],[data-g-spoiler]:focus-within{filter:none;user-select:auto}
+
+/* Acessibilidade */
+.g-pular{position:absolute;left:-9999px;top:8px;z-index:100}
+.g-pular:focus{left:12px}
+.g-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+html{overflow-x:clip}
+body{overflow-x:clip}
+
+/* Destaque ao pular para um item (o tema pode redesenhar a animação g-flash) */
+.g-flash{animation:g-flash 1.2s ease}
+@keyframes g-flash{30%{outline:3px solid currentColor;outline-offset:4px}}
+
+/* Aviso rápido (exportar/importar) e erro de carregamento */
+.g-toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:100;padding:10px 16px;border-radius:8px;background:#111;color:#fff;font:15px/1.4 system-ui,sans-serif;box-shadow:0 8px 24px #0006}
+.g-erro{padding:40px 16px;text-align:center}
+.g-erro strong{display:block;margin-bottom:6px}
+
+/* Menos movimento para quem pede */
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+
+/* Impressão: tudo aberto, spoilers visíveis, sem botões. O tema escolhe as cores da impressão. */
+@media print{
+  [data-recolhido] [data-g="corpo"]{display:block!important}
+  [data-g-spoiler]{filter:none!important}
+  [data-g="topo"] nav,[data-g="abrir-menu"],[data-g="alternar-tema"],[data-g="menu-mais"],[data-g="busca"],[data-g="proxima"],.g-toast{display:none!important}
+}

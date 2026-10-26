@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceito 1 — O Dossiê da NSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=Staatliches&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prancha.css">
+<style>
+/* ===== Conceito 1: O Dossiê da NSA ===== */
+.t-escuro{ /* "Arquivo morto, depois do expediente" */
+  --mesa:#13161b;--pasta:#2b2a24;--pasta-borda:#4a4637;--ficha:#1e2229;--pauta:#2c333d;--texto:#e9e3d5;--suave:#c4c0b4;--mudo:#9a978d;
+  --tinta:#ef5a45;--tinta-fundo:#ef5a4522;--manila:#d6ad5f;--grampo:#9aa3ad;--sombra:#0008;
+}
+.t-claro{ /* "Mesa do agente Dicker" */
+  --mesa:#cfc7b6;--pasta:#e3c88f;--pasta-borda:#b8975a;--ficha:#f7f2e5;--pauta:#d9e2ea;--texto:#24211b;--suave:#3f3a30;--mudo:#62594a;
+  --tinta:#b3261e;--tinta-fundo:#b3261e18;--manila:#7a5717;--grampo:#7b848e;--sombra:#5a4a2a33;
+}
+.c1{background:var(--mesa);color:var(--texto);font:16px/1.55 "Libre Franklin",system-ui,sans-serif;padding:24px}
+.c1 *{box-sizing:border-box}
+.tw{font-family:"Courier Prime",monospace}
+/* Capa da pasta */
+.c1-capa{position:relative;background:var(--pasta);border:1px solid var(--pasta-borda);border-radius:4px 14px 4px 4px;padding:22px 22px 18px;box-shadow:0 8px 24px var(--sombra)}
+.c1-capa::before{content:"";position:absolute;top:-14px;left:28px;width:180px;height:16px;background:var(--pasta);border:1px solid var(--pasta-borda);border-bottom:0;border-radius:8px 8px 0 0}
+.c1-etq{display:inline-block;background:var(--ficha);border:1px solid var(--pasta-borda);padding:4px 12px;font-size:.82rem;letter-spacing:.06em}
+.c1-capa h1{font:400 clamp(2.1rem,6.4cqi,3.6rem)/1 Staatliches,sans-serif;letter-spacing:.03em;margin:16px 0 4px}
+.c1-capa h1 em{font-style:normal;color:var(--tinta)}
+.c1-capa p{margin:0 0 14px;color:var(--suave);max-width:620px}
+.c1-carimbo{position:absolute;right:20px;top:18px;transform:rotate(-8deg);border:3px solid var(--tinta);color:var(--tinta);font:400 1.25rem/1 Staatliches,sans-serif;letter-spacing:.12em;padding:6px 10px;border-radius:4px;opacity:.85}
+.c1-campos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--pasta-borda);background:var(--ficha)}
+.c1-campos div{padding:6px 10px;border-right:1px solid var(--pasta-borda)}
+.c1-campos div:last-child{border-right:0}
+.c1-campos small{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mudo)}
+.c1-campos b{font:700 1.05rem "Courier Prime",monospace}
+/* Ficha de controle: um quadrado por conquista */
+.c1-controle{margin-top:14px;background:var(--ficha);border:1px solid var(--pasta-borda);padding:10px 12px}
+.c1-controle header{display:flex;justify-content:space-between;gap:10px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mudo)}
+.c1-controle header b{color:var(--texto);font:700 .95rem "Courier Prime",monospace;letter-spacing:0;text-transform:none}
+.c1-grade{display:grid;grid-template-columns:repeat(auto-fill,18px);gap:4px;margin-top:8px}
+.c1-grade i{aspect-ratio:1;border:1px solid var(--pauta);border-radius:2px;position:relative}
+.c1-grade i[data-on]{background:var(--tinta);border-color:var(--tinta)}
+.c1-filtros{display:flex;gap:6px;flex-wrap:wrap;margin:22px 0 0}
+.c1-filtros button{font:700 .85rem "Courier Prime",monospace;background:var(--ficha);color:var(--suave);border:1px solid var(--pasta-borda);padding:10px 14px;min-height:44px;border-radius:2px;cursor:pointer}
+.c1-filtros button[aria-pressed=true]{background:var(--texto);color:var(--mesa)}
+/* Pasta = capítulo */
+.c1-pasta{margin-top:26px;position:relative;background:var(--pasta);border:1px solid var(--pasta-borda);border-radius:0 10px 6px 6px;padding:16px}
+.c1-aba{position:absolute;top:-30px;left:-1px;background:var(--pasta);border:1px solid var(--pasta-borda);border-bottom:0;border-radius:8px 8px 0 0;padding:5px 16px 4px;font:400 1.1rem/1.2 Staatliches,sans-serif;letter-spacing:.08em}
+.c1-pasta>header{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:12px}
+.c1-pasta h2{font:400 1.7rem/1 Staatliches,sans-serif;margin:0;letter-spacing:.02em}
+.c1-pasta header p{margin:2px 0 0;color:var(--suave)}
+.c1-pasta header b{font:700 .95rem "Courier Prime",monospace}
+.c1-fichas{display:grid;gap:14px}
+/* Ficha = conquista */
+.c1-ficha{position:relative;display:grid;grid-template-columns:76px minmax(0,1fr);gap:14px;background:var(--ficha);padding:16px 16px 14px;border-radius:2px;box-shadow:0 3px 10px var(--sombra);
+  background-image:repeating-linear-gradient(to bottom,transparent 0 27px,var(--pauta) 27px 28px);background-position:0 46px}
+.c1-ficha::before{content:"";position:absolute;left:0;right:0;top:44px;border-top:2px solid var(--tinta);opacity:.55}
+.c1-foto{position:relative;align-self:start;background:#fff;padding:4px 4px 12px;transform:rotate(-3deg);box-shadow:0 2px 6px var(--sombra)}
+.c1-foto img{display:block;width:100%;aspect-ratio:1;filter:grayscale(1) contrast(1.1)}
+.c1-foto::after{content:"";position:absolute;top:-8px;left:22px;width:12px;height:30px;border:2px solid var(--grampo);border-radius:6px}
+.c1-ficha[data-feita] .c1-foto img{filter:none}
+.c1-ficha h3{font:700 1.15rem/1.15 "Courier Prime",monospace;margin:0 0 16px;text-transform:uppercase}
+.c1-ficha .desc{margin:0;font:italic .95rem/28px "Courier Prime",monospace;color:var(--suave)}
+.c1-ficha .dica{margin:0;line-height:28px}
+.c1-ficha .dica b{font:700 .78rem "Courier Prime",monospace;letter-spacing:.1em;color:var(--tinta)}
+.c1-rodape{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.c1-rodape span{font:700 .78rem "Courier Prime",monospace;border:1px solid var(--pasta-borda);padding:2px 8px}
+.c1-rodape span.rar{color:var(--tinta);border-color:var(--tinta)}
+.c1-enc{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;font:700 .85rem "Courier Prime",monospace;cursor:pointer;border:1px dashed var(--pasta-borda);padding:0 12px}
+.c1-enc input{width:20px;height:20px;accent-color:var(--tinta)}
+/* Assinatura: o carimbo "CASO ENCERRADO" desce sobre a ficha */
+.c1-selo{position:absolute;right:18px;top:4px;pointer-events:none;border:4px double var(--tinta);color:var(--tinta);background:var(--tinta-fundo);font:400 1.6rem/1 Staatliches,sans-serif;letter-spacing:.1em;padding:8px 12px;border-radius:6px;transform:rotate(-12deg) scale(2.4);opacity:0;transition:transform .22s cubic-bezier(.3,1.6,.6,1),opacity .12s}
+.c1-ficha[data-feita] .c1-selo{opacity:.9;transform:rotate(-12deg) scale(1)}
+@container (max-width:560px){
+  .c1{padding:14px}
+  .c1-campos{grid-template-columns:1fr 1fr}.c1-campos div:nth-child(2){border-right:0}.c1-campos div:nth-child(-n+2){border-bottom:1px solid var(--pasta-borda)}
+  .c1-carimbo{position:static;display:inline-block;margin-top:10px}
+  .c1-ficha{grid-template-columns:56px minmax(0,1fr);gap:10px;padding:14px 12px 12px}
+  .c1-selo{font-size:1.1rem;right:8px;top:2px}
+}
+@media (prefers-reduced-motion:reduce){.c1-selo{transition:none}}
+</style>
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Conceito 1 · O Dossiê da NSA</h1>
+   <p><strong>O guia é o arquivo do agente Rick Dicker sobre a família Pêra.</strong> Cada conquista é um caso numa ficha datilografada; cada capítulo, uma pasta de papel manilha; marcar é carimbar "caso encerrado".</p></div>
+  <div class="pr-nav"><a href="conceito-4.html">Conceito 4 (1 + cores do 2) →</a><a href="conceito-2.html">Conceito 2 →</a><a href="conceito-3.html">Conceito 3 →</a></div>
+ </div>
+ <div class="pr-grid">
+  <div class="pr-box">
+   <h2>O papel de cada peça</h2>
+   <table>
+    <tr><td>Página</td><td>Uma mesa de agente com pastas abertas (Programa de Realocação de Supers)</td></tr>
+    <tr><td>Topo</td><td>A capa da pasta: etiqueta com o nº do processo (App ID), carimbo CONFIDENCIAL e campos do formulário (dificuldade, horas, jogadas)</td></tr>
+    <tr><td>Capítulo</td><td>Uma pasta manilha com aba ("Pasta 1 · Os Incríveis 2")</td></tr>
+    <tr><td>Conquista</td><td>Ficha pautada com a foto (ícone) presa por clipe, em preto e branco até o caso fechar</td></tr>
+    <tr><td>Marcar</td><td>"Encerrar caso" → carimbo vermelho CASO ENCERRADO</td></tr>
+    <tr><td>Progresso</td><td>A ficha de controle: 51 quadrados, um por caso, que recebem tinta</td></tr>
+    <tr><td>Filtros</td><td>"Todos / Em aberto / Encerrados"; perdível = "Prazo"; dificuldade = "Nível de ameaça"</td></tr>
+    <tr><td>Fontes</td><td>"Informantes", como anexos grampeados no fim do dossiê</td></tr>
+   </table>
+  </div>
+  <div class="pr-box">
+   <h2>Paleta e fontes</h2>
+   <b>Escuro · "Arquivo morto, depois do expediente"</b>
+   <div class="pr-sw"><span style="background:#13161b;color:#e9e3d5">mesa #13161b</span><span style="background:#2b2a24;color:#e9e3d5">pasta #2b2a24</span><span style="background:#1e2229;color:#e9e3d5">ficha #1e2229</span><span style="background:#ef5a45">tinta #ef5a45</span><span style="background:#d6ad5f">manilha #d6ad5f</span></div>
+   <b>Claro · "Mesa do agente Dicker"</b>
+   <div class="pr-sw"><span style="background:#cfc7b6">mesa #cfc7b6</span><span style="background:#e3c88f">pasta #e3c88f</span><span style="background:#f7f2e5">ficha #f7f2e5</span><span style="background:#b3261e;color:#fff">tinta #b3261e</span><span style="background:#7a5717;color:#fff">manilha #7a5717</span></div>
+   <p style="margin:0"><span style="font:400 1.5rem Staatliches">Staatliches</span> títulos e carimbos · <span style="font:700 1rem 'Courier Prime'">Courier Prime</span> o datilografado · <span style="font:600 1rem 'Libre Franklin'">Libre Franklin</span> o texto corrido.</p>
+   <h2 style="margin-top:14px">Momento de assinatura</h2>
+   <p class="pr-note" style="margin:0">Ao encerrar o caso, o carimbo desce sobre a ficha com um quique, a foto ganha cor e um quadrado da ficha de controle recebe tinta. <b>Teste: clique em "Encerrar caso" nas fichas abaixo.</b></p>
+  </div>
+ </div>
+ <div class="pr-label">Recorte real · tema escuro</div>
+ <div class="pr-frame"><div class="c1 t-escuro" data-quadro></div></div>
+ <div class="pr-label">Recorte real · tema claro</div>
+ <div class="pr-frame"><div class="c1 t-claro" data-quadro></div></div>
+ <div class="pr-label">Celular · 375 px</div>
+ <div class="pr-phones">
+  <div class="pr-phone"><div class="c1 t-escuro" data-quadro></div></div>
+  <div class="pr-phone"><div class="c1 t-claro" data-quadro></div></div>
+ </div>
+</div>
+<script src="dados.js"></script>
+<script src="prancha.js"></script>
+<script>
+(async () => {
+const AMEACA = ['', 'baixa', 'moderada', 'alta', 'severa', 'extrema'];
+const render = vm => `
+<section class="c1-capa">
+ <span class="c1-etq tw">PROCESSO Nº 818320 · PROGRAMA DE REALOCAÇÃO DE SUPERS</span>
+ <span class="c1-carimbo">Confidencial</span>
+ <h1>Assunto: <em>100%</em> da família Pêra</h1>
+ <p>${vm.total} casos em aberto em <em>LEGO The Incredibles</em>, cada um com o procedimento para encerrar e a ordem que poupa horas de trabalho de campo.</p>
+ <div class="c1-campos">
+  <div><small>Nível de ameaça</small><b>${vm.overview.difficulty}/10</b></div>
+  <div><small>Horas de campo</small><b>${vm.overview.hours}</b></div>
+  <div><small>Operações</small><b>${vm.overview.playthroughs}</b></div>
+  <div><small>Prazos (perdíveis)</small><b>Nenhum</b></div>
+ </div>
+ <div class="c1-controle">
+  <header><span>Ficha de controle · casos encerrados</span><b data-feitas></b></header>
+  <div class="c1-grade" data-grade>${'<i></i>'.repeat(vm.total)}</div>
+ </div>
+</section>
+<div class="c1-filtros"><button aria-pressed="true">Todos</button><button aria-pressed="false">Em aberto</button><button aria-pressed="false">Encerrados</button></div>
+<section class="c1-pasta">
+ <span class="c1-aba">Pasta ${vm.capitulo.n}</span>
+ <header><div><h2>${vm.capitulo.titulo}</h2><p>${vm.capitulo.subtitulo}</p></div><b>1/${vm.capitulo.total} encerrados</b></header>
+ <div class="c1-fichas">
+ ${vm.cards.map(c => `<article class="c1-ficha" data-card${c.feita ? ' data-feita' : ''}>
+   <div class="c1-foto"><img src="${c.icone}" alt=""></div>
+   <div><h3>${c.nome}</h3><p class="desc">“${c.desc}”</p><p class="dica"><b>PROCEDIMENTO ·</b> ${c.dica}</p>
+    <div class="c1-rodape"><span class="rar">${c.raridade.rotulo} · ${c.raridade.pct}</span>${c.dificuldade ? `<span>Ameaça ${AMEACA[c.dificuldade]}</span>` : ''}${c.tempo ? `<span>${c.tempo}</span>` : ''}
+     <label class="c1-enc"><input type="checkbox" aria-label="Encerrar o caso ${c.nome}"> Encerrar caso</label></div></div>
+   <span class="c1-selo" aria-hidden="true">Caso encerrado</span>
+  </article>`).join('')}
+ </div>
+</section>`;
+await montar({ render, capitulo: 'incredibles-2', ids: ['COMPLETE_CHAPTER07', 'CHAPTER09_ALL8INCREDIBLE', 'CHAPTER07_THROWENEMIESINGEARS'], feitas: ['COMPLETE_CHAPTER07'] });
+document.querySelectorAll('[data-quadro]').forEach(q => {
+  const set = p => { const n = Math.round(p * 51); q.querySelectorAll('[data-grade] i').forEach((el, i) => el.toggleAttribute('data-on', i < n)); };
+  q.addEventListener('progresso', e => set(e.detail));
+  set(+getComputedStyle(q).getPropertyValue('--g-progresso') || 0);
+});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+/* TEMA "O Dossiê da Família" — LEGO The Incredibles.
+   O arquivo do agente Rick Dicker sobre a família Pêra, nas cores do uniforme dos Incríveis.
+   Escuro "Noite em Municiberg" · Claro "Cartaz de Metroville". Direção de arte: docs/direcao-de-arte.md. */
+
+/* ================================================================ tokens */
+:root,[data-theme="dark"]{ /* Noite em Municiberg */
+  --mesa:#1b1411;--pasta:#2a1f1a;--pasta-borda:#4d382b;--ficha:#33261f;--pauta:#45342a;
+  --texto:#f3e6cf;--suave:#dccdb3;--mudo:#b5a487;
+  --tinta:#d0381c;--tinta-fundo:#ee4a2f22;--tinta-txt:#ff7a62;--laranja:#f4973d;--azul:#4fb3aa;--verde:#8cc66f;--preto:#120d0b;
+  --grampo:#b5a487;--sombra:#0009;--foto:#f3e6cf;
+  color-scheme:dark;
+}
+[data-theme="light"]{ /* Cartaz de Metroville */
+  --mesa:#e8d6b3;--pasta:#f4b46a;--pasta-borda:#c9772a;--ficha:#fbf3e2;--pauta:#ead9b9;
+  --texto:#21170f;--suave:#3d2f22;--mudo:#5e4c39;
+  --tinta:#c0301a;--tinta-fundo:#c0301a18;--tinta-txt:#962110;--laranja:#a8520a;--azul:#1d6c66;--verde:#3d6e2c;--preto:#21170f;
+  --grampo:#7b6a55;--sombra:#5a3a1a33;--foto:#fffdf7;
+  color-scheme:light;
+}
+:root{
+  --f-titulo:Staatliches,"Arial Narrow",sans-serif;
+  --f-tw:"Courier Prime","Courier New",monospace;
+  --f-texto:"Libre Franklin",system-ui,sans-serif;
+  --largura:1040px;
+}
+
+/* ================================================================ base */
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--mesa);scroll-padding-top:72px}
+body{margin:0;background:var(--mesa);color:var(--texto);font:16px/1.6 var(--f-texto);-webkit-text-size-adjust:100%;
+  background-image:radial-gradient(ellipse at 50% -10%,#ffffff0d,transparent 60%)}
+a{color:inherit;text-decoration-color:var(--tinta);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:var(--tinta-txt)}
+h1,h2,h3{margin:0;font-weight:400}
+p{margin:0}
+img{max-width:100%}
+button,input,summary,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--laranja);outline-offset:3px}
+.dz-tw{font-family:var(--f-tw);font-weight:700;letter-spacing:.04em}
+.dz-leve{color:var(--mudo);font-size:.82rem}
+.dz-mesa{max-width:var(--largura);margin:0 auto;padding:22px 16px 40px}
+.g-pular{background:var(--tinta);color:#fff;padding:10px 16px}
+
+/* botões comuns */
+.dz-btn,.dz-filtros button,.dz-mais summary,.dz-mais-lista button,.dz-btn-menu,.dz-btn-tema{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;cursor:pointer;
+  font:700 .88rem var(--f-tw);letter-spacing:.02em;background:var(--ficha);color:var(--suave);border:1px solid var(--pasta-borda);border-radius:2px;text-decoration:none}
+.dz-btn:hover,.dz-filtros button:hover,.dz-mais summary:hover{color:var(--texto);border-color:var(--texto)}
+.dz-btn-forte{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.dz-btn-forte:hover{color:#fff;filter:brightness(1.08)}
+.dz-filtros button[aria-pressed="true"],[data-g="ocultar-feitas"][aria-pressed="true"],.dz-mais-lista button[aria-pressed="true"]{background:var(--texto);color:var(--mesa);border-color:var(--texto)}
+
+/* ================================================================ topo (casca) */
+.dz-topo{position:sticky;top:0;z-index:20;background:var(--mesa);border-bottom:1px solid var(--pasta-borda);box-shadow:0 6px 16px var(--sombra)}
+.dz-topo::after{content:"";display:block;height:6px;background:repeating-linear-gradient(90deg,var(--tinta) 0 40px,var(--laranja) 40px 60px,var(--preto) 60px 70px)}
+.dz-barra{max-width:var(--largura);margin:0 auto;padding:8px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.dz-marca{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:400 1.35rem/1 var(--f-titulo);letter-spacing:.04em;margin-right:auto;min-height:44px}
+.dz-marca b{font-weight:400;color:var(--tinta-txt)}
+.dz-lacre-mini{width:30px;height:30px;border-radius:50%;background:var(--laranja);border:3px solid var(--preto);display:grid;place-items:center;font:400 1.1rem/1 var(--f-titulo);color:var(--preto)}
+.dz-nav{display:none;width:100%;flex-direction:column;gap:6px;padding:6px 0 4px}
+.dz-nav[data-aberto]{display:flex}
+.dz-nav a{display:flex;align-items:center;min-height:44px;padding:0 14px;font:400 1.15rem var(--f-titulo);letter-spacing:.06em;text-decoration:none;background:var(--pasta);border:1px solid var(--pasta-borda);border-top:3px solid var(--pasta-borda);border-radius:6px 6px 0 0}
+.dz-nav a[aria-current="page"]{border-top-color:var(--tinta);color:var(--texto)}
+.dz-btn-tema .dz-lampada{width:14px;height:14px;border-radius:50%;background:var(--laranja);box-shadow:0 0 10px var(--laranja)}
+[data-theme="light"] .dz-btn-tema .dz-lampada{background:var(--preto);box-shadow:none}
+.dz-tema-txt{display:none}
+@media (min-width:760px){
+  .dz-btn-menu{display:none}
+  .dz-nav{display:flex;width:auto;flex-direction:row;padding:0}
+  .dz-nav a{min-height:40px;font-size:1.05rem}
+  .dz-tema-txt{display:inline}
+}
+
+/* ================================================================ capa da pasta */
+.dz-capa{position:relative;margin-top:18px;background:var(--pasta);border:1px solid var(--pasta-borda);border-radius:4px 14px 4px 4px;padding:18px 14px 30px;box-shadow:0 8px 24px var(--sombra)}
+.dz-capa::before{content:"";position:absolute;top:-14px;left:22px;width:150px;height:16px;background:var(--pasta);border:1px solid var(--pasta-borda);border-bottom:0;border-radius:8px 8px 0 0}
+.dz-capa::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;border-radius:0 0 4px 4px;background:repeating-linear-gradient(90deg,var(--tinta) 0 40px,var(--laranja) 40px 60px,var(--preto) 60px 70px)}
+.dz-etq{display:inline-block;max-width:calc(100% - 56px);background:var(--ficha);border:1px solid var(--pasta-borda);padding:4px 10px;font-size:.74rem}
+.dz-carimbo{display:inline-block;margin:12px 0 0;transform:rotate(-6deg);border:3px solid var(--tinta);color:var(--tinta-txt);font:400 1.1rem/1 var(--f-titulo);letter-spacing:.12em;padding:6px 10px;border-radius:4px;opacity:.9}
+.dz-lacre{position:absolute;top:12px;right:12px;width:46px;height:46px;border-radius:50%;background:var(--laranja);border:4px solid var(--preto);display:grid;place-items:center;font:400 1.8rem/1 var(--f-titulo);color:var(--preto);box-shadow:0 4px 10px var(--sombra)}
+.dz-capa h1{font:400 clamp(2.1rem,8.4vw,3.7rem)/1 var(--f-titulo);letter-spacing:.02em;margin:12px 0 8px}
+.dz-capa h1 em{font-style:normal;color:var(--tinta-txt)}
+.dz-intro{color:var(--suave);max-width:640px;margin-bottom:14px}
+.dz-campos{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--pasta-borda);background:var(--ficha)}
+.dz-campos div{padding:7px 10px;border-right:1px solid var(--pasta-borda);border-bottom:1px solid var(--pasta-borda);min-width:0}
+.dz-campos div:nth-child(2n){border-right:0}
+.dz-campos small{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mudo)}
+.dz-campos b{font:700 1rem var(--f-tw)}
+.dz-campo-forte b{color:var(--tinta-txt)}
+.dz-parecer{margin-top:10px;background:var(--ficha);border:1px solid var(--pasta-borda);padding:10px 12px;color:var(--suave)}
+.dz-parecer b,.dz-nota b,.dz-dica b,.dz-ref b,.dz-prazo b,.dz-informantes b{font:700 .74rem var(--f-tw);letter-spacing:.1em;color:var(--tinta-txt)}
+.dz-controle{margin-top:12px;background:var(--ficha);border:1px solid var(--pasta-borda);padding:10px 12px}
+.dz-controle header{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mudo)}
+.dz-controle header b{color:var(--texto);font:700 1rem var(--f-tw);letter-spacing:0;text-transform:none;white-space:nowrap}
+.dz-grade{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:8px}
+.dz-grupo{display:flex;flex-wrap:wrap;gap:4px}
+.dz-grade a{display:block;width:20px;height:20px;border:1px solid var(--pauta);border-radius:2px;background:transparent;transition:background .2s,border-color .2s}
+.dz-grade a:hover{border-color:var(--texto)}
+.dz-grade a[data-on]{background:var(--tinta);border-color:var(--tinta)}
+.dz-grupo:nth-child(2n) a[data-on]{background:var(--laranja);border-color:var(--laranja)}
+.dz-raridades{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font:700 .78rem var(--f-tw);color:var(--mudo)}
+.dz-raridades b{color:var(--suave)}
+.dz-raridades:empty{display:none}
+.dz-capa-pe{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:14px}
+@media (min-width:700px){
+  .dz-capa{padding:24px 24px 34px}
+  .dz-capa::before{width:180px;left:28px}
+  .dz-campos{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .dz-campos div:nth-child(2n){border-right:1px solid var(--pasta-borda)}
+  .dz-campos div:nth-child(4n),.dz-campos div:last-child{border-right:0}
+  .dz-carimbo{position:absolute;right:96px;top:20px;margin:0;font-size:1.25rem}
+  .dz-lacre{top:16px;right:22px;width:62px;height:62px;border-width:6px;font-size:2.5rem}
+  .dz-etq{font-size:.8rem;max-width:calc(100% - 280px)}
+}
+
+/* ================================================================ memorando (roteiro / como ler) */
+.dz-memo{margin-top:28px;background:var(--ficha);border:1px solid var(--pasta-borda);border-top:4px solid var(--tinta);padding:16px 14px;box-shadow:0 4px 12px var(--sombra)}
+.dz-memo>h2,.dz-anexo>h2,.dz-anexo-b>h2{font:400 1.5rem/1.1 var(--f-titulo);letter-spacing:.03em;margin-bottom:12px}
+.dz-memo>h2 .dz-tw,.dz-anexo h2 .dz-tw{font-size:.85rem;color:var(--tinta-txt);margin-right:4px}
+.dz-plano{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:p}
+.dz-plano li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start;border-bottom:1px dashed var(--pauta);padding-bottom:12px}
+.dz-plano li:last-child{border-bottom:0;padding-bottom:0}
+.dz-plano-n{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--tinta);color:#fff;font:400 1.4rem var(--f-titulo)}
+.dz-plano li:nth-child(2n) .dz-plano-n{background:var(--laranja);color:var(--preto)}
+[data-theme="light"] .dz-plano li:nth-child(2n) .dz-plano-n{color:#fff}
+.dz-plano h3{font:700 1rem var(--f-tw);text-transform:uppercase;margin-bottom:2px}
+.dz-plano p{color:var(--suave)}
+.dz-plano-links{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:4px;font:700 .82rem var(--f-tw)}
+.dz-plano-links a{display:inline-flex;align-items:center;min-height:32px}
+@media (min-width:700px){.dz-memo{padding:20px 22px}.dz-plano{grid-template-columns:1fr 1fr;gap:16px 28px}.dz-plano li:nth-last-child(2):nth-child(odd){border-bottom:0}}
+
+/* ================================================================ ferramentas */
+.dz-ferramentas{position:sticky;top:61px;z-index:10;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:26px -16px 0;padding:10px 16px;background:var(--mesa);border-bottom:1px solid var(--pasta-borda)}
+.dz-filtros{display:flex;flex-wrap:wrap;gap:6px;width:100%}
+.dz-filtros button{flex:1 1 auto;padding:0 10px}
+.dz-busca{flex:1 1 200px;min-width:0;min-height:44px;padding:0 12px;background:var(--ficha);border:1px solid var(--pasta-borda);border-radius:2px;font:400 .95rem var(--f-tw)}
+.dz-busca::placeholder{color:var(--mudo)}
+.dz-mais{position:relative}
+.dz-mais summary{list-style:none}
+.dz-mais summary::-webkit-details-marker{display:none}
+.dz-mais summary::after{content:"▾"}
+.dz-mais-lista{position:absolute;right:0;top:calc(100% + 6px);z-index:30;display:grid;gap:6px;min-width:220px;padding:10px;background:var(--pasta);border:1px solid var(--pasta-borda);box-shadow:0 10px 24px var(--sombra)}
+.dz-mais-lista button{justify-content:flex-start}
+@media (min-width:760px){.dz-ferramentas{top:63px;margin:26px 0 0;padding:10px 0}.dz-filtros{width:auto}.dz-filtros button{flex:0 0 auto}}
+.dz-vazio{margin:24px 0;padding:18px;border:2px dashed var(--pasta-borda);text-align:center;font:700 .95rem var(--f-tw);color:var(--suave)}
+
+/* ================================================================ pasta = capítulo */
+.dz-pastas{display:grid;gap:44px;margin-top:44px}
+.dz-pasta{position:relative;background:var(--pasta);border:1px solid var(--pasta-borda);border-radius:0 10px 6px 6px;box-shadow:0 6px 18px var(--sombra)}
+.dz-pasta-cab{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:end;padding:14px 14px 12px;cursor:pointer}
+.dz-aba{position:absolute;top:-30px;left:-1px;background:var(--pasta);border:1px solid var(--pasta-borda);border-bottom:0;border-top:4px solid var(--tinta);border-radius:8px 8px 0 0;padding:3px 16px 2px;font:400 1.05rem/1.3 var(--f-titulo);letter-spacing:.08em}
+.dz-pasta:nth-child(2n) .dz-aba{border-top-color:var(--laranja)}
+.dz-pasta-cab h2{font:400 clamp(1.5rem,6vw,2rem)/1 var(--f-titulo);letter-spacing:.02em}
+.dz-pasta-cab p{color:var(--suave);margin-top:2px}
+.dz-cont{grid-column:1;font-size:.8rem;color:var(--mudo)}
+.dz-cont b{font:700 .95rem var(--f-tw);color:var(--texto)}
+.dz-seta{grid-row:1 / span 2;grid-column:2;align-self:center;width:34px;height:34px;border:1px solid var(--pasta-borda);border-radius:50%;background:var(--ficha);position:relative}
+.dz-seta::after{content:"";position:absolute;left:11px;top:9px;width:9px;height:9px;border-right:2px solid var(--texto);border-bottom:2px solid var(--texto);transform:rotate(45deg);transition:transform .2s}
+[data-recolhido]>header .dz-seta::after,[data-recolhido] .dz-seta::after{transform:rotate(-45deg);left:9px;top:11px}
+.dz-pasta[data-completo] .dz-aba::after{content:"✓";margin-left:8px;color:var(--tinta-txt)}
+.dz-pasta-corpo{padding:0 10px 14px}
+.dz-nota{margin:0 4px 12px;color:var(--suave);font-size:.92rem;border-left:3px solid var(--tinta);padding-left:10px}
+.dz-fichas{display:grid;gap:14px}
+@media (min-width:700px){.dz-pasta-cab{padding:16px 18px 14px}.dz-pasta-corpo{padding:0 16px 18px}}
+
+/* ================================================================ ficha = conquista */
+.dz-ficha{position:relative;display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;background-color:var(--ficha);padding:14px 12px 12px;border-radius:2px;box-shadow:0 3px 10px var(--sombra);
+  background-image:repeating-linear-gradient(to bottom,transparent 0 27px,var(--pauta) 27px 28px);background-position:0 44px}
+.dz-ficha::before{content:"";position:absolute;left:0;right:0;top:42px;border-top:2px solid var(--tinta);opacity:.55}
+.dz-foto{position:relative;align-self:start;background:var(--foto);padding:3px 3px 10px;transform:rotate(-3deg);box-shadow:0 2px 6px var(--sombra)}
+.dz-foto img{display:block;width:100%;height:auto;aspect-ratio:1;filter:grayscale(1) contrast(1.1)}
+.dz-foto::after{content:"";position:absolute;top:-8px;left:16px;width:10px;height:26px;border:2px solid var(--grampo);border-radius:6px}
+.dz-ficha[data-feita] .dz-foto img{filter:none}
+.dz-ficha-corpo{min-width:0}
+.dz-nome{font:700 1.02rem/1.2 var(--f-tw);text-transform:uppercase;margin:0 0 14px;padding-right:4px;min-height:26px}
+.dz-desc{font:italic .93rem/28px var(--f-tw);color:var(--suave)}
+.dz-dica,.dz-prazo,.dz-ref{line-height:28px}
+.dz-prazo{color:var(--tinta-txt)}
+.dz-ref{font-size:.92rem}
+.dz-ficha-pe{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.dz-chip{display:inline-flex;align-items:center;gap:4px;font:700 .76rem/1.3 var(--f-tw);border:1px solid var(--pasta-borda);padding:3px 8px;background:var(--ficha);text-decoration:none}
+.dz-rar{color:var(--mudo)}
+[data-raridade="epic"] .dz-rar{color:var(--tinta-txt);border-color:var(--tinta)}
+[data-raridade="rare"] .dz-rar{color:var(--laranja);border-color:var(--laranja)}
+[data-raridade="uncommon"] .dz-rar{color:var(--azul);border-color:var(--azul)}
+.dz-enc{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;font:700 .85rem var(--f-tw);cursor:pointer;border:1px dashed var(--pasta-borda);background:var(--ficha)}
+.dz-enc input{width:20px;height:20px;margin:0;accent-color:var(--tinta)}
+.dz-enc-b{display:none}
+[data-feita] .dz-enc{border-style:solid;border-color:var(--tinta)}
+[data-feita] .dz-enc-a{display:none}
+[data-feita] .dz-enc-b{display:inline;color:var(--tinta-txt)}
+.dz-informantes{margin-top:8px;font-size:.8rem;color:var(--mudo);line-height:1.5}
+/* Assinatura: o carimbo CASO ENCERRADO desce sobre a ficha */
+.dz-selo{position:absolute;right:10px;bottom:62px;pointer-events:none;border:4px double var(--tinta);color:var(--tinta-txt);background:var(--tinta-fundo);font:400 1.15rem/1 var(--f-titulo);letter-spacing:.1em;padding:7px 10px;border-radius:6px;transform:rotate(-12deg) scale(1);opacity:0;visibility:hidden}
+[data-feita]>.dz-selo{opacity:.92;visibility:visible}
+.dz-anima .dz-selo{transition:transform .22s cubic-bezier(.3,1.6,.6,1),opacity .12s,visibility 0s .22s}
+.dz-anima :not([data-feita])>.dz-selo{transform:rotate(-12deg) scale(2.4)}
+.dz-anima [data-feita]>.dz-selo{transition:transform .22s cubic-bezier(.3,1.6,.6,1),opacity .12s,visibility 0s}
+@media (min-width:700px){
+  .dz-ficha{grid-template-columns:76px minmax(0,1fr);gap:14px;padding:16px 16px 14px}
+  .dz-foto{padding:4px 4px 12px}
+  .dz-foto::after{left:22px}
+  .dz-selo{right:18px;top:4px;bottom:auto;font-size:1.5rem}
+  .dz-nome{padding-right:210px}
+}
+
+/* ================================================================ anexos (fontes e pendências) */
+.dz-anexo{margin-top:40px;background:var(--ficha);border:1px solid var(--pasta-borda);padding:18px 14px;position:relative;box-shadow:0 4px 12px var(--sombra)}
+.dz-anexo::before{content:"";position:absolute;top:-10px;left:26px;width:40px;height:20px;border:3px solid var(--grampo);border-bottom:0;border-radius:4px 4px 0 0}
+.dz-anexos{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.dz-anexos li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;border-bottom:1px dashed var(--pauta);padding-bottom:10px}
+.dz-anexo-n{font:700 .9rem var(--f-tw);color:var(--tinta-txt)}
+.dz-anexos strong{font-weight:600}
+.dz-anexos p{color:var(--suave);font-size:.92rem}
+.dz-anexos small,.dz-pendencias small{color:var(--mudo);font:700 .76rem var(--f-tw)}
+.dz-anexo-b{margin-top:26px}
+.dz-pendencias{margin:0;padding:0 0 0 18px;display:grid;gap:10px}
+.dz-pendencias li::marker{content:"□  ";color:var(--tinta-txt)}
+.dz-pendencias p{color:var(--suave)}
+@media (min-width:700px){.dz-anexo{padding:22px 24px}.dz-anexos{grid-template-columns:1fr 1fr;column-gap:28px}}
+
+/* ================================================================ rodapé */
+.dz-rodape{max-width:var(--largura);margin:0 auto;padding:22px 16px 36px;color:var(--mudo);font-size:.82rem;display:grid;gap:8px}
+.dz-rodape .dz-tw{font-size:.74rem;color:var(--suave)}
+
+/* ================================================================ rota: evidências (Red Bricks) */
+.dz-evidencias{margin-top:12px;background:var(--ficha);border:1px solid var(--pasta-borda);padding:10px 12px}
+.dz-evidencias header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px 12px;margin-bottom:8px}
+.dz-evidencias h2{font:400 1.3rem var(--f-titulo);letter-spacing:.04em}
+.dz-evidencias header .dz-tw{font-size:.74rem;color:var(--mudo)}
+.dz-evidencias header b{color:var(--texto)}
+.dz-provas{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.dz-prova{position:relative;min-height:44px;padding:10px 0 4px;cursor:pointer;font:700 .8rem var(--f-tw);color:var(--mudo);background:transparent;border:1px dashed var(--pasta-borda);border-radius:3px}
+.dz-prova::before{content:"";position:absolute;top:-1px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;border:1px solid var(--pasta-borda);background:var(--ficha);transform:translateY(-50%)}
+.dz-prova[data-aceso]{color:#fff;background:var(--tinta);border:1px solid var(--tinta);box-shadow:inset 0 -4px 0 #0003,0 2px 6px var(--sombra)}
+.dz-prova[data-aceso]::before{background:var(--laranja);border-color:var(--preto)}
+.dz-prova[data-selecionado]{outline:2px solid var(--laranja);outline-offset:2px}
+.dz-marco-detalhe{margin-top:8px;font-size:.88rem;color:var(--suave);min-height:1.6em}
+.dz-obtido{color:var(--tinta-txt);font-weight:700}
+@media (min-width:700px){.dz-provas{grid-template-columns:repeat(12,minmax(0,1fr))}}
+
+/* como ler */
+.dz-fluxo{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.dz-fluxo li{display:grid;gap:6px}
+.dz-fluxo li .dz-chip{justify-self:start}
+.dz-fluxo p{color:var(--suave)}
+.dz-legenda{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;color:var(--suave);font-size:.9rem}
+.dz-nota-leve{margin-top:10px;color:var(--mudo);font-size:.86rem}
+@media (min-width:700px){.dz-fluxo{grid-template-columns:repeat(3,1fr);gap:18px}}
+
+/* papéis das etiquetas */
+.dz-chip[data-papel="danger"]{color:var(--tinta-txt);border-color:var(--tinta)}
+.dz-chip[data-papel="special"]{color:#fff;background:var(--tinta);border-color:var(--tinta)}
+.dz-chip[data-papel="info"]{color:var(--azul);border-color:var(--azul)}
+.dz-chip[data-papel="ok"]{color:var(--verde);border-color:var(--verde)}
+.dz-chip[data-papel="warm"],.dz-chip[data-papel="accent"]{color:var(--laranja);border-color:var(--laranja)}
+
+/* abas e mapa de fases */
+.dz-abas{display:flex;gap:4px;margin-top:30px;border-bottom:3px solid var(--pasta-borda)}
+.dz-aba-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;font:400 1.15rem var(--f-titulo);letter-spacing:.06em;text-decoration:none;background:var(--ficha);border:1px solid var(--pasta-borda);border-bottom:0;border-radius:8px 8px 0 0;color:var(--mudo)}
+.dz-aba-link[aria-selected="true"]{background:var(--pasta);color:var(--texto);border-top:4px solid var(--tinta)}
+.dz-aba-link span{font:700 .8rem var(--f-tw)}
+.dz-mapa-caixa{width:100%}
+.dz-mapa{display:flex;gap:6px}
+.dz-mapa-n{position:relative;flex:1;min-height:44px;cursor:pointer;overflow:hidden;font:700 .9rem var(--f-tw);color:var(--texto);background:var(--ficha);border:1px solid var(--pasta-borda);border-radius:2px}
+.dz-mapa-n::before{content:"";position:absolute;inset:auto 0 0 0;height:calc(var(--g-progresso,0)*100%);background:var(--tinta-fundo);border-top:2px solid var(--tinta);transition:height .3s}
+.dz-mapa-n span{position:relative}
+.dz-mapa-n[data-completo]{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.dz-mapa-n[data-completo]::before{display:none}
+.dz-mapa-n[data-atual]{outline:2px solid var(--laranja);outline-offset:2px}
+.dz-painel .dz-ferramentas{margin-top:0}
+
+/* fase = etapa */
+.dz-fases{display:grid;gap:22px;margin-top:22px}
+.dz-fase{position:relative;background:var(--ficha);border:1px solid var(--pasta-borda);border-left:6px solid var(--tinta);box-shadow:0 4px 12px var(--sombra)}
+.dz-fase:nth-child(2n){border-left-color:var(--laranja)}
+.dz-fase-cab{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:12px 12px;cursor:pointer}
+.dz-fase-n{display:grid;justify-items:center;font:700 .62rem/1 var(--f-tw);letter-spacing:.12em;text-transform:uppercase;color:var(--mudo)}
+.dz-fase-n b{font:400 2rem/1 var(--f-titulo);color:var(--texto);letter-spacing:0}
+.dz-fase-cab h3{font:400 1.45rem/1.05 var(--f-titulo);letter-spacing:.02em}
+.dz-fase-cab p{color:var(--suave);font-size:.92rem}
+.dz-fase-tag{grid-column:2;justify-self:start;font:700 .72rem var(--f-tw);letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--tinta);color:var(--tinta-txt);padding:1px 6px;transform:rotate(-2deg)}
+.dz-fase-cont{grid-column:2;font:700 .9rem var(--f-tw)}
+.dz-fase-cab>.dz-fase-n{grid-column:1;grid-row:1 / span 3;align-self:start}
+.dz-fase-cab>div{grid-column:2;grid-row:1}
+.dz-fase-cab>.dz-fase-tag{grid-column:2;grid-row:2}
+.dz-fase-cab>.dz-fase-cont{grid-column:2;grid-row:3}
+.dz-fase-cab>.dz-seta{grid-column:3;grid-row:1 / span 3}
+.dz-selo-fase{right:54px;top:auto;bottom:10px;font-size:1rem}
+[data-completo]>.dz-fase-cab>.dz-selo{opacity:.92;visibility:visible}
+.dz-anima [data-completo]>.dz-fase-cab>.dz-selo{transform:rotate(-12deg) scale(1);transition:transform .22s cubic-bezier(.3,1.6,.6,1),opacity .12s,visibility 0s}
+.dz-fase-corpo{padding:0 12px 14px}
+.dz-itens{display:grid;gap:0}
+@media (min-width:700px){
+  .dz-fase-cab{grid-template-columns:64px minmax(0,1fr) auto auto auto;padding:14px 16px}
+  .dz-fase-cab>.dz-fase-n{grid-row:1;align-self:center}
+  .dz-fase-cab>.dz-fase-tag{grid-column:3;grid-row:1}
+  .dz-fase-cab>.dz-fase-cont{grid-column:4;grid-row:1}
+  .dz-fase-cab>.dz-seta{grid-column:5;grid-row:1}
+  .dz-selo-fase{right:200px;top:50%;bottom:auto;margin-top:-18px;font-size:1.2rem}
+  .dz-fase-corpo{padding:0 18px 18px 92px}
+}
+
+/* tarefa = linha do formulário */
+.dz-item{padding:8px 0;border-bottom:1px solid var(--pauta)}
+.dz-item:last-child{border-bottom:0}
+.dz-item-cab{display:flex;align-items:flex-start;gap:12px;min-height:44px;padding-top:8px;cursor:pointer}
+.dz-item-cab input{flex:0 0 auto;width:22px;height:22px;margin:1px 0 0;accent-color:var(--tinta)}
+.dz-item-tit{font-weight:600}
+.dz-item[data-feita] .dz-item-tit{text-decoration:line-through;text-decoration-color:var(--tinta);text-decoration-thickness:2px;color:var(--mudo)}
+.dz-etqs{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 0 34px}
+.dz-caso span{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;background:var(--laranja);color:var(--preto);font:400 .7rem/1 var(--f-titulo)}
+.dz-como{margin:4px 0 0 34px}
+.dz-como summary{display:inline-flex;align-items:center;min-height:36px;cursor:pointer;font:700 .8rem var(--f-tw);letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-txt)}
+.dz-como>div{display:grid;gap:6px;padding:4px 0 6px;color:var(--suave)}
+.dz-divisor{padding:12px 0}
+.dz-divisor h2{font:400 1.8rem var(--f-titulo)}
+
+/* tabela de Red Bricks */
+.dz-tabela{width:100%;border-collapse:collapse;font-size:.92rem}
+.dz-tabela th{text-align:left;font:700 .72rem var(--f-tw);letter-spacing:.1em;text-transform:uppercase;color:var(--mudo);border-bottom:2px solid var(--tinta);padding:6px 8px 6px 0}
+.dz-tabela td{border-bottom:1px dashed var(--pauta);padding:8px 8px 8px 0;vertical-align:top}
+.dz-tabela tr[data-aceso] td:first-child{color:var(--tinta-txt);font-weight:700}
+.dz-tabela tr[data-aceso] td:first-child::before{content:"■ "}
+
+/* realce ao pular para um item */
+.g-flash{animation:dz-flash 1.4s ease}
+@keyframes dz-flash{20%{box-shadow:0 0 0 4px var(--laranja),0 3px 10px var(--sombra)}}
+
+/* ================================================================ impressão */
+@media print{
+  :root,[data-theme]{--mesa:#fff;--pasta:#fff;--ficha:#fff;--pauta:#ddd;--texto:#000;--suave:#222;--mudo:#444;--pasta-borda:#999;--tinta:#b02a15;--tinta-txt:#962110;--sombra:transparent}
+  .dz-topo{position:static;box-shadow:none}
+  .dz-ferramentas,.dz-capa-pe .dz-btn,.dz-mapa-caixa,.dz-abas{display:none!important}
+  .dz-ficha,.dz-fase{break-inside:avoid;box-shadow:none}
+  .dz-ficha{background-image:none}
+}
+
+/* O emblema "i" da família, desenhado (a Staatliches só tem maiúsculas): pingo + haste */
+.dz-lacre,.dz-lacre-mini,.dz-caso span{font-size:0!important}
+.dz-lacre-mini,.dz-caso span{position:relative}
+.dz-lacre::before,.dz-lacre-mini::before,.dz-caso span::before,
+.dz-lacre::after,.dz-lacre-mini::after,.dz-caso span::after{content:"";position:absolute;left:50%;width:22%;transform:translateX(-50%);background:var(--preto)}
+.dz-lacre::before,.dz-lacre-mini::before,.dz-caso span::before{top:17%;aspect-ratio:1;border-radius:50%}
+.dz-lacre::after,.dz-lacre-mini::after,.dz-caso span::after{top:44%;height:40%;border-radius:2px 2px 1px 1px}
+
+/* Barra do topo no celular: marca, menu e tema numa linha só */
+@media (max-width:759px){
+  .dz-barra{gap:8px;padding:6px 16px}
+  .dz-marca{font-size:1.15rem;gap:8px}
+  .dz-btn-menu,.dz-btn-tema{padding:0 10px}
+  .dz-btn-tema{min-width:44px}
+}
+@media (max-width:759px){
+  .dz-ferramentas{position:static}
+  .dz-selo{bottom:6px;right:8px;font-size:1rem;padding:5px 8px}
+}

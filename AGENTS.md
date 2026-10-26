@@ -16,5 +16,6 @@ Este guia foi criado com a skill **guia-conquistas**; os padrões completos (voz
 - Rodar: `py -m http.server 8000` (ou o preview "site" de `.claude/launch.json`) e conferir as duas páginas nos dois temas e em 375 px.
 - Conquistas novas na Steam: `python tools/steam_importar.py` (mantém o que foi escrito à mão).
 - Mudou números ou visual: `python tools/gerar_og.py`.
+- Mudou `assets/tema/tema.css` ou `tema.js`: troque o `?v=` do tema (no `<link>` e no `importmap`) em `index.html` e `rota.html`. O GitHub Pages deixa os arquivos 10 minutos em cache e, sem isso, o navegador mistura a página nova com o tema antigo.
 - Reestruturação grande: antes, backup em `backups/AAAA-MM-DD_HH-MM/` (zip + LEIA-ME com commit e como restaurar) e uma tag git local; depois, trabalhe em fases ("Phase 1: … (no visual change)").
 - Commits em inglês, com corpo explicando o quê e o porquê; diga quando IDs e chaves de progresso não mudaram.

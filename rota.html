@@ -29,7 +29,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/motor/motor.css">
-<link rel="stylesheet" href="assets/tema/tema.css">
+<!-- Versão do tema: troque o ?v= (aqui e no importmap, nas duas páginas) a cada mudança visual, para o navegador não misturar com a versão em cache. -->
+<link rel="stylesheet" href="assets/tema/tema.css?v=gazeta-1">
+<script type="importmap">{ "imports": { "./assets/tema/tema.js": "./assets/tema/tema.js?v=gazeta-1" } }</script>
 </head>
 <body data-pagina="rota">
 <a class="g-pular" href="#conteudo">Pular para o conteúdo</a>

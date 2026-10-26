@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pranchas de conceito — LEGO The Incredibles</title>
+<link rel="stylesheet" href="prancha.css">
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Pranchas de conceito · LEGO The Incredibles</h1>
+   <p>Todas as direções de arte propostas para o guia, com dados reais nos dois temas e em 375 px. Toque numa prancha para abrir; dentro dela, a barra do topo leva à anterior, à próxima ou de volta para cá. As notas de cada rodada estão em <code>docs/direcao-de-arte.md</code>.</p></div>
+  <div class="pr-nav"><a href="../../index.html">Ver o site →</a></div>
+ </div>
+ <div id="lista"></div>
+</div>
+<script src="prancha.js"></script>
+<script>
+const RODADAS = { 1: 'Primeira rodada', 2: 'Segunda rodada' };
+const card = p => `<article class="ix-card">
+ <a class="ix-mini" href="conceito-${p.n}.html" aria-label="Abrir a prancha ${p.n}: ${p.nome}">
+  <img src="capturas/conceito-${p.n}-celular.png" alt="" loading="lazy">
+  <span class="ix-n">${p.n}</span>${p.noAr ? '<span class="ix-ar">No ar</span>' : ''}
+ </a>
+ <div class="ix-corpo"><h2>${p.nome}</h2><p>${p.frase}</p><small>${p.fontes}</small></div>
+ <div class="ix-links"><a href="conceito-${p.n}.html">Abrir prancha</a><a href="capturas/conceito-${p.n}-celular.png">Captura no celular</a><a href="capturas/conceito-${p.n}.png">Captura completa</a></div>
+</article>`;
+const rodadas = [...new Set(PRANCHAS.map(p => p.rodada))].sort((a, b) => b - a);   // a mais nova primeiro
+document.getElementById('lista').innerHTML = rodadas.map(r => `<h2 class="ix-rodada">${RODADAS[r] || `Rodada ${r}`}</h2>
+ <div class="ix-grade">${PRANCHAS.filter(p => p.rodada === r).map(card).join('')}</div>`).join('');
+</script>
+</body>
+</html>

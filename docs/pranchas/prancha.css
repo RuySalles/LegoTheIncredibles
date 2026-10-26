@@ -27,3 +27,28 @@ body{margin:0;background:#e6e6e3;color:#222;font:15px/1.5 system-ui,-apple-syste
 .so-celular body,.so-celular .pr-wrap{padding:0;margin:0;max-width:none}
 .so-celular .pr-label{display:none}
 .so-celular .pr-frame{border:0;border-radius:0;box-shadow:none;width:375px}
+
+/* Barra comum de navegação entre pranchas (montada pelo prancha.js) */
+.pr-nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.pr-nav a,.pr-nav b{display:inline-flex;align-items:center;justify-content:center;min-height:36px;min-width:36px;padding:0 10px;margin:0;border:1px solid #bbb;border-radius:6px;background:#f6f6f4;color:#333;text-decoration:none;font-weight:600}
+.pr-nav a:hover{border-color:#333}
+.pr-nav-nums{display:inline-flex;gap:4px}
+.pr-nav b{background:#222;color:#fff;border-color:#222}
+.pr-nav .pr-nav-indice{background:#222;color:#fff;border-color:#222}
+
+/* Índice das pranchas */
+.ix-rodada{margin:30px 0 12px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#666}
+.ix-grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.ix-card{display:flex;flex-direction:column;background:#f6f6f4;border:1px solid #cfcfca;border-radius:10px;overflow:hidden;color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.ix-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px #0002}
+.ix-mini{position:relative;aspect-ratio:16/11;background:#ddd;overflow:hidden;border-bottom:1px solid #cfcfca}
+.ix-mini img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.ix-n{position:absolute;left:10px;top:10px;width:34px;height:34px;border-radius:50%;background:#222;color:#fff;display:grid;place-items:center;font-weight:700}
+.ix-ar{position:absolute;right:10px;top:10px;background:#c0301a;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.ix-corpo{padding:12px 14px 14px;display:grid;gap:6px;flex:1}
+.ix-corpo h2{margin:0;font-size:1.1rem}
+.ix-corpo p{margin:0;color:#444;font-size:.92rem}
+.ix-corpo small{color:#666}
+.ix-links{display:flex;flex-wrap:wrap;gap:8px;padding:0 14px 14px}
+.ix-links a{display:inline-flex;align-items:center;min-height:40px;padding:0 12px;border:1px solid #bbb;border-radius:6px;color:#333;text-decoration:none;font-size:.88rem;font-weight:600;background:#fff}
+.ix-links a:first-child{background:#222;color:#fff;border-color:#222}

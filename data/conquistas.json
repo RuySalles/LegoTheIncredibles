@@ -138,7 +138,7 @@
     "COMPLETE_CHAPTER01": {
       "name": "Um Compromisso Anterior",
       "desc": "Complete o Capítulo 7 - ''Anos Dourados''.",
-      "pct": 36.7,
+      "pct": 36.6,
       "tip": "Fase 7, a primeira do filme original; começa no círculo de luz do mapa logo depois de <em>Screenslaver Showdown</em> e sai naturalmente. Aqui você libera o Bochecha (<em>Buddy Pine</em>).",
       "difficulty": 1,
       "sources": [
@@ -169,7 +169,7 @@
     "COMPLETE_CHAPTER02": {
       "name": "Eu queria jogar boliche!",
       "desc": "Complete o Capítulo 8 - ''Justiceiros Atentos''.",
-      "pct": 34.7,
+      "pct": 34.5,
       "tip": "Fase 8 do Modo História; sai naturalmente.",
       "difficulty": 1,
       "sources": [
@@ -197,7 +197,7 @@
     "COMPLETE_CHAPTER03": {
       "name": "Entre Mundos",
       "desc": "Complete o Capítulo 9 - ''Ilha Nomanisan''.",
-      "pct": 33.4,
+      "pct": 33.2,
       "tip": "Fase 9 do Modo História; sai naturalmente.",
       "difficulty": 1,
       "sources": [
@@ -226,7 +226,7 @@
     "COMPLETE_CHAPTER04": {
       "name": "Um Convidado Indesejado",
       "desc": "Complete o Capítulo 10 - ''De volta à Ilha Nomanisan''.",
-      "pct": 31.9,
+      "pct": 31.8,
       "tip": "Fase 10 do Modo História; sai naturalmente.",
       "difficulty": 1,
       "sources": [
@@ -239,7 +239,7 @@
     "CHAPTER04_NOHITBYGOOCANNON": {
       "name": "Intocável",
       "desc": "Complete ''De volta à Ilha Nomanisan'' sem ser atingido por um canhão de gosma.",
-      "pct": 9.9,
+      "pct": 9.8,
       "tip": "À esquerda, avance escondido atrás das caixas grandes e entre numa caixa de papelão para os canhões não mirarem em você; à direita, suba a torre no intervalo entre os disparos. No Free Play, um voador corta caminho até o computador principal. A conquista aparece ao cruzar a última ponte, antes da cena.",
       "difficulty": 3,
       "time": "~15 min",
@@ -254,7 +254,7 @@
     "COMPLETE_CHAPTER05": {
       "name": "Estou feliz que esteja vivo!",
       "desc": "Complete o Capítulo 11 - ''Pêra Superado''.",
-      "pct": 30.4,
+      "pct": 30.3,
       "tip": "Fase 11 do Modo História; sai naturalmente.",
       "difficulty": 1,
       "sources": [
@@ -282,7 +282,7 @@
     "COMPLETE_CHAPTER06": {
       "name": "As melhores férias!",
       "desc": "Complete o Capítulo 12 - ''O Último Confronto''.",
-      "pct": 29.5,
+      "pct": 29.3,
       "tip": "Fase 12, o fim da história; sai naturalmente.",
       "difficulty": 1,
       "spoiler": true,
@@ -311,7 +311,7 @@
     "COMPLETE_CHAPTER07": {
       "name": "Em Público Novamente",
       "desc": "Complete o Capítulo 1 - ''Enfraquecido''.",
-      "pct": 71.3,
+      "pct": 71.1,
       "tip": "Primeira fase do jogo; sai naturalmente. Ao terminar, a cidade abre e começa a primeira Crimewave (<em>Waterfront</em>): ela é obrigatória antes da fase 2, que começa no círculo de luz do mapa.",
       "difficulty": 1,
       "sources": [
@@ -343,7 +343,7 @@
     "COMPLETE_CHAPTER08": {
       "name": "Confusão nos Trilhos",
       "desc": "Complete o Capítulo 2 - ''Zoeira no Trem Voador''.",
-      "pct": 53.2,
+      "pct": 53.0,
       "tip": "Fase 2 do Modo História; sai naturalmente.",
       "difficulty": 1,
       "sources": [
@@ -372,7 +372,7 @@
     "COMPLETE_CHAPTER09": {
       "name": "Helicóptero Caótico",
       "desc": "Complete o Capítulo 3 - ''Revelações''.",
-      "pct": 47.8,
+      "pct": 47.6,
       "tip": "Fase 3 do Modo História; sai naturalmente.",
       "difficulty": 1,
       "sources": [
@@ -385,7 +385,7 @@
     "CHAPTER09_ALL8INCREDIBLE": {
       "name": "Guaxinim Neles",
       "desc": "Consiga a pontuação ''Incrível'' em todos os duelos com guaxinins em ''Revelações''.",
-      "pct": 11.0,
+      "pct": 10.9,
       "tip": "São 8 duelos do Zezé com o guaxinim, no começo da fase. Aperte o botão pedido o mais rápido possível para encher o círculo; o atalho que a comunidade usa é apertar os três botões de ação juntos assim que o duelo começa, sem repetir a mesma dupla duas vezes seguidas. Um único duelo abaixo de \"Incrível\" exige refazer a fase: saia pelo menu e recomece.",
       "difficulty": 3,
       "time": "~15 min",
@@ -401,7 +401,7 @@
     "COMPLETE_CHAPTER10": {
       "name": "Um Pouco de Ação",
       "desc": "Complete o Capítulo 4 - ''Mulher Elástica Em Ação''.",
-      "pct": 44.1,
+      "pct": 43.9,
       "tip": "Fase 4 do Modo História; sai naturalmente.",
       "difficulty": 1,
       "sources": [
@@ -414,7 +414,7 @@
     "CHAPTER10_COMPLETEINMINUTES": {
       "name": "Pêra Incisivo",
       "desc": "Capture o Hipnotizador em ''Mulher Elástica Em Ação'' dentro de 3 minutos e 15 segundos.",
-      "pct": 7.2,
+      "pct": 7.1,
       "tip": "Faça no Free Play com um voador e a Mulher-Elástica. O cronômetro conta só a perseguição pelos corredores: voe por cima do primeiro, use a Mulher-Elástica para baixar a escada, monte o canhão e acenda o pavio dourado, voe pelo segundo corredor, puxe a alavanca e derreta a parede dourada com laser. Cronometre no celular; há relatos de que o limite é mais justo do que parece.",
       "difficulty": 3,
       "time": "~20 min",
@@ -429,7 +429,7 @@
     "COMPLETE_CHAPTER11": {
       "name": "Pêra Adoidado",
       "desc": "Complete o Capítulo 5 - ''Pêra Adoidado''.",
-      "pct": 41.4,
+      "pct": 41.2,
       "tip": "Fase 5 do Modo História; sai naturalmente.",
       "difficulty": 1,
       "sources": [
@@ -442,7 +442,7 @@
     "CHAPTER11_MOVINGBOXES": {
       "name": "É um dos jeitos de fazer isso",
       "desc": "Destrua todas as caixas de mudança em ''Pêra Adoidado''.",
-      "pct": 13.4,
+      "pct": 13.3,
       "tip": "Quebre todas as caixas de papelão marrons com setas. Quase todas estão na primeira área (perto do início, da mesa de jantar, da cozinha e do sofá); não saia dela antes da conquista aparecer, porque há relatos de que a segunda metade não conta. A difícil fica alta, à direita, numa saliência da sala do globo espelhado.",
       "difficulty": 2,
       "time": "~10 min",
@@ -457,7 +457,7 @@
     "COMPLETE_CHAPTER12": {
       "name": "Uma Ocasião Importante",
       "desc": "Complete o Capítulo 6 - ''Confronto com Hipnotizador''.",
-      "pct": 39.6,
+      "pct": 39.5,
       "tip": "Fase 6, última do Incredibles 2; sai naturalmente. A fase 7 começa logo em seguida, no círculo de luz do mapa.",
       "difficulty": 1,
       "sources": [
@@ -485,7 +485,7 @@
     "COMPLETE_BONUS": {
       "name": "Onde estão eles agora?",
       "desc": "Complete ''A Ira do Omnidriode''.",
-      "pct": 28.2,
+      "pct": 28.0,
       "tip": "A fase bônus em que você controla o Omnidroid, liberada no fim da história. Basta chegar a 100% de destruição, não é preciso destruir tudo; destrua sem parar para o multiplicador não cair e saia com até 1 milhão de peças.",
       "difficulty": 1,
       "spoiler": true,
@@ -500,7 +500,7 @@
     "LEVEL_TRUEHERO": {
       "name": "O Melhor",
       "desc": "Conquiste Super Demais em qualquer fase.",
-      "pct": 62.2,
+      "pct": 62.0,
       "tip": "Encha a barra de <em>True Super</em> numa fase. A mais barata é <em>House Parr-ty</em> (35.000 peças), seguida de <em>Revelations</em> (45.000); com o x2 já passa.",
       "difficulty": 1,
       "together": [
@@ -518,7 +518,7 @@
     "ALL_TRUEHERO": {
       "name": "O Melhor dos Melhores",
       "desc": "Conquiste Super Demais em todos os níveis.",
-      "pct": 17.4,
+      "pct": 17.3,
       "tip": "Encha a barra nas 12 fases. O mínimo vai de 35.000 peças (<em>House Parr-ty</em>) a 250.000 (<em>Above Parr</em>); com os multiplicadores, acontece junto com a caça aos Minikits no Free Play, sem esforço extra.",
       "difficulty": 1,
       "together": [
@@ -536,7 +536,7 @@
     "LEVEL_MINIKITS": {
       "name": "Kitudo",
       "desc": "Pegue todos os Minikits em um nível.",
-      "pct": 16.3,
+      "pct": 16.2,
       "tip": "Pegue os 10 Minikits de uma fase no Free Play, com o Detector de Itens ligado.",
       "difficulty": 1,
       "together": [
@@ -553,7 +553,7 @@
     "ALL_MINIKITS": {
       "name": "Preparado",
       "desc": "Pegue todos os Minikits do jogo.",
-      "pct": 10.9,
+      "pct": 10.8,
       "tip": "São 120 (10 por fase). Faça no Free Play, depois das Crimewaves e dos Family Builds Pixar: vários pedem personagens Pixar (rastrear com o Russell, cavar com o Flik, iluminar com Bing Bong ou McQueen). Leve um voador e ligue o Detector de Itens. Armadilha conhecida: em <em>Elastigirl On The Case</em>, o Minikit não é o do fliperama; destrua os 10 olhos nas prateleiras do corredor do início para liberar a bola que dá o Minikit.",
       "difficulty": 2,
       "time": "~4 h",
@@ -574,7 +574,7 @@
     "ANY_INCREDIBUILD": {
       "name": "Melhor do que churrasco!",
       "desc": "Complete sua primeira Construção em Família.",
-      "pct": 77.7,
+      "pct": 77.6,
       "tip": "A história ensina a primeira Construção em Família; sai sem esforço.",
       "difficulty": 1,
       "sources": [
@@ -587,7 +587,7 @@
     "ALL_INCREDIBUILD": {
       "name": "Incrível demais!",
       "desc": "Complete todas as Construções em Família.",
-      "pct": 16.8,
+      "pct": 16.7,
       "tip": "São 22 Construções em Família, marcadas no mapa com os Incredibricks necessários: 4 em <em>Waterfront</em> e em <em>Residential District</em>, 3 em <em>Downtown</em>, 2 em <em>City Park</em>, <em>Financial</em>, <em>Tourist</em> e <em>Industrial</em>, e 1 em <em>Outer Municiberg</em>, <em>Docks</em> e <em>Urbem Heights</em>. A estátua do Junior, em <em>Financial District</em> (5 Incredibricks), só aparece depois de todos os pads Pixar; se faltar uma, é quase sempre ela.",
       "difficulty": 2,
       "time": "~1 h",
@@ -604,7 +604,7 @@
     "ANY_REDBRICK": {
       "name": "Uma Vantagem Natural",
       "desc": "Colete um Bloco Vermelho.",
-      "pct": 40.4,
+      "pct": 40.3,
       "tip": "Os Red Bricks não são comprados: cada um sai de um puzzle depois de um Family Build Pixar. O mais barato é o da Dory (<em>The Reef</em>, 1 Incredibrick, <em>Waterfront</em>): bata nos 5 mariscos pequenos debaixo d'água para abrir o grande. Ative no menu de personagens, última aba.",
       "difficulty": 1,
       "sources": [
@@ -619,7 +619,7 @@
     "ALL_REDBRICK": {
       "name": "A sorte favorece os preparados",
       "desc": "Colete todos os Blocos Vermelhos.",
-      "pct": 17.9,
+      "pct": 17.8,
       "tip": "São 12, cada um num Family Build Pixar (5 Incredibricks cada, Dory só 1) seguido de um puzzle. Os que aceleram tudo, nesta ordem: x2 (Merida, <em>City Park</em>), x6 (Miguel, <em>Waterfront</em>), x8 (Linguini, <em>Downtown</em>), x10 (WALL-E, <em>Industrial District</em>), Invencibilidade (Relâmpago McQueen: vença a corrida do <em>Florida 500 Speedway</em>, em <em>Waterfront</em>, em menos de 1:40) e Ímã de Peças (Woody, <em>Tourist District</em>). Os outros seis são estéticos ou de conforto.",
       "difficulty": 2,
       "time": "~2 h",
@@ -643,7 +643,7 @@
     "ANY_CUSTOMCHAR": {
       "name": "Um máximo! Dramática! Heroica!",
       "desc": "Crie um personagem personalizado.",
-      "pct": 23.8,
+      "pct": 23.7,
       "tip": "Entre na casa da Edna Moda, no sul de <em>Outer Municiberg</em>, abra o criador de personagens e salve qualquer combinação.",
       "difficulty": 1,
       "time": "~3 min",
@@ -661,7 +661,7 @@
     "CUSTOMISER_WEARCAPE": {
       "name": "Nada de Capa!",
       "desc": "Crie um personagem personalizado com uma capa.",
-      "pct": 22.9,
+      "pct": 22.8,
       "tip": "No mesmo criador da Edna, ponha uma capa e salve. Faça junto com a anterior, numa só criação. (Sim, a Edna desaprovaria.)",
       "difficulty": 1,
       "time": "~1 min",
@@ -678,7 +678,7 @@
     "ONE_BILLION_STUDS": {
       "name": "Sou um bilionário!",
       "desc": "Ganhe 1.000.000.000 de peças.",
-      "pct": 16.5,
+      "pct": 16.4,
       "tip": "Com x2 · x6 · x8 · x10 ligados, cada peça vale 960 vezes mais: o bilhão sai sozinho enquanto você refaz as fases atrás de Minikits (quem fez o 100% passou de 4 bilhões). Ligue também o Ímã de Peças. Se faltar, repita uma fase curta com Family Build.",
       "difficulty": 1,
       "together": [
@@ -696,7 +696,7 @@
     "ONE_HUNDRED_PERCENT": {
       "name": "Chave da Cidade",
       "desc": "Atinja 100%.",
-      "pct": 10.4,
+      "pct": 10.3,
       "tip": "O 100% pede: 12 fases com <em>True Super</em>, 120 Minikits, 12 Red Bricks, 22 Family Builds, 25 corridas, 20 desafios, 10 Crimewaves, 113 personagens, 93 bolsas, 40 veículos e 210 Gold Bricks. Acompanhe na última aba do menu; o que faltar aparece lá.",
       "difficulty": 2,
       "time": "~3 h de limpeza",
@@ -712,7 +712,7 @@
     "ANY_DISTRICT": {
       "name": "Tornando o mundo um lugar melhor",
       "desc": "Limpe um distrito.",
-      "pct": 59.9,
+      "pct": 59.7,
       "tip": "Conclua a primeira Crimewave, que começa sozinha depois da fase 1 (<em>Waterfront</em>, sem chefe). É obrigatória: a fase 2 só abre depois dela.",
       "difficulty": 1,
       "sources": [
@@ -727,7 +727,7 @@
     "ALL_DISTRICT": {
       "name": "Super-herói do Ano",
       "desc": "Limpe todos os distritos.",
-      "pct": 22.2,
+      "pct": 22.1,
       "tip": "São 10 Crimewaves, uma por distrito, liberadas em ordem fixa: <em>Waterfront, City Park, Financial District</em> (chefe Bomb Voyage), <em>Tourist District, Downtown</em> (Brainfreezer), <em>Outer Municiberg, Docks</em> (Anchor-Man), <em>Urbem Heights, Residential District</em> (Underminer) e <em>Industrial District</em> (Síndrome). Cada uma revela no mapa os segredos e corridas do distrito e dá um personagem; faça todas logo depois da história.",
       "difficulty": 2,
       "time": "~3 h",
@@ -761,7 +761,7 @@
     "DASH_RACE": {
       "name": "Em segundo por pouco",
       "desc": "Termine uma corrida com o Flecha conquistando prata.",
-      "pct": 21.4,
+      "pct": 21.3,
       "tip": "Escolha o Flecha e entre em qualquer corrida da cidade; chegue em <strong>segundo</strong> de propósito, deixando o rival passar na reta final. Ouro não conta.",
       "difficulty": 1,
       "time": "~5 min",
@@ -776,7 +776,7 @@
     "DEFEAT_WITH_NONSUPER": {
       "name": "Todos são especiais",
       "desc": "Derrote um inimigo com um personagem que não seja super-herói.",
-      "pct": 39.4,
+      "pct": 39.2,
       "tip": "Derrote um inimigo com alguém sem poderes (um civil como Gilberto Lima, Rick Dicker ou um policial). Combina com o Gilberto que você compra para <em>Não estou feliz, Beto</em>.",
       "difficulty": 1,
       "time": "~2 min",
@@ -793,7 +793,7 @@
     "HIGH_COMBO": {
       "name": "Aquilo foi muito maneiro!",
       "desc": "Realize um combo de 75 golpes.",
-      "pct": 10.8,
+      "pct": 10.7,
       "tip": "Combo de 75 sem levar dano. O truque mais fácil: em <em>Under-mined</em>, jogue com a Violeta, estoure a bolha dela e passe por cima dos inimigos para atordoá-los, mantendo a sequência; passe também por cima do parceiro para ele não matar os inimigos antes. Alternativa: a luta contra Brainfreezer no fim da Crimewave de <em>Downtown</em>, que tem inimigos infinitos (dá para refazer pela prisão).",
       "difficulty": 3,
       "time": "~15 min",
@@ -866,7 +866,7 @@
     "FREEZE_PO_WITH_FROZONE": {
       "name": "Congelado aí!",
       "desc": "Congele um policial com o Gelado.",
-      "pct": 10.4,
+      "pct": 10.3,
       "tip": "Na grade de personagens, ponha o Gelado como principal e um policial como segundo (canto inferior esquerdo da grade). Jogue gelo no policial.",
       "difficulty": 1,
       "time": "~2 min",
@@ -896,7 +896,7 @@
     "UNDERWATER_RACE_WITH_DORY": {
       "name": "Continue a nadar",
       "desc": "Complete uma corrida aquática com Dory.",
-      "pct": 23.4,
+      "pct": 23.3,
       "tip": "Libere a Dory no Family Build Pixar <em>The Reef</em>, no sul de <em>Waterfront</em> (custa só 1 Incredibrick), e complete uma corrida subaquática jogando com ela.",
       "difficulty": 1,
       "time": "~10 min",
@@ -912,7 +912,7 @@
     "ANY_AMBIENTCRIME": {
       "name": "Fazendo nossa parte!",
       "desc": "Combata um crime na cidade.",
-      "pct": 57.5,
+      "pct": 57.3,
       "tip": "Pontos vermelhos no minimapa são crimes na rua (assalto, perseguição, briga). Vá até um e resolva; sai nos primeiros minutos na cidade.",
       "difficulty": 1,
       "sources": [
@@ -925,7 +925,7 @@
     "ALL_AMBIENTCRIME": {
       "name": "Os Super-heróis voltaram!",
       "desc": "Combata 50 crimes na cidade.",
-      "pct": 18.9,
+      "pct": 18.8,
       "tip": "O contador soma todos os crimes de rua resolvidos. Quem faz o 100% chega a 40–50 sem perceber; para completar, voe pela cidade indo de ponto vermelho em ponto vermelho no minimapa.",
       "difficulty": 2,
       "time": "~30 min",

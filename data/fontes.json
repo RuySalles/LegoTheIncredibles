@@ -128,6 +128,27 @@
       "about": "o poder que costuma faltar: iluminar um lugar escuro com o Zezé em chamas, em <em>Revelations</em>."
     },
     {
+      "id": "steam-blvgh",
+      "title": "Steam — BLVGH: LEGO The Incredibles (legogamesguy)",
+      "short": "Guia Steam (BLVGH)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1412941361",
+      "about": "o gatilho de cada fase no mapa (a fase 2 exige a primeira Crimewave), a ordem e os chefes das 10 Crimewaves, o mínimo de peças do <em>True Super</em> em cada fase, os puzzles dos 12 Red Bricks (Invencibilidade é uma corrida abaixo de 1:40), as 22 Family Builds por distrito e os desafios da cidade (<em>Big Catch!</em> dá a Tradewind)."
+    },
+    {
+      "id": "steam-camzilla",
+      "title": "Steam — Lego The Incredibles: All Minikits (Camzillasmom)",
+      "short": "Guia Steam (Minikits)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1416141126",
+      "about": "os 120 Minikits com o poder exigido por cada um (rastrear com o Russell, cavar com o Flik, iluminar com Bing Bong ou McQueen) e o Minikit dos 10 olhos em <em>Elastigirl On The Case</em>."
+    },
+    {
+      "id": "steam-vergiu",
+      "title": "Steam — Guide 100%: All Minikits & Red Bricks (Vergiu)",
+      "short": "Guia Steam (Vergiu)",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2208563708",
+      "about": "os Minikits que pedem várias ações (3 objetos prateados, 5 pássaros, 4 extintores…) e a lista dos 12 Red Bricks em vídeo."
+    },
+    {
       "id": "jogando",
       "title": "Testado jogando",
       "short": "testado jogando",
@@ -135,16 +156,6 @@
     }
   ],
   "confirm": [
-    {
-      "text": "Multiplicadores x6 e x8: a página de peças da Gamepressure põe o x8 em <em>Waterfront</em> e o x6 em <em>Downtown</em>; a página de Red Bricks da própria Gamepressure, Prodigy, Outcyders e HappyThumbs dizem x8 = Linguini em <em>Downtown</em> e x6 = Miguel em <em>Waterfront</em>. O guia segue a maioria.",
-      "sources": [
-        "gp-moedas",
-        "gp-redbricks",
-        "prodigy",
-        "outcyders",
-        "happythumbs"
-      ]
-    },
     {
       "text": "Quando os Family Builds Pixar aparecem no mapa: a página de Red Bricks da Gamepressure diz que só depois de <strong>todas</strong> as Crimewaves; a página de Crimewaves e o guia Turbo Achiever dizem que cada Crimewave revela os do próprio distrito.",
       "sources": [
@@ -192,13 +203,6 @@
       ]
     },
     {
-      "text": "Como as fases do primeiro filme (7 a 12) são liberadas: as fontes só dizem que vêm depois de <em>Screenslaver Showdown</em>. Confirmar jogando se é automático ou se há um ponto no mapa.",
-      "sources": [
-        "gp-conquistas",
-        "steam-dampit"
-      ]
-    },
-    {
       "text": "<em>Os Super-heróis voltaram!</em>: a Steam pede 50 crimes; a Gamepressure escreve 5. Vale a Steam.",
       "sources": [
         "steam-stats",
@@ -209,6 +213,12 @@
       "text": "<em>Incrível demais!</em> (todas as Family Builds): um jogador relatou 100% sem a conquista destravar, sem solução no tópico. Se acontecer, refaça o pad bônus de <em>Financial District</em> e reinicie o jogo.",
       "sources": [
         "steam-familybuild"
+      ]
+    },
+    {
+      "text": "Minikit do fliperama (<em>pinball</em>) em <em>Vigilant Vigilantes</em>: o guia de Minikits manda só jogar; nos comentários, um jogador diz que não ganhou nada e outro diz que é preciso acertar os 5 alvos e depois destruir a máquina.",
+      "sources": [
+        "steam-camzilla"
       ]
     }
   ]

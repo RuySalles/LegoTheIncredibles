@@ -69,7 +69,7 @@
       {
         "label": "INV",
         "name": "Invencibilidade",
-        "detail": "Relâmpago McQueen · corrida da Piston Cup",
+        "detail": "Relâmpago McQueen · corrida do <em>Florida 500 Speedway</em> em menos de 1:40",
         "unlock": "t9"
       },
       {
@@ -87,7 +87,7 @@
       {
         "label": "SWG",
         "name": "Swing Mode",
-        "detail": "Dory · <em>Waterfront</em> (1 Incredibrick)",
+        "detail": "Dory · <em>The Reef</em>, <em>Waterfront</em> (1 Incredibrick)",
         "unlock": "t29"
       },
       {
@@ -121,12 +121,12 @@
       "title": "A família em ação",
       "subtitle": "As 12 fases e a bônus no Modo História",
       "tag": "Base",
-      "note": "O Modo História é obrigatório: libera os personagens que o Free Play exige e abre a cidade. Não perca tempo com desafios difíceis agora; sem os Red Bricks eles custam o dobro.",
+      "note": "O Modo História é obrigatório: libera os personagens que o Free Play exige e abre a cidade. Cada fase seguinte começa num ponto do mapa (quase sempre um círculo de luz). Não perca tempo com desafios difíceis agora; sem os Red Bricks eles custam o dobro.",
       "tasks": [
         {
           "id": "t1",
           "title": "Jogue as fases 1 a 6 (<em>Os Incríveis 2</em>)",
-          "desc": "<em>Under-mined</em>, <em>Hover Train Hijinx</em>, <em>Revelations</em>, <em>Elastigirl On The Case</em>, <em>House Parr-ty</em> e <em>Screenslaver Showdown</em>. De brinde: engrenagens (fase 1) e empinada (fase 2) são fáceis de fazer já na primeira passada.",
+          "desc": "<em>Under-mined</em>, <em>Hover Train Hijinx</em>, <em>Revelations</em>, <em>Elastigirl On The Case</em>, <em>House Parr-ty</em> e <em>Screenslaver Showdown</em>. Entre a fase 1 e a 2 o jogo exige a primeira Crimewave (<em>Waterfront</em>, curta e sem chefe). De brinde: engrenagens (fase 1) e empinada (fase 2) são fáceis de fazer já na primeira passada.",
           "tags": [
             {
               "text": "Fase",
@@ -139,7 +139,8 @@
           ],
           "sources": [
             "gp-conquistas",
-            "steam-dampit"
+            "steam-dampit",
+            "steam-blvgh"
           ]
         },
         {
@@ -154,13 +155,14 @@
           ],
           "sources": [
             "gp-conquistas",
-            "steam-dampit"
+            "steam-dampit",
+            "steam-blvgh"
           ]
         },
         {
           "id": "t3",
           "title": "Destrua a cidade na fase bônus do Omnidroid",
-          "desc": "Mantenha a destruição contínua para o multiplicador da fase não cair: até 1 milhão de peças para os primeiros personagens.",
+          "desc": "Você controla o Omnidroid: chegue a 100% de destruição (não precisa destruir tudo). Mantenha a destruição contínua para o multiplicador não cair: até 1 milhão de peças para os primeiros personagens.",
           "tags": [
             {
               "text": "Fase",
@@ -168,7 +170,8 @@
             }
           ],
           "sources": [
-            "gp-conquistas"
+            "gp-conquistas",
+            "steam-blvgh"
           ]
         }
       ]
@@ -182,7 +185,7 @@
         {
           "id": "t4",
           "title": "Conclua as 10 Crimewaves",
-          "desc": "Ordem: <em>Waterfront</em>, <em>City Park</em>, <em>Financial District</em>, <em>Tourist District</em>, <em>Downtown</em>, <em>Outer Municiberg</em>, <em>Docks</em>, <em>Urbem Heights</em>, <em>Residential District</em>, <em>Industrial District</em>. Resolva os crimes de rua (pontos vermelhos) que estiverem no caminho: contam para os 50.",
+          "desc": "Ordem: <em>Waterfront</em> (já feita entre as fases 1 e 2), <em>City Park</em>, <em>Financial District</em> (chefe Bomb Voyage), <em>Tourist District</em>, <em>Downtown</em> (Brainfreezer), <em>Outer Municiberg</em>, <em>Docks</em> (Anchor-Man), <em>Urbem Heights</em>, <em>Residential District</em> (Underminer) e <em>Industrial District</em> (Síndrome). Resolva os crimes de rua (pontos vermelhos) que estiverem no caminho: contam para os 50.",
           "tags": [
             {
               "text": "Cidade",
@@ -198,7 +201,8 @@
           ],
           "sources": [
             "steam-turbo",
-            "gp-crimewaves"
+            "gp-crimewaves",
+            "steam-blvgh"
           ]
         }
       ]
@@ -228,7 +232,8 @@
           ],
           "sources": [
             "gp-redbricks",
-            "prodigy"
+            "prodigy",
+            "steam-blvgh"
           ]
         },
         {
@@ -250,7 +255,8 @@
           ],
           "sources": [
             "prodigy",
-            "outcyders"
+            "outcyders",
+            "steam-blvgh"
           ]
         },
         {
@@ -272,7 +278,8 @@
           ],
           "sources": [
             "prodigy",
-            "gp-redbricks"
+            "gp-redbricks",
+            "steam-blvgh"
           ]
         },
         {
@@ -294,13 +301,14 @@
           ],
           "sources": [
             "prodigy",
-            "gp-redbricks"
+            "gp-redbricks",
+            "steam-blvgh"
           ]
         },
         {
           "id": "t9",
-          "title": "Invencibilidade: vença a corrida do Relâmpago McQueen",
-          "desc": "Family Build no nordeste da orla; depois, vença a corrida na arquibancada da Piston Cup. Deixa os desafios de dano triviais.",
+          "title": "Invencibilidade: vença a corrida do Relâmpago McQueen em menos de 1:40",
+          "desc": "Monte o <em>Florida 500 Speedway</em> em <em>Waterfront</em> (5 Incredibricks) e vença a corrida dele em menos de 1:40. Deixa os desafios de dano triviais.",
           "tags": [
             {
               "text": "Red Brick",
@@ -313,7 +321,8 @@
           ],
           "sources": [
             "prodigy",
-            "gp-redbricks"
+            "gp-redbricks",
+            "steam-blvgh"
           ]
         },
         {
@@ -335,7 +344,8 @@
           ],
           "sources": [
             "prodigy",
-            "gp-redbricks"
+            "gp-redbricks",
+            "steam-blvgh"
           ]
         },
         {
@@ -357,13 +367,14 @@
           ],
           "sources": [
             "prodigy",
-            "gp-redbricks"
+            "gp-redbricks",
+            "steam-blvgh"
           ]
         },
         {
           "id": "t12",
-          "title": "Libere a Tradewind no desafio <em>Big Catch</em>, nas <em>Docks</em>",
-          "desc": "Ela voa e mergulha: com ela, Incredibricks em telhados e Minikits altos ficam fáceis.",
+          "title": "Libere a Tradewind no desafio <em>Big Catch!</em>, nas <em>Docks</em>",
+          "desc": "Reconstrua as 5 estátuas de peixe do distrito. Ela voa e mergulha: com ela, Incredibricks em telhados e Minikits altos ficam fáceis.",
           "tags": [
             {
               "text": "Cidade",
@@ -374,7 +385,8 @@
             }
           ],
           "sources": [
-            "steam-turbo"
+            "steam-turbo",
+            "steam-blvgh"
           ]
         }
       ]
@@ -388,7 +400,7 @@
         {
           "id": "t13",
           "title": "Pegue os 10 Minikits e encha o <em>True Super</em> em cada fase",
-          "desc": "Use o Detector de Itens e um voador. Em <em>Elastigirl On The Case</em>, destrua os olhos das prateleiras do corredor inicial: é isso que libera o Minikit, não o fliperama.",
+          "desc": "Use o Detector de Itens e um voador; vários Minikits pedem personagens Pixar (Russell rastreia, Flik cava, Bing Bong e McQueen iluminam). O <em>True Super</em> vai de 35.000 peças (<em>House Parr-ty</em>) a 250.000 (<em>Above Parr</em>). Em <em>Elastigirl On The Case</em>, destrua os 10 olhos das prateleiras do corredor inicial: é isso que libera o Minikit, não o fliperama.",
           "tags": [
             {
               "text": "Fase",
@@ -403,7 +415,9 @@
           ],
           "sources": [
             "steam-dampit",
-            "steam-minikit"
+            "steam-minikit",
+            "steam-camzilla",
+            "steam-blvgh"
           ]
         },
         {
@@ -650,7 +664,7 @@
         {
           "id": "t29",
           "title": "Feche as 22 Family Builds e os 6 Red Bricks restantes",
-          "desc": "Dory, Bing Bong, Russell, Spot, Sulley e os pads comuns. O pad Pixar bônus de <em>Financial District</em> aparece por último.",
+          "desc": "Dory, Bing Bong, Russell, Spot, Sulley e os pads comuns (3 Incredibricks cada). A estátua do Junior, em <em>Financial District</em>, aparece por último, depois de todos os pads Pixar.",
           "tags": [
             {
               "text": "Red Brick",
@@ -663,7 +677,8 @@
           ],
           "sources": [
             "gp-redbricks",
-            "steam-familybuild"
+            "steam-familybuild",
+            "steam-blvgh"
           ]
         },
         {

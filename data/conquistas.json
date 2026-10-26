@@ -139,11 +139,12 @@
       "name": "Um Compromisso Anterior",
       "desc": "Complete o Capítulo 7 - ''Anos Dourados''.",
       "pct": 36.7,
-      "tip": "Fase 7, a primeira do filme original; sai naturalmente. Aqui você libera o Bochecha (<em>Buddy Pine</em>).",
+      "tip": "Fase 7, a primeira do filme original; começa no círculo de luz do mapa logo depois de <em>Screenslaver Showdown</em> e sai naturalmente. Aqui você libera o Bochecha (<em>Buddy Pine</em>).",
       "difficulty": 1,
       "sources": [
         "gp-conquistas",
-        "steam-dampit"
+        "steam-dampit",
+        "steam-blvgh"
       ],
       "rota": [
         "t2"
@@ -311,10 +312,11 @@
       "name": "Em Público Novamente",
       "desc": "Complete o Capítulo 1 - ''Enfraquecido''.",
       "pct": 71.3,
-      "tip": "Primeira fase do jogo; sai naturalmente. Ao terminar, a cidade (<em>New Urbem</em>) abre e começa a primeira Crimewave.",
+      "tip": "Primeira fase do jogo; sai naturalmente. Ao terminar, a cidade abre e começa a primeira Crimewave (<em>Waterfront</em>): ela é obrigatória antes da fase 2, que começa no círculo de luz do mapa.",
       "difficulty": 1,
       "sources": [
-        "gp-conquistas"
+        "gp-conquistas",
+        "steam-blvgh"
       ],
       "rota": [
         "t1"
@@ -456,10 +458,11 @@
       "name": "Uma Ocasião Importante",
       "desc": "Complete o Capítulo 6 - ''Confronto com Hipnotizador''.",
       "pct": 39.6,
-      "tip": "Fase 6, última do Incredibles 2; sai naturalmente.",
+      "tip": "Fase 6, última do Incredibles 2; sai naturalmente. A fase 7 começa logo em seguida, no círculo de luz do mapa.",
       "difficulty": 1,
       "sources": [
-        "gp-conquistas"
+        "gp-conquistas",
+        "steam-blvgh"
       ],
       "rota": [
         "t1"
@@ -483,11 +486,12 @@
       "name": "Onde estão eles agora?",
       "desc": "Complete ''A Ira do Omnidriode''.",
       "pct": 28.2,
-      "tip": "A fase bônus da demolição com o Omnidroid, liberada no fim da história. Destrua sem parar para o multiplicador não cair: rende até 1 milhão de peças, ótimo para comprar personagens cedo.",
+      "tip": "A fase bônus em que você controla o Omnidroid, liberada no fim da história. Basta chegar a 100% de destruição, não é preciso destruir tudo; destrua sem parar para o multiplicador não cair e saia com até 1 milhão de peças.",
       "difficulty": 1,
       "spoiler": true,
       "sources": [
-        "gp-conquistas"
+        "gp-conquistas",
+        "steam-blvgh"
       ],
       "rota": [
         "t3"
@@ -497,14 +501,15 @@
       "name": "O Melhor",
       "desc": "Conquiste Super Demais em qualquer fase.",
       "pct": 62.2,
-      "tip": "Encha a barra de <em>True Super</em> numa fase. Com o x2 já passa; com o x10 enche na primeira sala.",
+      "tip": "Encha a barra de <em>True Super</em> numa fase. A mais barata é <em>House Parr-ty</em> (35.000 peças), seguida de <em>Revelations</em> (45.000); com o x2 já passa.",
       "difficulty": 1,
       "together": [
         "LEVEL_MINIKITS"
       ],
       "sources": [
         "steam-dampit",
-        "gp-conquistas"
+        "gp-conquistas",
+        "steam-blvgh"
       ],
       "rota": [
         "t13"
@@ -514,14 +519,15 @@
       "name": "O Melhor dos Melhores",
       "desc": "Conquiste Super Demais em todos os níveis.",
       "pct": 17.4,
-      "tip": "Encha a barra nas 12 fases. Com os multiplicadores, acontece junto com a caça aos Minikits no Free Play, sem esforço extra.",
+      "tip": "Encha a barra nas 12 fases. O mínimo vai de 35.000 peças (<em>House Parr-ty</em>) a 250.000 (<em>Above Parr</em>); com os multiplicadores, acontece junto com a caça aos Minikits no Free Play, sem esforço extra.",
       "difficulty": 1,
       "together": [
         "ALL_MINIKITS",
         "ONE_BILLION_STUDS"
       ],
       "sources": [
-        "steam-dampit"
+        "steam-dampit",
+        "steam-blvgh"
       ],
       "rota": [
         "t13"
@@ -548,7 +554,7 @@
       "name": "Preparado",
       "desc": "Pegue todos os Minikits do jogo.",
       "pct": 10.9,
-      "tip": "São 120 (10 por fase). Faça no Free Play, depois das Crimewaves, com um voador e o Detector de Itens. Armadilha conhecida: em <em>Elastigirl On The Case</em>, o Minikit não é o do fliperama; destrua os olhos nas prateleiras do corredor do início para liberar a bola que dá o Minikit.",
+      "tip": "São 120 (10 por fase). Faça no Free Play, depois das Crimewaves e dos Family Builds Pixar: vários pedem personagens Pixar (rastrear com o Russell, cavar com o Flik, iluminar com Bing Bong ou McQueen). Leve um voador e ligue o Detector de Itens. Armadilha conhecida: em <em>Elastigirl On The Case</em>, o Minikit não é o do fliperama; destrua os 10 olhos nas prateleiras do corredor do início para liberar a bola que dá o Minikit.",
       "difficulty": 2,
       "time": "~4 h",
       "together": [
@@ -557,7 +563,9 @@
       "sources": [
         "steam-dampit",
         "steam-minikit",
-        "steam-turbo"
+        "steam-turbo",
+        "steam-camzilla",
+        "steam-vergiu"
       ],
       "rota": [
         "t13"
@@ -580,13 +588,14 @@
       "name": "Incrível demais!",
       "desc": "Complete todas as Construções em Família.",
       "pct": 16.8,
-      "tip": "São 22 Construções em Família pela cidade, marcadas no mapa com os Incredibricks necessários. O pad Pixar bônus de <em>Financial District</em> só aparece depois de todos os outros pads Pixar; se faltar uma, é quase sempre ele.",
+      "tip": "São 22 Construções em Família, marcadas no mapa com os Incredibricks necessários: 4 em <em>Waterfront</em> e em <em>Residential District</em>, 3 em <em>Downtown</em>, 2 em <em>City Park</em>, <em>Financial</em>, <em>Tourist</em> e <em>Industrial</em>, e 1 em <em>Outer Municiberg</em>, <em>Docks</em> e <em>Urbem Heights</em>. A estátua do Junior, em <em>Financial District</em> (5 Incredibricks), só aparece depois de todos os pads Pixar; se faltar uma, é quase sempre ela.",
       "difficulty": 2,
       "time": "~1 h",
       "sources": [
         "steam-dampit",
         "gp-100",
-        "steam-familybuild"
+        "steam-familybuild",
+        "steam-blvgh"
       ],
       "rota": [
         "t29"
@@ -596,11 +605,12 @@
       "name": "Uma Vantagem Natural",
       "desc": "Colete um Bloco Vermelho.",
       "pct": 40.4,
-      "tip": "Os Red Bricks não são comprados: cada um sai de um puzzle depois de um Family Build Pixar. O primeiro barato é o da Dory (1 Incredibrick, <em>Waterfront</em>). Ative no menu de personagens, última aba.",
+      "tip": "Os Red Bricks não são comprados: cada um sai de um puzzle depois de um Family Build Pixar. O mais barato é o da Dory (<em>The Reef</em>, 1 Incredibrick, <em>Waterfront</em>): bata nos 5 mariscos pequenos debaixo d'água para abrir o grande. Ative no menu de personagens, última aba.",
       "difficulty": 1,
       "sources": [
         "prodigy",
-        "gp-redbricks"
+        "gp-redbricks",
+        "steam-blvgh"
       ],
       "rota": [
         "t5"
@@ -610,13 +620,14 @@
       "name": "A sorte favorece os preparados",
       "desc": "Colete todos os Blocos Vermelhos.",
       "pct": 17.9,
-      "tip": "São 12, cada um num Family Build Pixar (5 Incredibricks cada, Dory só 1). Os que aceleram tudo, nesta ordem: x2 (Merida, <em>City Park</em>), x6 (Miguel, <em>Waterfront</em>), x8 (Linguini, <em>Downtown</em>), x10 (WALL-E, <em>Industrial District</em>), Invencibilidade (Relâmpago McQueen) e Ímã de Peças (Woody, <em>Tourist District</em>). Os outros seis são estéticos ou de conforto.",
+      "tip": "São 12, cada um num Family Build Pixar (5 Incredibricks cada, Dory só 1) seguido de um puzzle. Os que aceleram tudo, nesta ordem: x2 (Merida, <em>City Park</em>), x6 (Miguel, <em>Waterfront</em>), x8 (Linguini, <em>Downtown</em>), x10 (WALL-E, <em>Industrial District</em>), Invencibilidade (Relâmpago McQueen: vença a corrida do <em>Florida 500 Speedway</em>, em <em>Waterfront</em>, em menos de 1:40) e Ímã de Peças (Woody, <em>Tourist District</em>). Os outros seis são estéticos ou de conforto.",
       "difficulty": 2,
       "time": "~2 h",
       "sources": [
         "gp-redbricks",
         "prodigy",
-        "outcyders"
+        "outcyders",
+        "steam-blvgh"
       ],
       "rota": [
         "t5",
@@ -702,11 +713,12 @@
       "name": "Tornando o mundo um lugar melhor",
       "desc": "Limpe um distrito.",
       "pct": 59.9,
-      "tip": "Conclua a primeira Crimewave, que começa sozinha depois da fase 1 (<em>Waterfront</em>).",
+      "tip": "Conclua a primeira Crimewave, que começa sozinha depois da fase 1 (<em>Waterfront</em>, sem chefe). É obrigatória: a fase 2 só abre depois dela.",
       "difficulty": 1,
       "sources": [
         "gp-conquistas",
-        "steam-turbo"
+        "steam-turbo",
+        "steam-blvgh"
       ],
       "rota": [
         "t4"
@@ -716,12 +728,13 @@
       "name": "Super-herói do Ano",
       "desc": "Limpe todos os distritos.",
       "pct": 22.2,
-      "tip": "São 10 Crimewaves, uma por distrito, liberadas em ordem fixa: <em>Waterfront, City Park, Financial District, Tourist District, Downtown, Outer Municiberg, Docks, Urbem Heights, Residential District, Industrial District</em>. Cada uma revela no mapa os segredos e corridas do distrito e dá um personagem; faça todas logo depois da história.",
+      "tip": "São 10 Crimewaves, uma por distrito, liberadas em ordem fixa: <em>Waterfront, City Park, Financial District</em> (chefe Bomb Voyage), <em>Tourist District, Downtown</em> (Brainfreezer), <em>Outer Municiberg, Docks</em> (Anchor-Man), <em>Urbem Heights, Residential District</em> (Underminer) e <em>Industrial District</em> (Síndrome). Cada uma revela no mapa os segredos e corridas do distrito e dá um personagem; faça todas logo depois da história.",
       "difficulty": 2,
       "time": "~3 h",
       "sources": [
         "steam-turbo",
-        "gp-crimewaves"
+        "gp-crimewaves",
+        "steam-blvgh"
       ],
       "rota": [
         "t4"
@@ -781,7 +794,7 @@
       "name": "Aquilo foi muito maneiro!",
       "desc": "Realize um combo de 75 golpes.",
       "pct": 10.8,
-      "tip": "Combo de 75 sem levar dano. O truque mais fácil: em <em>Under-mined</em>, jogue com a Violeta, estoure a bolha dela e passe por cima dos inimigos para atordoá-los, mantendo a sequência; passe também por cima do parceiro para ele não matar os inimigos antes. Alternativa: a luta contra Brainfreezer no fim da Crimewave dele, que tem inimigos infinitos.",
+      "tip": "Combo de 75 sem levar dano. O truque mais fácil: em <em>Under-mined</em>, jogue com a Violeta, estoure a bolha dela e passe por cima dos inimigos para atordoá-los, mantendo a sequência; passe também por cima do parceiro para ele não matar os inimigos antes. Alternativa: a luta contra Brainfreezer no fim da Crimewave de <em>Downtown</em>, que tem inimigos infinitos (dá para refazer pela prisão).",
       "difficulty": 3,
       "time": "~15 min",
       "together": [
@@ -789,7 +802,8 @@
       ],
       "sources": [
         "steam-dampit",
-        "happythumbs"
+        "happythumbs",
+        "steam-blvgh"
       ],
       "rota": [
         "t14"
@@ -816,7 +830,7 @@
       "name": "Tem sempre alguém em perigo",
       "desc": "Liberte um chefe de distrito da prisão.",
       "pct": 11.3,
-      "tip": "Depois de todas as Crimewaves, entre na prisão no centro da cidade e abra a cela de qualquer chefe: isso reinicia a Crimewave dele e a conquista sai na hora.",
+      "tip": "Depois das 10 Crimewaves, entre na prisão no centro da cidade e abra a cela de qualquer um dos cinco chefes (Bomb Voyage, Brainfreezer, Anchor-Man, Underminer ou Síndrome): isso reinicia a Crimewave dele e a conquista sai na hora.",
       "difficulty": 1,
       "time": "~5 min",
       "together": [
@@ -824,7 +838,8 @@
       ],
       "sources": [
         "gp-conquistas",
-        "happythumbs"
+        "happythumbs",
+        "steam-blvgh"
       ],
       "rota": [
         "t32"
@@ -866,12 +881,13 @@
       "name": "Eu sou você, mas mais forte!",
       "desc": "Faça um par de Bochecha com Síndrome.",
       "pct": 11.4,
-      "tip": "O Bochecha (<em>Buddy Pine</em>) sai na fase 7; o Síndrome vem da bolsa da Crimewave em que ele é o chefe. Ponha os dois como dupla na grade de personagens e a conquista sai.",
+      "tip": "O Bochecha (<em>Buddy Pine</em>) sai na fase 7; o Síndrome é o chefe da última Crimewave (<em>Industrial District</em>) e entra no elenco ao vencê-la. Ponha os dois como dupla na grade de personagens e a conquista sai.",
       "difficulty": 1,
       "time": "~2 min",
       "sources": [
         "steam-dampit",
-        "happythumbs"
+        "happythumbs",
+        "steam-blvgh"
       ],
       "rota": [
         "t27"
@@ -881,12 +897,13 @@
       "name": "Continue a nadar",
       "desc": "Complete uma corrida aquática com Dory.",
       "pct": 23.4,
-      "tip": "Libere a Dory no Family Build Pixar do sul de <em>Waterfront</em> (custa só 1 Incredibrick) e complete uma corrida subaquática jogando com ela.",
+      "tip": "Libere a Dory no Family Build Pixar <em>The Reef</em>, no sul de <em>Waterfront</em> (custa só 1 Incredibrick), e complete uma corrida subaquática jogando com ela.",
       "difficulty": 1,
       "time": "~10 min",
       "sources": [
         "prodigy",
-        "gp-conquistas"
+        "gp-conquistas",
+        "steam-blvgh"
       ],
       "rota": [
         "t28"

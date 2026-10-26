@@ -39,3 +39,15 @@ Teste do cinza: o 1 é o que mais se aproxima de outro guia (a datilografia lemb
 | Fontes | Anexo A (informantes) e Anexo B (pendências de verificação) |
 
 Ajustes feitos na construção: vermelho do escuro escurecido para #d0381c nos preenchimentos (branco sobre ele 4,9:1) e vermelho de texto do claro para #962110 (4,6:1 sobre a pasta); o "i" é desenhado com formas, porque a Staatliches só tem maiúsculas; no celular a barra de filtros não fica fixa e o carimbo desce para a linha dos informantes.
+
+## Segunda rodada (2026-10-26)
+
+Com o 4 publicado, o Ruy pediu pranchas inéditas, porque ainda não estava 100% satisfeito. Três composições novas, nenhuma parecida com os conceitos 1–4 nem com a galeria:
+
+| | Objeto | Composição | Assinatura | Fontes |
+|---|---|---|---|---|
+| 5 · Gazeta de Metroville | O jornal da cidade em 1962 cobrindo a volta dos Supers | Primeira página: cabeçalho gótico, faixa de data e preço, manchete + quadro da tiragem, cadernos, matérias em colunas com fios, capitular e foto reticulada | Faixa vermelha EXTRA! CASO RESOLVIDO desce na matéria; a foto sai da retícula para a cor; a tiragem ganha uma coluna | UnifrakturCook (só o nome) · Abril Fatface · Newsreader |
+| 6 · Os Incríveis em Quadrinhos | Gibi de banca nº 100 | Capa com título explodindo; quadros de tamanhos diferentes com traço grosso; legenda amarela + dica num balão de fala | POW!/BAM!/ZAP! estoura no canto do quadro com um tranco; a explosão da capa enche de amarelo | Bangers · Atkinson Hyperlegible |
+| 7 · Linhas do Trem Flutuante | Mapa do sistema de trens de Municiberg | Placa da estação + quadro de horários + diagrama da rede (5 linhas, uma bolinha por conquista); cada capítulo é uma linha vertical com as estações penduradas | O vagão desce a linha até a estação, que acende com um anel | Overpass · Overpass Mono |
+
+Aguardando a escolha.

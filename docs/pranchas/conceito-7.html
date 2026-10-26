@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceito 7 — Linhas do Trem Flutuante</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,600;0,800;0,900;1,400&family=Overpass+Mono:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prancha.css">
+<style>
+/* ===== Conceito 7: Linhas do Trem Flutuante ===== */
+.t-escuro{ /* "Plataforma à noite" */
+  --fundo:#101317;--placa:#1a1f26;--placa2:#232a33;--linha-fundo:#2e3640;--texto:#eef0f2;--suave:#c9cfd6;--mudo:#9aa3ad;
+  --l1:#ff4d4f;--l2:#ff9d2e;--l3:#2ec4b6;--l4:#5b8cff;--l5:#f4cf3a;--placa-txt:#101317;
+}
+.t-claro{ /* "Placa esmaltada" */
+  --fundo:#eceae3;--placa:#fbfaf6;--placa2:#e2dfd5;--linha-fundo:#c9c5b8;--texto:#15171a;--suave:#2c3036;--mudo:#555b63;
+  --l1:#d11f2a;--l2:#c35d00;--l3:#0d7c75;--l4:#2457a6;--l5:#b98d00;--placa-txt:#ffffff;
+}
+.c7{background:var(--fundo);color:var(--texto);font:16px/1.55 Overpass,system-ui,sans-serif;padding:22px}
+.c7 *{box-sizing:border-box}
+/* Topo: placa da estação + diagrama da rede */
+.c7-placa{background:var(--placa);border-radius:14px;padding:18px 20px;box-shadow:0 6px 18px #0004}
+.c7-placa-topo{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.c7-logo{width:46px;height:46px;border-radius:50%;background:var(--l1);color:#fff;display:grid;place-items:center;font:900 1.6rem/1 Overpass;flex:0 0 auto}
+.c7-placa-topo small{font:800 .78rem Overpass;letter-spacing:.18em;text-transform:uppercase;color:var(--mudo)}
+.c7-placa h1{font:900 clamp(2rem,6.6cqi,3.6rem)/1 Overpass;letter-spacing:-.01em;margin:10px 0 6px}
+.c7-placa h1 em{font-style:normal;color:var(--l1)}
+.c7-placa p{margin:0;color:var(--suave);max-width:620px}
+.c7-quadro-horarios{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--linha-fundo);border-radius:8px;overflow:hidden;margin-top:14px}
+.c7-quadro-horarios div{background:var(--placa2);padding:8px 12px}
+.c7-quadro-horarios small{display:block;font:800 .68rem Overpass;letter-spacing:.14em;text-transform:uppercase;color:var(--mudo)}
+.c7-quadro-horarios b{font:600 1.1rem "Overpass Mono",monospace}
+/* Diagrama da rede = progresso (uma linha por capítulo, uma estação por conquista) */
+.c7-rede{margin-top:16px;display:grid;gap:10px}
+.c7-rede-linha{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:center}
+.c7-rede-linha .tag{width:34px;height:24px;border-radius:5px;background:var(--cor);color:var(--placa-txt);display:grid;place-items:center;font:900 .8rem Overpass}
+.t-escuro .c7-rede-linha .tag{color:#101317}
+.c7-trilho{position:relative;height:14px;display:flex;justify-content:space-between;align-items:center}
+.c7-trilho::before{content:"";position:absolute;left:0;right:0;top:50%;height:6px;margin-top:-3px;border-radius:3px;background:var(--linha-fundo)}
+.c7-trilho::after{content:"";position:absolute;left:0;top:50%;height:6px;margin-top:-3px;border-radius:3px;background:var(--cor);width:calc(var(--p,0)*100%);transition:width .4s}
+.c7-trilho i{position:relative;z-index:1;width:12px;height:12px;border-radius:50%;background:var(--placa);border:3px solid var(--linha-fundo)}
+.c7-trilho i[data-on]{border-color:var(--cor);background:var(--cor)}
+.c7-rede-linha b{font:600 .85rem "Overpass Mono",monospace;color:var(--mudo);white-space:nowrap}
+.c7-filtros{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 0}
+.c7-filtros button{font:800 .9rem Overpass;min-height:44px;padding:0 16px;border-radius:22px;background:var(--placa);color:var(--texto);border:2px solid var(--linha-fundo);cursor:pointer}
+.c7-filtros button[aria-pressed=true]{background:var(--texto);color:var(--fundo);border-color:var(--texto)}
+/* Capítulo = uma linha do trem */
+.c7-linha{--cor:var(--l1);margin-top:26px}
+.c7-linha>header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.c7-linha .tag-grande{min-width:56px;height:40px;padding:0 10px;border-radius:8px;background:var(--cor);color:#fff;display:grid;place-items:center;font:900 1.3rem Overpass}
+.c7-linha h2{font:900 1.7rem/1.05 Overpass;margin:0}
+.c7-linha header p{margin:0;color:var(--suave);flex:1 1 220px}
+.c7-linha header b{font:600 .95rem "Overpass Mono",monospace}
+/* Estações = conquistas, penduradas na linha vertical */
+.c7-estacoes{position:relative;list-style:none;margin:0;padding:6px 0 0 44px}
+.c7-estacoes::before{content:"";position:absolute;left:15px;top:0;bottom:24px;width:10px;border-radius:5px;background:var(--cor)}
+.c7-estacao{position:relative;margin:0 0 16px}
+.c7-ponto{position:absolute;left:-40px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--placa);border:6px solid var(--cor);transition:background .25s}
+.c7-cartao{background:var(--placa);border-radius:12px;padding:14px 16px 12px;box-shadow:0 3px 10px #0003}
+.c7-cartao header{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.c7-cartao img{width:52px;height:52px;border-radius:10px;flex:0 0 auto}
+.c7-nome{display:inline-block;background:var(--cor);color:#fff;font:900 1.1rem/1.2 Overpass;padding:4px 10px;border-radius:6px}
+.c7-cartao .rar{display:block;font:600 .8rem "Overpass Mono",monospace;color:var(--mudo);margin-top:4px}
+.c7-cartao .desc{margin:0 0 6px;font-style:italic;color:var(--suave)}
+.c7-cartao .dica{margin:0}
+.c7-cartao footer{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.c7-cartao .chip{font:600 .78rem "Overpass Mono",monospace;background:var(--placa2);padding:3px 9px;border-radius:12px}
+.c7-desembarque{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:22px;border:2px solid var(--cor);font:800 .88rem Overpass;cursor:pointer}
+.c7-desembarque input{width:18px;height:18px;accent-color:var(--cor)}
+/* Assinatura: o trem chega na estação — o vagão desliza pela linha até o ponto, que acende com um anel */
+.c7-trem{position:absolute;left:-44px;top:-30px;width:38px;height:22px;border-radius:11px 11px 6px 6px;background:var(--texto);opacity:0;pointer-events:none}
+.c7-trem::before{content:"";position:absolute;left:6px;right:6px;top:5px;height:6px;border-radius:3px;background:var(--cor)}
+.c7-estacao[data-feita] .c7-trem{animation:c7-chega .6s cubic-bezier(.3,.9,.4,1) forwards}
+@keyframes c7-chega{0%{top:-60px;opacity:1}80%{top:20px;opacity:1}100%{top:20px;opacity:0}}
+.c7-estacao[data-feita] .c7-ponto{background:var(--cor);box-shadow:0 0 0 0 var(--cor);animation:c7-anel .8s .45s ease-out}
+@keyframes c7-anel{from{box-shadow:0 0 0 0 var(--cor)}to{box-shadow:0 0 0 16px transparent}}
+.c7-estacao[data-feita] .c7-desembarque{background:var(--cor);color:#fff}
+@container (max-width:560px){
+  .c7{padding:12px}
+  .c7-placa{padding:14px}
+  .c7-quadro-horarios{grid-template-columns:1fr 1fr}
+  .c7-estacoes{padding-left:36px}
+  .c7-estacoes::before{left:11px;width:8px}
+  .c7-ponto{left:-33px;width:26px;height:26px;border-width:5px}
+  .c7-trem{left:-38px}
+}
+@media (prefers-reduced-motion:reduce){.c7-estacao[data-feita] .c7-trem{animation:none}.c7-estacao[data-feita] .c7-ponto{animation:none}}
+</style>
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Conceito 7 · Linhas do Trem Flutuante</h1>
+   <p><strong>O guia é o mapa do sistema de trens de Municiberg</strong> (o mesmo trem flutuante da fase 2). Cada capítulo é uma linha colorida, cada conquista uma estação; marcar é desembarcar, e o trem chega à estação.</p></div>
+  <div class="pr-nav"><a href="conceito-5.html">← Conceito 5</a><a href="conceito-6.html">← Conceito 6</a></div>
+ </div>
+ <div class="pr-grid">
+  <div class="pr-box">
+   <h2>O papel de cada peça</h2>
+   <table>
+    <tr><td>Página</td><td>Sinalização de metrô dos anos 60: placas esmaltadas, linhas grossas, cantos arredondados</td></tr>
+    <tr><td>Topo</td><td>A placa da estação central + quadro de horários (dificuldade, horas, perdíveis) + diagrama da rede</td></tr>
+    <tr><td>Capítulo</td><td>Uma linha: "L1 · Os Incríveis 2", cada capítulo com sua cor</td></tr>
+    <tr><td>Conquista</td><td>Uma estação pendurada na linha: placa com o nome na cor da linha, ícone, descrição e dica</td></tr>
+    <tr><td>Marcar</td><td>"Desembarcar" → o trem desce a linha e a estação acende com um anel</td></tr>
+    <tr><td>Progresso</td><td>O diagrama da rede: 5 linhas, uma bolinha por conquista, o trilho se pinta na cor da linha</td></tr>
+    <tr><td>Filtros</td><td>"Todas as estações / A visitar / Visitadas"; dificuldade e tempo como "baldeação" e "tempo de viagem"</td></tr>
+    <tr><td>Rota</td><td>Vira o itinerário: as fases como trechos, as tarefas como paradas</td></tr>
+   </table>
+  </div>
+  <div class="pr-box">
+   <h2>Paleta e fontes</h2>
+   <b>Escuro · "Plataforma à noite"</b>
+   <div class="pr-sw"><span style="background:#101317;color:#eef0f2">fundo #101317</span><span style="background:#ff4d4f">L1 #ff4d4f</span><span style="background:#ff9d2e">L2 #ff9d2e</span><span style="background:#2ec4b6">L3 #2ec4b6</span><span style="background:#5b8cff">L4 #5b8cff</span></div>
+   <b>Claro · "Placa esmaltada"</b>
+   <div class="pr-sw"><span style="background:#eceae3">fundo #eceae3</span><span style="background:#d11f2a;color:#fff">L1 #d11f2a</span><span style="background:#c35d00;color:#fff">L2 #c35d00</span><span style="background:#0d7c75;color:#fff">L3 #0d7c75</span><span style="background:#2457a6;color:#fff">L4 #2457a6</span></div>
+   <p style="margin:0"><span style="font:900 1.4rem Overpass">Overpass</span> títulos e placas, da família das letras de sinalização · <span style="font:600 1rem 'Overpass Mono'">Overpass Mono</span> números e horários.</p>
+   <h2 style="margin-top:14px">Momento de assinatura</h2>
+   <p class="pr-note" style="margin:0">Ao desembarcar, um vagão desce a linha até a estação, o ponto acende com um anel que se espalha e a bolinha correspondente no diagrama da rede se pinta. <b>Teste: clique em "Desembarcar" nas estações.</b></p>
+  </div>
+ </div>
+ <div class="pr-label">Recorte real · tema escuro</div>
+ <div class="pr-frame"><div class="c7 t-escuro" data-quadro></div></div>
+ <div class="pr-label">Recorte real · tema claro</div>
+ <div class="pr-frame"><div class="c7 t-claro" data-quadro></div></div>
+ <div class="pr-label">Celular · 375 px</div>
+ <div class="pr-phones">
+  <div class="pr-phone"><div class="c7 t-escuro" data-quadro></div></div>
+  <div class="pr-phone"><div class="c7 t-claro" data-quadro></div></div>
+ </div>
+</div>
+<script src="dados.js"></script>
+<script src="prancha.js"></script>
+<script>
+(async () => {
+const CORES = ['var(--l1)', 'var(--l2)', 'var(--l3)', 'var(--l4)', 'var(--l5)'];
+const caps = window.PRANCHA_DADOS.chapters;
+const render = vm => `
+<section class="c7-placa">
+ <div class="c7-placa-topo"><span class="c7-logo">i</span><small>Rede de Trens de Municiberg · Estação Central</small></div>
+ <h1>Todas as linhas levam aos <em>100%</em></h1>
+ <p>${vm.total} estações (as conquistas da Steam) em ${vm.nCapitulos} linhas, com o caminho mais curto até cada uma.</p>
+ <div class="c7-quadro-horarios"><div><small>Dificuldade</small><b>${vm.overview.difficulty}/10</b></div><div><small>Viagem total</small><b>${vm.overview.hours}</b></div><div><small>Perdíveis</small><b>0</b></div><div><small>Visitadas</small><b data-feitas></b></div></div>
+ <div class="c7-rede" data-rede>${caps.map((c, i) => `<div class="c7-rede-linha" style="--cor:${CORES[i]}"><span class="tag">L${i + 1}</span><div class="c7-trilho">${c.achievements.map(() => '<i></i>').join('')}</div><b>${c.title}</b></div>`).join('')}</div>
+</section>
+<div class="c7-filtros"><button aria-pressed="true">Todas as estações</button><button aria-pressed="false">A visitar</button><button aria-pressed="false">Visitadas</button></div>
+<section class="c7-linha" style="--cor:${CORES[vm.capitulo.n - 1]}">
+ <header><span class="tag-grande">L${vm.capitulo.n}</span><h2>${vm.capitulo.titulo}</h2><p>${vm.capitulo.subtitulo}</p><b>1/${vm.capitulo.total}</b></header>
+ <ol class="c7-estacoes">
+ ${vm.cards.map(c => `<li class="c7-estacao" data-card${c.feita ? ' data-feita' : ''}>
+   <span class="c7-trem" aria-hidden="true"></span><span class="c7-ponto" aria-hidden="true"></span>
+   <div class="c7-cartao">
+    <header><img src="${c.icone}" alt=""><div><span class="c7-nome">${c.nome}</span><span class="rar">${c.raridade.rotulo} · ${c.raridade.pct}</span></div></header>
+    <p class="desc">${c.desc}</p><p class="dica">${c.dica}</p>
+    <footer>${c.dificuldade ? `<span class="chip">Baldeação ${c.dificuldade}/5</span>` : ''}${c.tempo ? `<span class="chip">Viagem ${c.tempo}</span>` : ''}
+     <label class="c7-desembarque"><input type="checkbox" aria-label="Desembarcar em ${c.nome}"> Desembarcar</label></footer>
+   </div>
+  </li>`).join('')}
+ </ol>
+</section>`;
+await montar({ render, capitulo: 'incredibles-2', ids: ['COMPLETE_CHAPTER07', 'CHAPTER07_THROWENEMIESINGEARS', 'CHAPTER09_ALL8INCREDIBLE'], feitas: ['COMPLETE_CHAPTER07'] });
+// Diagrama: espalha o progresso de exemplo pelas linhas, da primeira à última
+document.querySelectorAll('[data-quadro]').forEach(q => {
+  const set = p => {
+    let n = Math.round(p * 51);
+    q.querySelectorAll('[data-rede] .c7-rede-linha').forEach(l => {
+      const pts = [...l.querySelectorAll('i')], k = Math.min(n, pts.length); n -= k;
+      pts.forEach((el, i) => el.toggleAttribute('data-on', i < k));
+      l.querySelector('.c7-trilho').style.setProperty('--p', pts.length > 1 ? Math.max(0, k - 1) / (pts.length - 1) : 0);
+    });
+  };
+  q.addEventListener('progresso', e => set(e.detail));
+  set(+getComputedStyle(q).getPropertyValue('--g-progresso') || 0);
+});
+})();
+</script>
+</body>
+</html>

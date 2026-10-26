@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceito 5 — Gazeta de Metroville</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prancha.css">
+<style>
+/* ===== Conceito 5: Gazeta de Metroville ===== */
+.t-escuro{ /* "Edição da madrugada" */
+  --mesa:#121416;--papel:#1d2024;--fio:#3a3f46;--tinta:#ece6d8;--suave:#cfc8b8;--mudo:#a39c8c;--vermelho:#ff6a52;--mostarda:#e7b54d;--retícula:#ffffff14;
+}
+.t-claro{ /* "Banca de jornal" */
+  --mesa:#ddd5c4;--papel:#f3eee2;--fio:#2a2724;--tinta:#1b1917;--suave:#34302b;--mudo:#5b544a;--vermelho:#b8261a;--mostarda:#8f6410;--retícula:#00000014;
+}
+.c5{background:var(--mesa);color:var(--tinta);font:16px/1.55 Newsreader,Georgia,serif;padding:20px}
+.c5 *{box-sizing:border-box}
+.c5-jornal{background:var(--papel);padding:18px 20px 26px;box-shadow:0 8px 24px #0005;
+  background-image:radial-gradient(var(--retícula) 1px,transparent 1.2px);background-size:5px 5px}
+/* Cabeçalho do jornal */
+.c5-linha{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font:600 .74rem/1.4 Newsreader;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--fio);padding-bottom:6px;color:var(--suave)}
+.c5-nome{font:700 clamp(2.4rem,9cqi,5.2rem)/1 UnifrakturCook,serif;text-align:center;margin:10px 0 2px;letter-spacing:.01em}
+.c5-lema{text-align:center;font:italic .92rem Newsreader;color:var(--mudo);margin-bottom:8px}
+.c5-faixa{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:3px double var(--fio);border-bottom:3px double var(--fio);padding:5px 0;font:600 .8rem Newsreader;letter-spacing:.06em;text-transform:uppercase}
+.c5-faixa b{color:var(--vermelho)}
+/* Manchete principal + tiragem (progresso) */
+.c5-capa{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:22px;margin-top:16px;padding-bottom:16px;border-bottom:1px solid var(--fio)}
+.c5-capa .kicker{font:800 .78rem Newsreader;letter-spacing:.18em;text-transform:uppercase;color:var(--vermelho)}
+.c5-capa h1{font:400 clamp(2.2rem,7cqi,4rem)/.98 "Abril Fatface",serif;margin:6px 0 10px}
+.c5-capa .linha-fina{font:italic 1.15rem/1.45 Newsreader;color:var(--suave);margin:0 0 10px}
+.c5-capa p{margin:0}
+.c5-tiragem{border:2px solid var(--fio);padding:12px;align-self:start}
+.c5-tiragem small{display:block;font:800 .72rem Newsreader;letter-spacing:.16em;text-transform:uppercase;color:var(--mudo)}
+.c5-tiragem b{display:block;font:400 3.2rem/1 "Abril Fatface",serif;margin:4px 0}
+.c5-tiragem .barra{display:grid;grid-template-columns:repeat(51,1fr);gap:1px;height:22px;margin:8px 0 6px}
+.c5-tiragem .barra i{background:var(--fio);opacity:.22}
+.c5-tiragem .barra i[data-on]{background:var(--vermelho);opacity:1}
+.c5-tiragem dl{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;margin:8px 0 0;font-size:.9rem}
+.c5-tiragem dt{color:var(--mudo)}
+.c5-tiragem dd{margin:0;font-weight:600}
+.c5-filtros{display:flex;flex-wrap:wrap;gap:0;margin:14px 0 0;border:1px solid var(--fio);width:max-content;max-width:100%}
+.c5-filtros button{font:600 .9rem Newsreader;letter-spacing:.06em;text-transform:uppercase;background:none;color:var(--tinta);border:0;border-right:1px solid var(--fio);min-height:44px;padding:0 14px;cursor:pointer}
+.c5-filtros button:last-child{border:0}
+.c5-filtros button[aria-pressed=true]{background:var(--tinta);color:var(--papel)}
+/* Caderno = capítulo */
+.c5-caderno{margin-top:22px}
+.c5-caderno>header{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-top:6px solid var(--tinta);border-bottom:1px solid var(--fio);padding:6px 0 8px}
+.c5-caderno .n{font:800 .8rem Newsreader;letter-spacing:.16em;text-transform:uppercase;background:var(--vermelho);color:#fff;padding:3px 8px}
+.c5-caderno h2{font:400 2rem/1 "Abril Fatface",serif;margin:0}
+.c5-caderno header p{margin:0;font-style:italic;color:var(--suave);flex:1 1 220px}
+.c5-caderno header b{font:600 .9rem Newsreader}
+/* Matérias em colunas, com fios entre elas; a primeira é a matéria principal */
+.c5-materias{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:0;margin-top:12px}
+.c5-materia{position:relative;padding:4px 16px 16px;border-left:1px solid var(--fio)}
+.c5-materia:first-child{grid-column:span 2;border-left:0;padding-left:0}
+.c5-materia:first-child h3{font-size:2rem}
+.c5-materia:first-child{display:grid;grid-template-columns:minmax(0,1fr) 42%;column-gap:16px;align-content:start}
+.c5-materia:first-child>*{grid-column:1}
+.c5-materia:first-child>.foto{grid-column:2;grid-row:1 / span 6;margin:4px 0 0!important}
+.c5-materia:nth-child(3){border-left:0;padding-left:0;grid-column:1 / -1;border-top:1px solid var(--fio);padding-top:14px;display:grid;grid-template-columns:120px minmax(0,1fr);column-gap:16px;align-content:start}
+.c5-materia:nth-child(3)>*{grid-column:2}
+.c5-materia:nth-child(3)>.foto{grid-column:1;grid-row:1 / span 6;margin:4px 0 0!important}
+.c5-materia .kicker{font:800 .72rem Newsreader;letter-spacing:.16em;text-transform:uppercase;color:var(--vermelho)}
+.c5-materia h3{font:400 1.45rem/1.05 "Abril Fatface",serif;margin:4px 0 6px}
+.c5-materia .linha-fina{font:italic .98rem/1.4 Newsreader;color:var(--suave);margin:0 0 8px}
+.c5-materia .corpo{margin:0;text-align:justify;hyphens:auto}
+.c5-materia .corpo::first-letter{font:400 2.6em/0.8 "Abril Fatface",serif;float:left;margin:6px 6px 0 0;color:var(--vermelho)}
+.c5-materia .foto{position:relative;margin:6px 0 10px;border:1px solid var(--fio);background:var(--mesa);overflow:hidden}
+.c5-materia .foto img{display:block;width:100%;max-height:200px;object-fit:cover;filter:grayscale(1) contrast(1.25)}
+.c5-materia .foto::after{content:"";position:absolute;inset:0;background:radial-gradient(#000 0.9px,transparent 1.3px) 0 0/4px 4px;mix-blend-mode:screen;opacity:.35}
+.c5-materia .foto figcaption{font:italic .78rem Newsreader;color:var(--mudo);padding:3px 6px}
+.c5-materia footer{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:10px;font:600 .8rem Newsreader;color:var(--mudo);clear:both}
+.c5-ok{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border:1px solid var(--fio);font:800 .78rem Newsreader;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;color:var(--tinta)}
+.c5-ok input{width:18px;height:18px;accent-color:var(--vermelho)}
+/* Assinatura: EXTRA! — a faixa vermelha corre pelo topo da matéria e a foto sai da retícula para a cor */
+.c5-extra{position:absolute;top:0;left:0;right:0;height:0;overflow:hidden;background:var(--vermelho);color:#fff;font:400 1.05rem/26px "Abril Fatface",serif;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;text-align:center;transition:height .25s cubic-bezier(.3,1.4,.6,1)}
+.c5-materia[data-feita]{padding-top:34px}
+.c5-materia[data-feita] .c5-extra{height:26px}
+.c5-materia[data-feita] .foto img{filter:none}
+.c5-materia[data-feita] .foto::after{opacity:0;transition:opacity .6s}
+@container (max-width:560px){
+  .c5{padding:10px}.c5-jornal{padding:12px 12px 18px}
+  .c5-capa{grid-template-columns:1fr}
+  .c5-materias{grid-template-columns:1fr}
+  .c5-materia,.c5-materia:first-child,.c5-materia:nth-child(3){grid-column:auto;border-left:0;padding:12px 0;border-top:1px solid var(--fio);display:block}
+  .c5-materia[data-feita]{padding-top:40px}
+  .c5-materia:nth-child(n)>*{grid-column:auto}
+  .c5-materia:nth-child(n)>.foto{grid-row:auto;margin:6px 0 10px!important}
+  .c5-materia:first-child h3{font-size:1.6rem}
+  .c5-filtros button{padding:0 10px}
+}
+@media (prefers-reduced-motion:reduce){.c5-extra{transition:none}}
+</style>
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Conceito 5 · Gazeta de Metroville</h1>
+   <p><strong>O guia é o jornal da cidade em 1962, cobrindo a volta dos Supers.</strong> A página de conquistas é uma primeira página; cada capítulo, um caderno; cada conquista, uma matéria em colunas com foto reticulada. Marcar publica a edição EXTRA.</p></div>
+  <div class="pr-nav"><a href="conceito-6.html">Conceito 6 →</a><a href="conceito-7.html">Conceito 7 →</a></div>
+ </div>
+ <div class="pr-grid">
+  <div class="pr-box">
+   <h2>O papel de cada peça</h2>
+   <table>
+    <tr><td>Página</td><td>A primeira página de um jornal: cabeçalho gótico, faixa com data e preço, matérias em colunas com fios</td></tr>
+    <tr><td>Topo</td><td>Manchete "Supers voltam" + quadro da tiragem com os números do 100%</td></tr>
+    <tr><td>Capítulo</td><td>Um caderno ("Caderno 1 · Os Incríveis 2"), com fio grosso no topo</td></tr>
+    <tr><td>Conquista</td><td>Uma matéria: chapéu (raridade), título (nome), linha fina (descrição da Steam), texto com capitular (dica), foto reticulada</td></tr>
+    <tr><td>Marcar</td><td>"Publicar" → faixa vermelha EXTRA! desce no topo da matéria</td></tr>
+    <tr><td>Progresso</td><td>A tiragem: uma barra de 51 colunas de tipo que se enchem de tinta</td></tr>
+    <tr><td>Filtros</td><td>"Edição completa / Em apuração / Publicadas"</td></tr>
+    <tr><td>Fontes</td><td>"Agências e correspondentes", no rodapé da página</td></tr>
+   </table>
+  </div>
+  <div class="pr-box">
+   <h2>Paleta e fontes</h2>
+   <b>Escuro · "Edição da madrugada"</b>
+   <div class="pr-sw"><span style="background:#121416;color:#ece6d8">mesa #121416</span><span style="background:#1d2024;color:#ece6d8">papel #1d2024</span><span style="background:#ece6d8">tinta #ece6d8</span><span style="background:#ff6a52">vermelho #ff6a52</span><span style="background:#e7b54d">mostarda #e7b54d</span></div>
+   <b>Claro · "Banca de jornal"</b>
+   <div class="pr-sw"><span style="background:#ddd5c4">mesa #ddd5c4</span><span style="background:#f3eee2">papel #f3eee2</span><span style="background:#1b1917;color:#f3eee2">tinta #1b1917</span><span style="background:#b8261a;color:#fff">vermelho #b8261a</span><span style="background:#8f6410;color:#fff">mostarda #8f6410</span></div>
+   <p style="margin:0"><span style="font:700 1.4rem UnifrakturCook">UnifrakturCook</span> só no nome do jornal · <span style="font:400 1.3rem 'Abril Fatface'">Abril Fatface</span> manchetes · <span style="font:400 1rem Newsreader">Newsreader</span> texto, feita para jornal.</p>
+   <h2 style="margin-top:14px">Momento de assinatura</h2>
+   <p class="pr-note" style="margin:0">Ao publicar, uma faixa vermelha <b>EXTRA! CASO RESOLVIDO</b> desce no topo da matéria, a foto sai da retícula para a cor e a barra da tiragem ganha mais uma coluna de tinta. <b>Teste: clique em "Publicar" nas matérias.</b></p>
+  </div>
+ </div>
+ <div class="pr-label">Recorte real · tema escuro</div>
+ <div class="pr-frame"><div class="c5 t-escuro" data-quadro></div></div>
+ <div class="pr-label">Recorte real · tema claro</div>
+ <div class="pr-frame"><div class="c5 t-claro" data-quadro></div></div>
+ <div class="pr-label">Celular · 375 px</div>
+ <div class="pr-phones">
+  <div class="pr-phone"><div class="c5 t-escuro" data-quadro></div></div>
+  <div class="pr-phone"><div class="c5 t-claro" data-quadro></div></div>
+ </div>
+</div>
+<script src="dados.js"></script>
+<script src="prancha.js"></script>
+<script>
+(async () => {
+const CHAPEU = { epic: 'Exclusivo', rare: 'Furo', uncommon: 'Reportagem', common: 'Cidade' };
+const render = vm => `
+<div class="c5-jornal">
+ <div class="c5-linha"><span>Edição 100% · Ano LXII</span><span>Metroville, 1962</span><span>${vm.total} notícias · 5 centavos</span></div>
+ <div class="c5-nome">Gazeta de Metroville</div>
+ <div class="c5-lema">“Tudo o que os Supers fazem, a gente publica”</div>
+ <div class="c5-faixa"><span>LEGO The Incredibles · guia das conquistas</span><span>Dificuldade <b>${vm.overview.difficulty}/10</b> · ${vm.overview.hours} · <b>nenhuma perdível</b></span></div>
+ <section class="c5-capa">
+  <div><span class="kicker">Edição histórica</span>
+   <h1>Supers voltam e a cidade quer os 100%</h1>
+   <p class="linha-fina">As ${vm.total} conquistas da Steam, cada uma com o caminho mais curto e a ordem que economiza horas.</p>
+   <p>Nenhuma conquista se perde: todo desafio de fase volta no Free Play. O que mais pesa são os 120 Minikits e as 22 Family Builds; com os quatro multiplicadores ligados, o bilhão de peças sai sozinho.</p></div>
+  <aside class="c5-tiragem"><small>Tiragem desta edição</small><b data-feitas></b><div class="barra" data-barra>${'<i></i>'.repeat(vm.total)}</div>
+   <dl><dt>Publicadas</dt><dd data-pct></dd><dt>Operações</dt><dd>${vm.overview.playthroughs}</dd><dt>Online</dt><dd>${vm.overview.online}</dd></dl></aside>
+ </section>
+ <div class="c5-filtros"><button aria-pressed="true">Edição completa</button><button aria-pressed="false">Em apuração</button><button aria-pressed="false">Publicadas</button></div>
+ <section class="c5-caderno">
+  <header><span class="n">Caderno ${vm.capitulo.n}</span><h2>${vm.capitulo.titulo}</h2><p>${vm.capitulo.subtitulo}</p><b>1 de ${vm.capitulo.total} publicadas</b></header>
+  <div class="c5-materias">
+  ${vm.cards.map((c, i) => `<article class="c5-materia" data-card${c.feita ? ' data-feita' : ''}>
+    <div class="c5-extra" aria-hidden="true">★ Extra! Caso resolvido ★</div>
+    <span class="kicker">${CHAPEU[c.raridade.chave]} · ${c.raridade.pct} dos jogadores</span>
+    <h3>${c.nome}</h3>
+    <figure class="foto" style="margin:6px 0 10px"><img src="${c.icone}" alt=""><figcaption>Foto: Steam</figcaption></figure>
+    <p class="linha-fina">${c.desc}</p>
+    <p class="corpo">${c.dica}</p>
+    <footer>${c.dificuldade ? `<span>Dificuldade ${c.dificuldade}/5</span>` : ''}${c.tempo ? `<span>· ${c.tempo}</span>` : ''}
+     <label class="c5-ok"><input type="checkbox" aria-label="Publicar ${c.nome}"> Publicar</label></footer>
+   </article>`).join('')}
+  </div>
+ </section>
+</div>`;
+await montar({ render, capitulo: 'incredibles-2', ids: ['CHAPTER09_ALL8INCREDIBLE', 'COMPLETE_CHAPTER07', 'CHAPTER07_THROWENEMIESINGEARS'], feitas: ['COMPLETE_CHAPTER07'] });
+document.querySelectorAll('[data-quadro]').forEach(q => {
+  const set = p => { const n = Math.round(p * 51); q.querySelectorAll('[data-barra] i').forEach((el, i) => el.toggleAttribute('data-on', i < n)); };
+  q.addEventListener('progresso', e => set(e.detail));
+  set(+getComputedStyle(q).getPropertyValue('--g-progresso') || 0);
+});
+})();
+</script>
+</body>
+</html>

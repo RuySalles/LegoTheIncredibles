@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceito 6 — Os Incríveis em Quadrinhos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prancha.css">
+<style>
+/* ===== Conceito 6: Os Incríveis em Quadrinhos ===== */
+.t-escuro{ /* "Gibi lido de lanterna" */
+  --fundo:#11131b;--papel:#1c2030;--traco:#f2ead6;--texto:#f2ead6;--suave:#d6cfbd;--mudo:#a9a28f;
+  --vermelho:#ff5a47;--amarelo:#ffd23f;--azul:#5aa0ff;--legenda:#ffd23f;--legenda-txt:#1a1405;--pontos:#ffffff10;
+}
+.t-claro{ /* "Papel de banca, 1962" */
+  --fundo:#f6ecd2;--papel:#fffaf0;--traco:#16130f;--texto:#16130f;--suave:#2e2a22;--mudo:#57503f;
+  --vermelho:#c8231a;--amarelo:#f5c518;--azul:#1f5fa8;--legenda:#f5c518;--legenda-txt:#16130f;--pontos:#c8231a1a;
+}
+.c6{background:var(--fundo);color:var(--texto);font:16px/1.55 "Atkinson Hyperlegible",system-ui,sans-serif;padding:22px;
+  background-image:radial-gradient(var(--pontos) 2px,transparent 2.4px);background-size:12px 12px}
+.c6 *{box-sizing:border-box}
+.bang{font-family:Bangers,"Impact",sans-serif;font-weight:400;letter-spacing:.04em}
+/* Capa da revista */
+.c6-capa{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:18px;background:var(--papel);border:4px solid var(--traco);padding:16px 18px 18px;box-shadow:8px 8px 0 var(--traco)}
+.c6-selo-edicao{display:flex;gap:10px;align-items:center;font:700 .78rem "Atkinson Hyperlegible";letter-spacing:.12em;text-transform:uppercase;color:var(--mudo)}
+.c6-selo-edicao b{background:var(--vermelho);color:#fff;padding:2px 8px;font:400 1.2rem Bangers;letter-spacing:.06em}
+.c6-capa h1{font:400 clamp(2.6rem,9cqi,5.4rem)/.9 Bangers,sans-serif;letter-spacing:.03em;margin:8px 0 10px;color:var(--amarelo);-webkit-text-stroke:2px var(--traco);paint-order:stroke fill;text-shadow:5px 5px 0 var(--vermelho);transform:rotate(-2deg);transform-origin:left}
+.c6-capa h1 span{display:block;color:var(--texto);-webkit-text-stroke:0;text-shadow:none;font-size:.42em;letter-spacing:.08em}
+.c6-legenda{display:inline-block;background:var(--legenda);color:var(--legenda-txt);border:3px solid var(--traco);padding:6px 10px;font-weight:700;max-width:520px;box-shadow:3px 3px 0 var(--traco)}
+.c6-numeros{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.c6-numeros span{border:3px solid var(--traco);background:var(--fundo);padding:4px 10px;font-weight:700}
+.c6-numeros b{font:400 1.25rem Bangers;letter-spacing:.05em;color:var(--vermelho);margin-right:4px}
+/* Medidor: a explosão do emblema enche como balão de força */
+.c6-medidor{position:relative;align-self:center;justify-self:center;width:180px;aspect-ratio:1}
+.c6-medidor svg{width:100%;height:100%;overflow:visible}
+.c6-medidor .fundo{fill:var(--papel);stroke:var(--traco);stroke-width:4}
+.c6-medidor .cheio{fill:var(--amarelo)}
+.c6-medidor text{font:400 34px Bangers;fill:var(--traco);letter-spacing:.04em}
+.c6-medidor small{position:absolute;bottom:-6px;left:50%;transform:translateX(-50%) rotate(-3deg);background:var(--vermelho);color:#fff;border:3px solid var(--traco);padding:0 8px;font:400 1rem Bangers;white-space:nowrap}
+.c6-filtros{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+.c6-filtros button{font:400 1.15rem Bangers;letter-spacing:.06em;min-height:44px;padding:0 16px;background:var(--papel);color:var(--texto);border:3px solid var(--traco);box-shadow:3px 3px 0 var(--traco);cursor:pointer}
+.c6-filtros button[aria-pressed=true]{background:var(--vermelho);color:#fff;transform:translate(2px,2px);box-shadow:1px 1px 0 var(--traco)}
+/* Capítulo = página de abertura (splash) */
+.c6-splash{margin:26px 0 14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.c6-splash .n{font:400 1.1rem Bangers;letter-spacing:.08em;background:var(--azul);color:#fff;border:3px solid var(--traco);padding:2px 10px;transform:rotate(-3deg)}
+.c6-splash h2{font:400 2.4rem/1 Bangers;letter-spacing:.04em;margin:0}
+.c6-splash p{margin:0;flex:1 1 220px;color:var(--suave)}
+.c6-splash b{font:400 1.4rem Bangers;letter-spacing:.06em;color:var(--vermelho)}
+/* Quadros = conquistas, em grade de página de gibi */
+.c6-pagina{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.c6-quadro{position:relative;grid-column:span 3;background:var(--papel);border:4px solid var(--traco);padding:14px 14px 12px;overflow:hidden}
+.c6-quadro:nth-child(1){grid-column:span 4;clip-path:polygon(0 0,100% 0,96% 100%,0 100%)}
+.c6-quadro:nth-child(2){grid-column:span 2;margin-left:-4%;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%);padding-left:9%}
+.c6-quadro:nth-child(3){grid-column:span 6}
+.c6-quadro header{display:flex;gap:12px;align-items:center;margin-bottom:8px}
+.c6-quadro img{width:62px;height:62px;border-radius:50%;border:3px solid var(--traco);flex:0 0 auto}
+.c6-quadro h3{font:400 1.5rem/1 Bangers;letter-spacing:.04em;margin:0}
+.c6-quadro .rar{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mudo)}
+.c6-quadro .legenda{background:var(--legenda);color:var(--legenda-txt);border:2px solid var(--traco);padding:4px 8px;font-size:.9rem;font-style:italic;margin:0 0 10px}
+/* A dica vem num balão de fala */
+.c6-balao{position:relative;background:var(--fundo);border:3px solid var(--traco);border-radius:18px;padding:10px 12px;margin:0 0 12px}
+.c6-balao::after{content:"";position:absolute;left:26px;top:-14px;width:18px;height:14px;background:var(--fundo);border-left:3px solid var(--traco);border-top:3px solid var(--traco);transform:skewX(30deg)}
+.c6-quadro footer{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.c6-quadro .chip{font-weight:700;font-size:.8rem;border:2px solid var(--traco);padding:1px 8px}
+.c6-acao{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;background:var(--amarelo);color:#16130f;border:3px solid var(--traco);box-shadow:3px 3px 0 var(--traco);font:400 1.1rem Bangers;letter-spacing:.06em;cursor:pointer}
+.c6-acao input{width:18px;height:18px;accent-color:var(--vermelho)}
+/* Assinatura: POW! — a explosão de onomatopeia estoura no quadro concluído */
+.c6-pow{position:absolute;right:10px;top:8px;width:120px;height:90px;pointer-events:none;transform:scale(0) rotate(-20deg);transition:transform .32s cubic-bezier(.3,1.8,.5,1)}
+.c6-pow svg{width:100%;height:100%;overflow:visible}
+.c6-pow polygon{fill:var(--amarelo);stroke:var(--traco);stroke-width:4;stroke-linejoin:round}
+.c6-pow text{font:400 32px Bangers;fill:var(--vermelho);stroke:var(--traco);stroke-width:1.5;paint-order:stroke fill;letter-spacing:.04em}
+.c6-quadro[data-feita] .c6-pow{transform:scale(1) rotate(-8deg)}
+.c6-quadro[data-feita]{animation:c6-tremor .3s .05s}
+.c6-quadro[data-feita] header{padding-right:110px}
+@keyframes c6-tremor{25%{translate:-3px 2px}50%{translate:3px -2px}75%{translate:-2px 1px}}
+@container (max-width:560px){
+  .c6{padding:12px}
+  .c6-capa{grid-template-columns:1fr;box-shadow:5px 5px 0 var(--traco)}
+  .c6-medidor{width:140px;grid-row:1}
+  .c6-pagina{grid-template-columns:1fr}
+  .c6-quadro,.c6-quadro:nth-child(n){grid-column:auto;clip-path:none;margin-left:0;padding-left:14px}
+  .c6-quadro[data-feita] header{padding-right:80px}
+  .c6-pow{width:90px;height:68px}
+}
+@media (prefers-reduced-motion:reduce){.c6-pow{transition:none}.c6-quadro[data-feita]{animation:none}}
+</style>
+</head>
+<body>
+<div class="pr-wrap">
+ <div class="pr-head">
+  <div><h1>Conceito 6 · Os Incríveis em Quadrinhos</h1>
+   <p><strong>O guia é um gibi de banca dos anos 60: "As Aventuras dos Incríveis nº 100".</strong> Capa com título explodindo, cada capítulo uma página de abertura, cada conquista um quadro com legenda amarela e a dica num balão de fala. Marcar estoura um POW!</p></div>
+  <div class="pr-nav"><a href="conceito-5.html">← Conceito 5</a><a href="conceito-7.html">Conceito 7 →</a></div>
+ </div>
+ <div class="pr-grid">
+  <div class="pr-box">
+   <h2>O papel de cada peça</h2>
+   <table>
+    <tr><td>Página</td><td>Uma página de gibi: quadros de tamanhos diferentes, traço preto grosso, retícula de pontos no fundo</td></tr>
+    <tr><td>Topo</td><td>A capa da revista: nº 100, título em letras de explosão, legenda amarela e números em selos</td></tr>
+    <tr><td>Capítulo</td><td>Página de abertura com título e selo azul ("Cap. 1")</td></tr>
+    <tr><td>Conquista</td><td>Um quadro: retrato redondo (ícone), legenda amarela (descrição da Steam), balão de fala (dica)</td></tr>
+    <tr><td>Marcar</td><td>"Em ação!" → POW! explode no canto e o quadro treme</td></tr>
+    <tr><td>Progresso</td><td>A explosão do topo se enche de amarelo de baixo para cima</td></tr>
+    <tr><td>Filtros</td><td>"Toda a revista / A ler / Lidas"</td></tr>
+    <tr><td>Fontes</td><td>"Créditos da edição": roteiro, arte e cartas dos leitores</td></tr>
+   </table>
+  </div>
+  <div class="pr-box">
+   <h2>Paleta e fontes</h2>
+   <b>Escuro · "Gibi lido de lanterna"</b>
+   <div class="pr-sw"><span style="background:#11131b;color:#f2ead6">fundo #11131b</span><span style="background:#1c2030;color:#f2ead6">papel #1c2030</span><span style="background:#ff5a47">vermelho #ff5a47</span><span style="background:#ffd23f">amarelo #ffd23f</span><span style="background:#5aa0ff">azul #5aa0ff</span></div>
+   <b>Claro · "Papel de banca, 1962"</b>
+   <div class="pr-sw"><span style="background:#f6ecd2">fundo #f6ecd2</span><span style="background:#fffaf0">papel #fffaf0</span><span style="background:#c8231a;color:#fff">vermelho #c8231a</span><span style="background:#f5c518">amarelo #f5c518</span><span style="background:#1f5fa8;color:#fff">azul #1f5fa8</span></div>
+   <p style="margin:0"><span style="font:400 1.6rem Bangers;letter-spacing:.04em">Bangers</span> títulos e onomatopeias · <span style="font:700 1rem 'Atkinson Hyperlegible'">Atkinson Hyperlegible</span> texto, feita para leitura fácil.</p>
+   <h2 style="margin-top:14px">Momento de assinatura</h2>
+   <p class="pr-note" style="margin:0">Ao marcar, uma explosão <b>POW!</b> estoura no canto do quadro com um tranco, e a explosão da capa enche mais um pouco. <b>Teste: clique em "Em ação!" nos quadros.</b></p>
+  </div>
+ </div>
+ <div class="pr-label">Recorte real · tema escuro</div>
+ <div class="pr-frame"><div class="c6 t-escuro" data-quadro></div></div>
+ <div class="pr-label">Recorte real · tema claro</div>
+ <div class="pr-frame"><div class="c6 t-claro" data-quadro></div></div>
+ <div class="pr-label">Celular · 375 px</div>
+ <div class="pr-phones">
+  <div class="pr-phone"><div class="c6 t-escuro" data-quadro></div></div>
+  <div class="pr-phone"><div class="c6 t-claro" data-quadro></div></div>
+ </div>
+</div>
+<script src="dados.js"></script>
+<script src="prancha.js"></script>
+<script>
+(async () => {
+// Explosão (estrela de 14 pontas) usada no medidor e no POW!
+const estrela = (cx, cy, r1, r2, n = 14) => Array.from({ length: n * 2 }, (_, i) => {
+  const r = i % 2 ? r2 : r1, a = Math.PI * i / n - Math.PI / 2;
+  return `${(cx + r * Math.cos(a)).toFixed(1)},${(cy + r * Math.sin(a) * .8).toFixed(1)}`;
+}).join(' ');
+const POW = ['POW!', 'BAM!', 'ZAP!'];
+const render = vm => `
+<section class="c6-capa">
+ <div>
+  <div class="c6-selo-edicao"><b>Nº 100</b> Edição especial · 1962 · 12 centavos</div>
+  <h1>As Aventuras dos Incríveis<span>e as ${vm.total} conquistas!</span></h1>
+  <p class="c6-legenda">Enquanto isso, em Metroville… a família Pêra precisa de você para chegar aos 100%!</p>
+  <div class="c6-numeros"><span><b>${vm.overview.difficulty}/10</b>dificuldade</span><span><b>${vm.overview.hours}</b>de leitura</span><span><b>0</b>perdíveis</span></div>
+ </div>
+ <div class="c6-medidor" aria-label="Progresso">
+  <svg viewBox="0 0 180 180"><defs><clipPath id="enche-${Math.random().toString(36).slice(2, 7)}"><rect x="0" width="180" data-enche></rect></clipPath></defs>
+   <polygon class="fundo" points="${estrela(90, 92, 88, 58)}"/>
+   <polygon class="cheio" points="${estrela(90, 92, 85, 55)}" data-cheio/>
+   <polygon points="${estrela(90, 92, 88, 58)}" fill="none" stroke="var(--traco)" stroke-width="4" stroke-linejoin="round"/>
+   <text x="90" y="104" text-anchor="middle" data-pct></text></svg>
+  <small data-feitas></small>
+ </div>
+</section>
+<div class="c6-filtros"><button aria-pressed="true">Toda a revista</button><button aria-pressed="false">A ler</button><button aria-pressed="false">Lidas</button></div>
+<header class="c6-splash"><span class="n">Cap. ${vm.capitulo.n}</span><h2>${vm.capitulo.titulo}</h2><p>${vm.capitulo.subtitulo}</p><b>1/${vm.capitulo.total}</b></header>
+<div class="c6-pagina">
+ ${vm.cards.map((c, i) => `<article class="c6-quadro" data-card${c.feita ? ' data-feita' : ''}>
+   <span class="c6-pow" aria-hidden="true"><svg viewBox="0 0 120 90"><polygon points="${estrela(60, 45, 58, 32, 12)}"/><text x="60" y="56" text-anchor="middle">${POW[i % 3]}</text></svg></span>
+   <header><img src="${c.icone}" alt=""><div><h3>${c.nome}</h3><span class="rar">${c.raridade.rotulo} · ${c.raridade.pct}</span></div></header>
+   <p class="legenda">${c.desc}</p>
+   <p class="c6-balao">${c.dica}</p>
+   <footer>${c.dificuldade ? `<span class="chip">${'★'.repeat(c.dificuldade)}${'☆'.repeat(5 - c.dificuldade)}</span>` : ''}${c.tempo ? `<span class="chip">${c.tempo}</span>` : ''}
+    <label class="c6-acao"><input type="checkbox" aria-label="Marcar ${c.nome}"> <span data-rot>${c.feita ? 'Feito!' : 'Em ação!'}</span></label></footer>
+  </article>`).join('')}
+</div>`;
+await montar({ render, capitulo: 'incredibles-2', ids: ['CHAPTER09_ALL8INCREDIBLE', 'COMPLETE_CHAPTER07', 'CHAPTER07_THROWENEMIESINGEARS'], feitas: ['COMPLETE_CHAPTER07'] });
+document.querySelectorAll('[data-quadro]').forEach(q => {
+  const clip = q.querySelector('clipPath'), rect = clip.querySelector('rect');
+  q.querySelector('[data-cheio]').setAttribute('clip-path', `url(#${clip.id})`);
+  const set = p => { rect.setAttribute('y', 162 - 140 * p); rect.setAttribute('height', 140 * p + 20); };   // a estrela ocupa y 22–162
+  q.addEventListener('progresso', e => set(e.detail));
+  set(+getComputedStyle(q).getPropertyValue('--g-progresso') || 0);
+  q.querySelectorAll('[data-card] input').forEach(inp => inp.addEventListener('change', () => {
+    inp.closest('[data-card]').querySelector('[data-rot]').textContent = inp.checked ? 'Feito!' : 'Em ação!';
+  }));
+});
+})();
+</script>
+</body>
+</html>

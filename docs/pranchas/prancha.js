@@ -10,8 +10,8 @@ window.PRANCHAS = [
   { n: 1, nome: 'O Dossiê da NSA', frase: 'O arquivo do agente Rick Dicker: pastas manilha, fichas datilografadas e o carimbo "caso encerrado".', fontes: 'Staatliches · Courier Prime · Libre Franklin', rodada: 1 },
   { n: 2, nome: 'Créditos de 1962', frase: 'A abertura de um filme de espionagem dos anos 60: faixas diagonais e o emblema "i" que se preenche.', fontes: 'Big Shoulders Display · Jost', rodada: 1 },
   { n: 3, nome: 'O Ateliê da Edna', frase: 'O caderno de croquis da Edna: amostras de tecido, fita métrica e a rubrica que aprova cada conquista.', fontes: 'Bodoni Moda · Karla', rodada: 1 },
-  { n: 4, nome: 'O Dossiê da Família', frase: 'A estrutura do 1 com as cores do 2: o dossiê no vermelho e laranja do uniforme, com o lacre "i".', fontes: 'Staatliches · Courier Prime · Libre Franklin', rodada: 1, noAr: true },
-  { n: 5, nome: 'Gazeta de Metroville', frase: 'O jornal da cidade em 1962: manchetes, cadernos, matérias em colunas e a faixa EXTRA! ao marcar.', fontes: 'UnifrakturCook · Abril Fatface · Newsreader', rodada: 2 },
+  { n: 4, nome: 'O Dossiê da Família', frase: 'A estrutura do 1 com as cores do 2: o dossiê no vermelho e laranja do uniforme, com o lacre "i".', fontes: 'Staatliches · Courier Prime · Libre Franklin', rodada: 1 },
+  { n: 5, nome: 'Gazeta de Metroville', frase: 'O jornal da cidade em 1962: manchetes, cadernos, matérias em colunas e a faixa EXTRA! ao marcar.', fontes: 'UnifrakturCook · Abril Fatface · Newsreader', rodada: 2, noAr: true },
   { n: 6, nome: 'Os Incríveis em Quadrinhos', frase: 'Um gibi de banca nº 100: quadros, legendas amarelas, a dica num balão e um POW! ao marcar.', fontes: 'Bangers · Atkinson Hyperlegible', rodada: 2 },
   { n: 7, nome: 'Linhas do Trem Flutuante', frase: 'O mapa dos trens da cidade: cada capítulo uma linha, cada conquista uma estação onde o trem chega.', fontes: 'Overpass · Overpass Mono', rodada: 2 },
 ];

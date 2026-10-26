@@ -1,6 +1,6 @@
 {
   "_leia-me": "Conteúdo da rota. Veja o README.md antes de editar. Regra de ouro: nunca mude ou reutilize o \"id\" de uma tarefa (t1, t2…), porque é ele que guarda o progresso de quem já usa o site. Tarefas novas recebem o próximo número livre.",
-  "mainTitle": "Missão",
+  "mainTitle": "Pauta",
   "tagTypes": [
     {
       "type": "prereq",

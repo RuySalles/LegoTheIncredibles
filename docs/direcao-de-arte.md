@@ -50,4 +50,21 @@ Com o 4 publicado, o Ruy pediu pranchas inéditas, porque ainda não estava 100%
 | 6 · Os Incríveis em Quadrinhos | Gibi de banca nº 100 | Capa com título explodindo; quadros de tamanhos diferentes com traço grosso; legenda amarela + dica num balão de fala | POW!/BAM!/ZAP! estoura no canto do quadro com um tranco; a explosão da capa enche de amarelo | Bangers · Atkinson Hyperlegible |
 | 7 · Linhas do Trem Flutuante | Mapa do sistema de trens de Municiberg | Placa da estação + quadro de horários + diagrama da rede (5 linhas, uma bolinha por conquista); cada capítulo é uma linha vertical com as estações penduradas | O vagão desce a linha até a estação, que acende com um anel | Overpass · Overpass Mono |
 
-Aguardando a escolha.
+**Escolha: conceito 5, Gazeta de Metroville** (2026-10-26). Substituiu o Dossiê da Família no site; o estado anterior está na tag `antes-gazeta` e em `backups/`.
+
+## Como o conceito 5 virou o tema
+
+| Peça | No site |
+|---|---|
+| Topo (casca) | Orelha do jornal: "Gazeta" em gótica + seções Primeira página / Pauta / Arquivo; o botão de tema troca entre "Edição da manhã" e "Edição da madrugada" |
+| Cabeçalho | Linha de edição, nome do jornal em UnifrakturCook, lema e faixa com fios duplos |
+| Capa | Manchete + linha fina (intro) + texto com capitular; ao lado, o quadro da tiragem |
+| Progresso | A tiragem: uma coluna de tipo por conquista (ou tarefa), agrupadas por caderno; cada coluna leva ao item |
+| Roteiro | Editorial em colunas, com números grandes |
+| Capítulo | Caderno com selo vermelho ("Caderno I"); matérias em colunas de jornal (CSS columns) com fio entre elas; a primeira matéria de cada caderno atravessa as colunas |
+| Conquista | Matéria: chapéu (raridade como Exclusivo/Furo/Reportagem/Cidade), título, foto reticulada de uma coluna, linha fina (descrição da Steam), texto com capitular (dica), "Leia também", "Na pauta" |
+| Marcar | "Publicar" → faixa EXTRA! CASO RESOLVIDO desce e a foto sai da retícula para a cor |
+| Rota | Pauta da redação: Red Bricks como classificados, "Manual da redação", índice de pautas, cada etapa uma pauta com "Edição fechada" ao completar |
+| Fontes | Expediente: "Agências e correspondentes" e "Em apuração" (pontos a confirmar) |
+
+Ajustes na construção: os ícones da Steam têm 64 px, então a foto ficou pequena (uma coluna, 104 px) em vez de esticada; texto alinhado à esquerda, porque a justificação abria buracos nas colunas estreitas; vermelho de preenchimento separado do vermelho de texto no escuro (#c8321f, branco sobre ele 5,3:1).

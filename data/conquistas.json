@@ -1,7 +1,7 @@
 {
   "_leia-me": "Conteúdo da página de conquistas. Nomes, descrições e porcentagens vêm da Steam (tools/steam_importar.py cria; tools/update_steam.py mantém as % atualizadas). Dicas, capítulos, roteiro e campos extras são escritos à mão. Nunca mude a chave de uma conquista: ela é o id oficial da Steam e guarda o progresso.",
   "steamAppId": 818320,
-  "updated": "2026-11-02",
+  "updated": "2026-11-09",
   "completion": "ONE_HUNDRED_PERCENT",
   "intro": "As 51 conquistas de <strong>LEGO The Incredibles</strong> na Steam, com uma dica direta para cada uma, a raridade entre os jogadores e a ordem que economiza horas. Só {pct100} dos jogadores receberam a Chave da Cidade.",
   "overview": {
@@ -239,7 +239,7 @@
     "CHAPTER04_NOHITBYGOOCANNON": {
       "name": "Intocável",
       "desc": "Complete ''De volta à Ilha Nomanisan'' sem ser atingido por um canhão de gosma.",
-      "pct": 9.8,
+      "pct": 9.9,
       "tip": "À esquerda, avance escondido atrás das caixas grandes e entre numa caixa de papelão para os canhões não mirarem em você; à direita, suba a torre no intervalo entre os disparos. No Free Play, um voador corta caminho até o computador principal. A conquista aparece ao cruzar a última ponte, antes da cena.",
       "difficulty": 3,
       "time": "~15 min",
@@ -414,7 +414,7 @@
     "CHAPTER10_COMPLETEINMINUTES": {
       "name": "Pêra Incisivo",
       "desc": "Capture o Hipnotizador em ''Mulher Elástica Em Ação'' dentro de 3 minutos e 15 segundos.",
-      "pct": 7.1,
+      "pct": 7.2,
       "tip": "Faça no Free Play com um voador e a Mulher-Elástica. O cronômetro conta só a perseguição pelos corredores: voe por cima do primeiro, use a Mulher-Elástica para baixar a escada, monte o canhão e acenda o pavio dourado, voe pelo segundo corredor, puxe a alavanca e derreta a parede dourada com laser. Cronometre no celular; há relatos de que o limite é mais justo do que parece.",
       "difficulty": 3,
       "time": "~20 min",
@@ -442,7 +442,7 @@
     "CHAPTER11_MOVINGBOXES": {
       "name": "É um dos jeitos de fazer isso",
       "desc": "Destrua todas as caixas de mudança em ''Pêra Adoidado''.",
-      "pct": 13.3,
+      "pct": 13.4,
       "tip": "Quebre todas as caixas de papelão marrons com setas. Quase todas estão na primeira área (perto do início, da mesa de jantar, da cozinha e do sofá); não saia dela antes da conquista aparecer, porque há relatos de que a segunda metade não conta. A difícil fica alta, à direita, numa saliência da sala do globo espelhado.",
       "difficulty": 2,
       "time": "~10 min",
@@ -457,7 +457,7 @@
     "COMPLETE_CHAPTER12": {
       "name": "Uma Ocasião Importante",
       "desc": "Complete o Capítulo 6 - ''Confronto com Hipnotizador''.",
-      "pct": 39.4,
+      "pct": 39.5,
       "tip": "Fase 6, última do Incredibles 2; sai naturalmente. A fase 7 começa logo em seguida, no círculo de luz do mapa.",
       "difficulty": 1,
       "sources": [
@@ -536,7 +536,7 @@
     "LEVEL_MINIKITS": {
       "name": "Kitudo",
       "desc": "Pegue todos os Minikits em um nível.",
-      "pct": 16.2,
+      "pct": 16.3,
       "tip": "Pegue os 10 Minikits de uma fase no Free Play, com o Detector de Itens ligado.",
       "difficulty": 1,
       "together": [
@@ -553,7 +553,7 @@
     "ALL_MINIKITS": {
       "name": "Preparado",
       "desc": "Pegue todos os Minikits do jogo.",
-      "pct": 10.8,
+      "pct": 10.9,
       "tip": "São 120 (10 por fase). Faça no Free Play, depois das Crimewaves e dos Family Builds Pixar: vários pedem personagens Pixar (rastrear com o Russell, cavar com o Flik, iluminar com Bing Bong ou McQueen). Leve um voador e ligue o Detector de Itens. Armadilha conhecida: em <em>Elastigirl On The Case</em>, o Minikit não é o do fliperama; destrua os 10 olhos nas prateleiras do corredor do início para liberar a bola que dá o Minikit.",
       "difficulty": 2,
       "time": "~4 h",
@@ -696,7 +696,7 @@
     "ONE_HUNDRED_PERCENT": {
       "name": "Chave da Cidade",
       "desc": "Atinja 100%.",
-      "pct": 10.3,
+      "pct": 10.4,
       "tip": "O 100% pede: 12 fases com <em>True Super</em>, 120 Minikits, 12 Red Bricks, 22 Family Builds, 25 corridas, 20 desafios, 10 Crimewaves, 113 personagens, 93 bolsas, 40 veículos e 210 Gold Bricks. Acompanhe na última aba do menu; o que faltar aparece lá.",
       "difficulty": 2,
       "time": "~3 h de limpeza",
@@ -793,7 +793,7 @@
     "HIGH_COMBO": {
       "name": "Aquilo foi muito maneiro!",
       "desc": "Realize um combo de 75 golpes.",
-      "pct": 10.7,
+      "pct": 10.8,
       "tip": "Combo de 75 sem levar dano. O truque mais fácil: em <em>Under-mined</em>, jogue com a Violeta, estoure a bolha dela e passe por cima dos inimigos para atordoá-los, mantendo a sequência; passe também por cima do parceiro para ele não matar os inimigos antes. Alternativa: a luta contra Brainfreezer no fim da Crimewave de <em>Downtown</em>, que tem inimigos infinitos (dá para refazer pela prisão).",
       "difficulty": 3,
       "time": "~15 min",
@@ -866,7 +866,7 @@
     "FREEZE_PO_WITH_FROZONE": {
       "name": "Congelado aí!",
       "desc": "Congele um policial com o Gelado.",
-      "pct": 10.3,
+      "pct": 10.4,
       "tip": "Na grade de personagens, ponha o Gelado como principal e um policial como segundo (canto inferior esquerdo da grade). Jogue gelo no policial.",
       "difficulty": 1,
       "time": "~2 min",

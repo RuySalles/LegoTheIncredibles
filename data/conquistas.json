@@ -1,7 +1,7 @@
 {
   "_leia-me": "Conteúdo da página de conquistas. Nomes, descrições e porcentagens vêm da Steam (tools/steam_importar.py cria; tools/update_steam.py mantém as % atualizadas). Dicas, capítulos, roteiro e campos extras são escritos à mão. Nunca mude a chave de uma conquista: ela é o id oficial da Steam e guarda o progresso.",
   "steamAppId": 818320,
-  "updated": "2026-11-09",
+  "updated": "2026-11-23",
   "completion": "ONE_HUNDRED_PERCENT",
   "intro": "As 51 conquistas de <strong>LEGO The Incredibles</strong> na Steam, com uma dica direta para cada uma, a raridade entre os jogadores e a ordem que economiza horas. Só {pct100} dos jogadores receberam a Chave da Cidade.",
   "overview": {
@@ -457,7 +457,7 @@
     "COMPLETE_CHAPTER12": {
       "name": "Uma Ocasião Importante",
       "desc": "Complete o Capítulo 6 - ''Confronto com Hipnotizador''.",
-      "pct": 39.5,
+      "pct": 39.4,
       "tip": "Fase 6, última do Incredibles 2; sai naturalmente. A fase 7 começa logo em seguida, no círculo de luz do mapa.",
       "difficulty": 1,
       "sources": [
@@ -912,7 +912,7 @@
     "ANY_AMBIENTCRIME": {
       "name": "Fazendo nossa parte!",
       "desc": "Combata um crime na cidade.",
-      "pct": 57.3,
+      "pct": 57.2,
       "tip": "Pontos vermelhos no minimapa são crimes na rua (assalto, perseguição, briga). Vá até um e resolva; sai nos primeiros minutos na cidade.",
       "difficulty": 1,
       "sources": [
